@@ -1,0 +1,191 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	box-sizing: border-box;
+}
+:root{
+	--red: #f9004d;
+	--light-pink: #fcfc;
+	--light-black: #1e1e1e;
+	--light-grey: #858585;
+}
+
+.hero {
+	background-color: var(--light-black);
+	height: 100vh;
+	width: 100%;
+	/* background-image: url(../img/gigachad-up.png); */
+	background-size: cover;
+	background-position: center;
+}
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+.logo {
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span {
+	color: var(--red);
+}
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px 25px;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+	color: var(--red);
+	transition: .4s;
+}
+.btn{
+	background-color: var(--red);
+	border-radius: 30px;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+	transition: transform .4s;
+}
+.btn:hover{
+	transform: scale(1.2);
+}
+.content{
+	position: absolute;
+	top: 50%;
+	left: 8%;
+	transform: translateY(-50%);
+}
+h1{
+	color: white;
+	margin: 20px 0px 20px;
+	font-size: 75px;
+}
+h3{
+	color: white;
+	margin-bottom: 50px;
+	font-size: 25px;
+}
+h4{
+	color: var(--light-pink);
+	letter-spacing: 2px;
+	font-size: 25px;
+}
+.newslatter form{
+	width: 380px;
+	max-width: 100%;
+	position: relative;
+}
+input[name='email'] {
+	display: inline-block;
+	width: 100%;
+	padding: 14px 130px 14px 15px;
+	border: 2px solid var(--red);
+	border-radius: 30px;
+	outline: none;
+}
+input[name='submit']{
+	display: inline;
+	position: absolute;
+	outline: none;
+	border: none;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background-color: var(--red);
+	color: white;
+	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
+	top: 6px;
+	right: 6px;
+}
+.about{
+	width: 100%;
+	padding: 70px 0px;
+	padding-bottom: 150px;
+	background-color: #1e1e1e;
+}
+.about img{
+	height: auto;
+	width: 430px;
+}
+.about-text{
+	width: 40vw;
+	margin-left: 100px;
+}
+.main{
+	width: 1130px;
+	margin: 0px auto;
+	max-width: 95%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.about-text h2{
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+.about-text h5{
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+.about-text button{
+	color: white;
+	background-color: var(--red);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	border-radius: 30px;
+	padding: 13px 30px;
+	transition: .4s;
+}
+.about-text button:hover{
+	background-color: transparent;
+	border: 4px solid var(--red);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
