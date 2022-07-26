@@ -166,6 +166,7 @@ input[name='submit']{
 	border: none;
 	padding: 10px 30px;
 	border-radius: 30px;
+	cursor: pointer;
 	background-color: var(--red);
 	color: white;
 	top: 6px;
