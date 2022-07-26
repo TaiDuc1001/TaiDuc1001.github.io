@@ -7,12 +7,36 @@
 :root{
 	--red: #f9004d;
 	--light-pink: #fcfc;
+	--dark-black: #191919;
 	--light-black: #1e1e1e;
 	--light-grey: #858585;
 }
 
+@keyframes shake {
+	10%, 90% {
+	  transform: translate3d(-1px, 0, 0);
+	}
+	20%, 80% {
+		transform: translate3d(2px, 0, 0);
+	}
+	30%, 50%, 70% {
+	  transform: translate3d(-4px, 0, 0);
+	}
+	40%, 60% {
+	  transform: translate3d(4px, 0, 0);
+	}
+  }
+
+@keyframes tilt-shaking {
+	0% { transform: rotate(0deg); }
+	25% { transform: rotate(5deg); }
+	50% { transform: rotate(0eg); }
+	75% { transform: rotate(-5deg); }
+	100% { transform: rotate(0deg); }
+  }
+
 .hero {
-	background-color: var(--light-black);
+	background-color: var(--dark-black);
 	height: 100vh;
 	width: 100%;
 	/* background-image: url(../img/gigachad-up.png); */
@@ -32,10 +56,18 @@ nav {
 	font-size: 35px;
 	letter-spacing: 1px;
 	cursor: pointer;
+	position: relative;
+	/* transition: transform .4s; */
 }
+.logo:hover{
+	animation: tilt-shaking .5s infinite;
+
+}
+
 span {
 	color: var(--red);
 }
+
 nav ul li {
 	list-style-type: none;
 	display: inline-block;
@@ -44,12 +76,30 @@ nav ul li {
 nav ul li a{
 	color: white;
 	text-decoration: none;
+	padding-top: 50px;
 	font-weight: bold;
+	font-size: 20px;
 	text-transform: capitalize;
+
+
+	background:
+ 	bottom var(--p1, 10px) left 50% /100% var(--p, 2px) no-repeat,
+    linear-gradient(currentColor 0 0) bottom -2px right 50%/var(--d, 0%) 3px no-repeat;
+  	transition: 0.5s;
+
+}
+nav ul li{
+	transition: transform .4s;
 }
 nav ul li a:hover{
 	color: var(--red);
-	transition: .4s;
+	--d: 100%;
+	--p: 3px;
+	--p1: 4px;
+	
+}
+nav ul li:hover{
+	transform: scale(1.2);
 }
 .btn{
 	background-color: var(--red);
@@ -62,6 +112,7 @@ nav ul li a:hover{
 	transition: transform .4s;
 }
 .btn:hover{
+	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
 	transform: scale(1.2);
 }
 .content{
@@ -89,7 +140,13 @@ h4{
 	width: 380px;
 	max-width: 100%;
 	position: relative;
+	transition: transform .4s;
 }
+.newslatter form:hover{
+	transform: scale(1.07);
+}
+
+
 input[name='email'] {
 	display: inline-block;
 	width: 100%;
@@ -97,6 +154,10 @@ input[name='email'] {
 	border: 2px solid var(--red);
 	border-radius: 30px;
 	outline: none;
+}
+input[name="email"]:hover{
+	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
+
 }
 input[name='submit']{
 	display: inline;
@@ -107,15 +168,22 @@ input[name='submit']{
 	border-radius: 30px;
 	background-color: var(--red);
 	color: white;
-	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
 	top: 6px;
 	right: 6px;
+	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
+}
+
+input[name="submit"]:hover {
+	animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	perspective: 1000px;
 }
 .about{
 	width: 100%;
-	padding: 70px 0px;
-	padding-bottom: 150px;
-	background-color: #1e1e1e;
+	height: 100vh;
+	padding: 150px 0px;
+	/* padding-bottom: 100px; */
+	background-color: var(--light-black);
 }
 .about img{
 	height: auto;
@@ -133,6 +201,7 @@ input[name='submit']{
 	align-items: center;
 	justify-content: space-around;
 }
+
 .about-text h2{
 	color: white;
 	font-size: 75px;
