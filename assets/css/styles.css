@@ -264,7 +264,7 @@ input[name="submit"]:hover {
 		transform: scale(1.2);
 	} */
 	.hero{
-		height: 70vh;
+		height: 100vh;
 	}
 
 	nav ul{
@@ -295,9 +295,10 @@ input[name="submit"]:hover {
 	/* nav content */
 	.content{
 		position: relative;
-		top: 30%;
+		top: 40%;
 		left: 8%;
-		transform: translateY(-50%);
+		/* bottom: 50%; */
+		/* transform: translateY(-50%); */
 	}
 	h1{
 		color: white;
@@ -373,7 +374,8 @@ input[name="submit"]:hover {
 		background-color: var(--dark-black);
 		height: 100vh;
 		/* padding: auto; */
-		padding-top: 30px;
+		/* margin-top: 100px; */
+		padding-top: 100px;
 		/* padding-right: 10px; */
 		/* margin: 0px 0px; */
 
