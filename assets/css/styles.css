@@ -353,19 +353,25 @@ input[name="submit"]:hover {
 footer{
 	position: relative;
 	width: 100%;
-	height: 40vh;
+	height: 35vh;
 	background-color: var(--light-black);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
-footer p{
+footer p:nth-child(1){
 	font-size: 30px;
 	color: white;
 	margin-top: 50px;
 	margin-bottom: 20px;
 	font-weight: bold;
+}
+footer p:nth-child(2){
+	color: white;
+	font-size: 17px;
+	width: 50vw;
+	text-align: center;
 }
 
 .social{
@@ -390,6 +396,8 @@ footer p{
 	transform: scale(1.3);
 	transition: .4s;
 }
+
+
 
 
 
