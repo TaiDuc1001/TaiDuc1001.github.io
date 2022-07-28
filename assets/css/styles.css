@@ -397,6 +397,112 @@ footer p:nth-child(2){
 	transition: .4s;
 }
 
+/* Subcribe popup */
+#popup{
+	position: fixed;
+	top: -100%;
+	left: 50%;
+	width: 400px;
+	margin: 30px;
+	z-index: 1000;
+	background: white;
+	padding: 80px 50px 50px;
+	visibility: hidden;
+	transition: .5s;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+	transform: translate(-50%, -50%);
+}
+
+
+#popup.active{
+	visibility: visible;
+	top: 50%;
+}
+
+.close:hover{
+	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
+
+}
+
+/* Popup content */
+#popup .popup-content{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Popup email image */
+#popup .popup-content img{
+	max-width: 80px;
+}
+
+/* The big word Join Us */
+#popup .popup-content h2{
+	font-size: 24px;
+	font-weight: 500;
+	color: #333;
+	margin: 20px 0px 10px;
+}
+
+/* Popup description */
+#popup .popup-content p{
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+}
+
+/* Popup Email input box */
+#popup .popup-content .inputBox {
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Popup Email input box */
+#popup .popup-content .inputBox input{
+	width: 100%;
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 15px;
+	outline: none;
+	font-size: 18px;
+}
+
+/* Popup submit button */
+#popup .popup-content .inputBox input[type="submit"]{
+	max-width: 150px;
+	color: white;
+	background-color: #004fac;
+	box-shadow: none;
+	border: none;
+	border-radius: 0px;
+}
+
+/* Popup close button */
+.close{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+}
+
+/* Popup close image button */
+.close img{
+	max-width: 20px;
+	display: block;
+}
+
+
+
+
+
+
+
 
 
 
@@ -595,6 +701,7 @@ footer p:nth-child(2){
 		margin-right: auto;
 		transition: .4s;
 	}
+
 	.about-text button a{
 		color: white;
 		text-decoration: none;
@@ -609,10 +716,10 @@ footer p:nth-child(2){
 	/* Modile service section	 */
 	.services{
 		background-color: var(--darker-black);
-		/* background-color: var(--light-pink); */
 		width: 100%;
 		padding: 100px 0px;
 	}
+
 	/* Mobile big word OUR SERVICES */
 	.title{
 		color: white;
@@ -622,13 +729,14 @@ footer p:nth-child(2){
 		text-align: center;
 	}
 
+	/* Mobile Service box (include cards) */
 	.box {
 		display: block;
 		justify-content: center;
 		align-items: center;
-		/* min-height: 400px; */
 	}
 
+	/* Mobile services - cards */
 	.card{
 		height: 50vh;
 		width: 40vh;
@@ -642,6 +750,7 @@ footer p:nth-child(2){
 		text-align: center;
 	}
 
+	/* Mobile service-cards icons */
 	.card i{
 		font-size: 50px;
 		display: block;
@@ -650,12 +759,14 @@ footer p:nth-child(2){
 		color: var(--red);
 	}
 
+	/* Mobile service-cards titles */
 	.card h5{
 		color: white;
 		font-size: 23px;
 		margin-bottom: 15px;
 	}
 
+	/* Mobile service-cards description */
 	.pra p{
 		color: var(--light-pink);
 		font-size: 16px;
@@ -664,6 +775,7 @@ footer p:nth-child(2){
 		/* font-weight: bold; */
 	}
 
+	/* Mobile service-card ReadMore buttons */
 	.card .button{
 		color: white;
 		background-color: var(--red);
@@ -684,6 +796,7 @@ footer p:nth-child(2){
 		border: 4px solid var(--red);
 	}
 
+	/* Mobile footer */
 	footer{
 		position: relative;
 		width: 100%;
@@ -696,6 +809,8 @@ footer p:nth-child(2){
 		align-items: center;
 		justify-content: center;
 	}
+
+	/* Mobile footer-MyName */
 	footer p:nth-child(1){
 		display: block;
 		font-size: 27px;
@@ -704,6 +819,8 @@ footer p:nth-child(2){
 		margin-bottom: 20px;
 		font-weight: bold;
 	}
+
+	/* Mobile footer-[contact me] script */
 	footer p:nth-child(2){
 		color: white;
 		font-size: 17px;
@@ -711,10 +828,12 @@ footer p:nth-child(2){
 		text-align: center;
 	}
 
+	/* Mobile social icons */
 	.social{
 		display: flex;
 	}
 
+	/* Mobile social icon text */
 	.social a{
 		width: 45px;
 		height: 45px;
@@ -734,6 +853,107 @@ footer p:nth-child(2){
 		transition: .4s;
 	}
 
+
+	/* Popup Section */
+
+	/* Subcribe popup */
+	#popup{
+		position: fixed;
+		top: -100%;
+		left: 50%;
+		width: 80vw;
+		margin: 0px;
+		z-index: 1000;
+		background: white;
+		padding: 80px 50px 50px;
+		visibility: hidden;
+		transition: .5s;
+		box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+		transform: translate(-50%, -50%);
+	}
+
+
+	#popup.active{
+		visibility: visible;
+		top: 50%;
+	}
+
+	.close:hover{
+		box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
+	
+	}
+	
+	/* Mobile Popup content */
+	#popup .popup-content{
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	/* Mobile Popup email image */
+	#popup .popup-content img{
+		max-width: 80px;
+	}
+
+	/* Mobile Popup The big word Join Us */
+	#popup .popup-content h2{
+		font-size: 24px;
+		font-weight: 500;
+		color: #333;
+		margin: 20px 0px 10px;
+	}
+
+	/* Mobile Popup description */
+	#popup .popup-content p{
+		text-align: center;
+		font-size: 16px;
+		color: #333;
+	}
+
+	/* Mobile Popup Email input box */
+	#popup .popup-content .inputBox {
+		position: relative;
+		width: 100%;
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* Mobile Popup Email input box */
+	#popup .popup-content .inputBox input{
+		width: 100%;
+		border: 1px solid rgba(0,0,0,0.2);
+		padding: 15px;
+		outline: none;
+		font-size: 18px;
+	}
+
+	/* Mobile Popup submit button */
+	#popup .popup-content .inputBox input[type="submit"]{
+		max-width: 150px;
+		color: white;
+		background-color: #004fac;
+		box-shadow: none;
+		border: none;
+		border-radius: 0px;
+	}
+
+	/* Mobile Popup close button */
+	.close{
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		cursor: pointer;
+	}
+
+	/* Mobile Popup close image button */
+	.close img{
+		max-width: 20px;
+	}
 
 }
 
