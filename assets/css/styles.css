@@ -11,6 +11,7 @@
 	--dark-black: #191919;
 	--light-black: #1e1e1e;
 	--light-grey: #858585;
+	--darker-black: #101010;
 }
 
 @keyframes shake {
@@ -37,7 +38,7 @@
 }
 
 body{
-	background-color: var(--dark-black);
+	/* background-color: var(--dark-black); */
 	width: 100vw;
 	height: 100vh;
 	margin: 0px;
@@ -273,22 +274,143 @@ input[name="submit"]:hover {
 	border: 4px solid var(--red);
 }
 
+.services{
+	background-color: var(--darker-black);
+	/* background-color: var(--light-pink); */
+	width: 100%;
+	padding: 100px 0px;
+}
+
+.title{
+	color: white;
+	font-size: 60px;
+	display: block;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+}
+
+.card{
+	height: 50vh;
+	width: 46vh;
+	padding: 20px 35px;
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	background-color: var(--dark-black);
+	overflow: hidden;
+	text-align: center;
+}
+
+.card i{
+	font-size: 50px;
+	display: block;
+	text-align: center;
+	margin: 25px 0px;
+	color: var(--red);
+}
+
+.card h5{
+	color: white;
+	font-size: 23px;
+	margin-bottom: 15px;
+}
+
+.pra p{
+	color: var(--light-pink);
+	font-size: 16px;
+	line-height: 27px;
+	margin-bottom: 25px;
+	/* font-weight: bold; */
+}
+
+.card .button{
+	color: white;
+	background-color: var(--red);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	border-radius: 30px;
+	padding: 9px 22px;
+	transition: .4s;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+.card .button:hover{
+	background-color: transparent;
+	border: 4px solid var(--red);
+}
+
+footer{
+	position: relative;
+	width: 100%;
+	height: 40vh;
+	background-color: var(--light-black);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+footer p{
+	font-size: 30px;
+	color: white;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.social{
+	display: flex;
+}
+
+.social a{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--red);
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.social a:hover{
+	transform: scale(1.3);
+	transition: .4s;
+}
+
+
+
 
 /* Mobile phone: Width < 740px */
 @media only screen and (max-width: 46.1875em){
 
-	/* Hero Section */
+	/* Mobile Hero Section */
 	.hero{
 		height: 100vh;
 		width: 100vw;
+		background-color: var(--dark-black);
+
 	}
 
-	/* Disable menu */
+	/*  Mobile Disable menu */
 	nav ul{
 		display: none;
 	}
 
-	/* Subcribe button */
+	/*  Mobile Subcribe button */
 	.btn{
 		background-color: var(--red);
 		border-radius: 30px;
@@ -306,7 +428,7 @@ input[name="submit"]:hover {
 		transform: scale(1.2);
 	}
 
-	/* nav content */
+	/*  Mobile nav content */
 	.content{
 		position: relative;
 		top: 40%;
@@ -315,7 +437,7 @@ input[name="submit"]:hover {
 
 	}
 
-	/* h1: The big words Phan Tai Duc */
+	/*  Mobile h1: The big words Phan Tai Duc */
 	h1{
 		color: white;
 		margin: 20px 0px;
@@ -323,7 +445,7 @@ input[name="submit"]:hover {
 		letter-spacing: 2px;
 	}
 
-	/* Put span "Tai Duc" down a new line */
+	/*  Mobile Put span "Tai Duc" down a new line */
 	.content h1 span{
 		font-size: 60px;
 		margin-top: 20px ;
@@ -331,21 +453,21 @@ input[name="submit"]:hover {
 		display: block;
 	}
 
-	/* h3: Short description "I'm a student" */
+	/*  Mobile h3: Short description "I'm a student" */
 	h3{
 		color: white;
 		margin-bottom: 50px;
 		font-size: 20px;
 	}
 
-	/* h4: greeting "Hello, I am" */
+	/*  Mobile h4: greeting "Hello, I am" */
 	h4{
 		color: var(--light-pink);
 		letter-spacing: 1.5px;
 		font-size: 15px;
 	}
 
-	/* Short contact form */
+	/*  Mobile Short contact form */
 	.newslatter form{
 		width: 85%;
 		max-width: 90%;
@@ -392,7 +514,7 @@ input[name="submit"]:hover {
 		perspective: 1000px;
 	}
 
-	/* about section */
+	/*  Mobile about section */
 	.about{
 		background-color: var(--dark-black);
 		height: 100vh;
@@ -402,7 +524,7 @@ input[name="submit"]:hover {
 		align-items: center;
 	}
 
-	/* div Main in About section */
+	/*  Mobile div Main in About section */
 	.main{
 		width: 100%;
 		display: block;
@@ -412,7 +534,7 @@ input[name="submit"]:hover {
 		max-width: 100%;
 	}
 	
-	/* gigachad */
+	/*  Mobile gigachad */
 	.about img{
 		position: relative;
 		align-items: center;
@@ -433,7 +555,7 @@ input[name="submit"]:hover {
 	}
 	
 
-	/* The big words About Me */
+	/*  Mobile The big words About Me */
 	.about-text h2{
 		color: white;
 		font-size: 30px;
@@ -442,7 +564,7 @@ input[name="submit"]:hover {
 		margin-bottom: 20px;
 	}
 	
-	/* About Me - Description */
+	/*  Mobile About Me - Description */
 	.about-text h5{
 		text-align: center;
 		color: white;
@@ -452,7 +574,7 @@ input[name="submit"]:hover {
 		text-transform: capitalize;
 	}
 
-	/* Button Let's talk */
+	/*  Mobile Button Let's talk */
 	.about-text button{
 		position: relative;
 		display: flex;
