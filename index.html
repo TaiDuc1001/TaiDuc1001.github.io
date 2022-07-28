@@ -21,7 +21,7 @@
 
 
 
-
+	<!-- Popup section -->
 	<div id="popup">
 		<div class="popup-content">
 			<!-- <i class="fa-regular fa-circle-envelope"></i> -->
@@ -49,6 +49,18 @@
 	
 
 
+	<!-- Clock -->
+	<div class="clock">
+		<div class="hour">
+			<div class="hr" id="hr"></div>
+		</div>
+		<div class="min">
+			<div class="mn" id="mn"></div>
+		</div>
+		<div class="sec">
+			<div class="sc" id="sc"></div>
+		</div>
+	</div>
 
 	<!-- Hero section -->
 	<div class="hero">
@@ -189,10 +201,32 @@
 		</div>
 
 	</footer>
-	<script>
+
+
+
+	<script type="text/javascript">
+
+		const deg = 6;
+		const hr = document.querySelector('#hr')
+		const mn = document.querySelector('#mn')
+		const sc = document.querySelector('#sc')
+
+		setInterval(() => {
+
+			let day = new Date();
+			let hh = day.getHours() * 30;
+			let mm = day.getMinutes() * deg;
+			let ss = day.getSeconds() * deg;
+	
+			hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+			mn.style.transform = `rotateZ(${mm}deg)`;
+			sc.style.transform = `rotateZ(${ss}deg)`;
+		})
+
+
 		function popupToggle(){
 			const popup = document.getElementById('popup');
-			popup.classList.toggle('active')
+			popup.classList.toggle('active');
 		}
 	</script>
 

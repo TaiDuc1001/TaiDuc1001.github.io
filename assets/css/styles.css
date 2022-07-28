@@ -49,6 +49,7 @@ body{
 
 .hero {
 	background-color: var(--dark-black);
+	/* background-color: #091921; */
 	height: 100vh;
 	width: 100%;
 	background-size: cover;
@@ -501,6 +502,105 @@ footer p:nth-child(2){
 
 
 
+/* clock */
+.clock{
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	top: 30%;
+	right: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(../img/clock.png);
+	background-size: cover;
+	border: 4px solid var(--dark-black);
+	border-radius: 50%;
+	box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+		inset	0 -15px 15px rgba(255, 255, 255, 0.05),
+				0  15px 15px rgba(0, 0, 0, 0.05),
+		inset	0  15px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* clock */
+.clock::before{
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	border-radius: 50%;
+	z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+	position: absolute;
+}
+
+/* Hour hand size */
+.clock .hour, .hr{
+	width: 160px;
+	height: 160px;
+}
+
+/* Minute hand size */
+.clock .min, .mn{
+	width: 190px;
+	height: 190px;
+}
+
+/* Second hand size */
+.clock .sec, .sc{
+	width: 230px;
+	height: 230px;
+}
+
+/* Hands clock General attributes */
+.hr, .mn, .sc {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	border-radius: 50%;
+}
+
+/* Hour hand */
+.hr::before{
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 80px;
+	background: var(--red);
+	z-index: 10;
+	border-radius: 6px 6px 0 0;
+}
+
+/* Minute hand */
+.mn::before{
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 90px;
+	background: white;
+	z-index: 11;
+	border-radius: 6px 6px 0 0;
+}
+
+
+/* Second hand */
+.sc::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 150px;
+	background: white;
+	z-index: 12;
+	border-radius: 6px 6px 0 0;
+}
+
+
+
 
 
 
@@ -550,7 +650,7 @@ footer p:nth-child(2){
 		top: 40%;
 		left: 0%;
 		padding-left: 8%;
-		/* max-width: 80% !important; */
+		max-width: 80% !important;
 		display: block;
 		transform: translateY(-50%);
 
@@ -587,13 +687,9 @@ footer p:nth-child(2){
 		font-size: 15px;
 	}
 
-	/* .newslatter{
-		display: inline;
-	} */
 	/*  Mobile Short contact form */
 	.newslatter form{
 		position: relative;
-		/* width: 80%; */
 		right: 10%;
 		max-width: 80%;
 		padding: auto;
@@ -610,7 +706,6 @@ footer p:nth-child(2){
 		width: 100%;
 		margin-top: 25px;
 		padding: 14px 0px 14px 15px;
-		/* margin-bottom: 100px; */
 		border: 2px solid var(--red);
 		border-radius: 30px;
 		outline: none;
