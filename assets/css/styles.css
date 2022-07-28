@@ -518,7 +518,7 @@ footer p:nth-child(2){
 		height: 100vh;
 		width: 100vw;
 		background-color: var(--dark-black);
-
+		display: block;
 	}
 
 	/*  Mobile Disable menu */
@@ -548,7 +548,10 @@ footer p:nth-child(2){
 	.content{
 		position: relative;
 		top: 40%;
-		left: 8%;
+		left: 0%;
+		padding-left: 8%;
+		/* max-width: 80% !important; */
+		display: block;
 		transform: translateY(-50%);
 
 	}
@@ -574,6 +577,7 @@ footer p:nth-child(2){
 		color: white;
 		margin-bottom: 50px;
 		font-size: 20px;
+		display: inline;
 	}
 
 	/*  Mobile h4: greeting "Hello, I am" */
@@ -583,11 +587,17 @@ footer p:nth-child(2){
 		font-size: 15px;
 	}
 
+	/* .newslatter{
+		display: inline;
+	} */
 	/*  Mobile Short contact form */
 	.newslatter form{
-		width: 85%;
-		max-width: 90%;
 		position: relative;
+		/* width: 80%; */
+		right: 10%;
+		max-width: 80%;
+		padding: auto;
+		margin: auto;
 		transition: transform .4s;
 	}
 
@@ -598,7 +608,8 @@ footer p:nth-child(2){
 	input[name='email'] {
 		display: inline-block;
 		width: 100%;
-		padding: 14px 130px 14px 15px;
+		margin-top: 25px;
+		padding: 14px 0px 14px 15px;
 		/* margin-bottom: 100px; */
 		border: 2px solid var(--red);
 		border-radius: 30px;
@@ -608,6 +619,7 @@ footer p:nth-child(2){
 	input[name="email"]:hover{
 		box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
 	}
+
 
 	input[name='submit']{
 		display: inline;
@@ -619,7 +631,7 @@ footer p:nth-child(2){
 		cursor: pointer;
 		background-color: var(--red);
 		color: white;
-		top: 6px;
+		top: 30px;
 		right: 6px;
 		box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
 	}
