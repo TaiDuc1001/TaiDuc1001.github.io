@@ -262,6 +262,12 @@ input[name="submit"]:hover {
 	cursor: pointer;
 }
 
+.about-text button a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
 .about-text button:hover{
 	background-color: transparent;
 	border: 4px solid var(--red);
@@ -305,6 +311,8 @@ input[name="submit"]:hover {
 		position: relative;
 		top: 40%;
 		left: 8%;
+		transform: translateY(-50%);
+
 	}
 
 	/* h1: The big words Phan Tai Duc */
@@ -389,32 +397,41 @@ input[name="submit"]:hover {
 		background-color: var(--dark-black);
 		height: 100vh;
 		padding-top: 100px;
+		display: block;
+		justify-content: center;
+		align-items: center;
 	}
 
+	/* div Main in About section */
+	.main{
+		width: 100%;
+		display: block;
+		justify-content: center;
+		align-items: center;
+		/* padding:0px 30px; */
+		max-width: 100%;
+	}
+	
 	/* gigachad */
 	.about img{
 		position: relative;
+		align-items: center;
 		display: block;
 		height: 200px;
 		width: 200px;
-		margin-left: auto;
-		margin-right: auto;
+		margin: auto;
 	}
 
 	.about-text{
 		width: 80vw;
-		margin: 5px;
+		display: block;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		/* margin: 5px; */
 		margin-top: 30px;
 	}
 	
-	/* div Main in About section */
-	.main{
-		width: 100%;
-		align-items: center;
-		display: block;
-		padding:0px 30px;
-		max-width: 100%;
-	}
 
 	/* The big words About Me */
 	.about-text h2{
@@ -440,16 +457,18 @@ input[name="submit"]:hover {
 		position: relative;
 		display: flex;
 		justify-content: center;
-		color: white;
 		background-color: var(--red);
-		text-decoration: none;
 		border: 2px solid transparent;
-		font-weight: bold;
 		border-radius: 30px;
 		padding: 13px 30px;
 		margin-left: auto;
 		margin-right: auto;
 		transition: .4s;
+	}
+	.about-text button a{
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
 	}
 
 	.about-text button:hover{
