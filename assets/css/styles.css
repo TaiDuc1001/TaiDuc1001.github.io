@@ -4,7 +4,9 @@
 	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
 }
-
+html::-webkit-scrollbar {
+	display: none;
+  }
 :root{
 	--red: #f9004d;
 	--light-pink: #fcfc;
@@ -409,7 +411,7 @@ footer p:nth-child(2){
 	padding: 80px 50px 50px;
 	visibility: hidden;
 	transition: .5s;
-	box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+	box-shadow: 0px 0px 15px black, 0px 0px 45px var(--light-grey);
 	transform: translate(-50%, -50%);
 }
 
@@ -868,7 +870,7 @@ footer p:nth-child(2){
 		padding: 80px 50px 50px;
 		visibility: hidden;
 		transition: .5s;
-		box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+		box-shadow: 0px 0px 15px black, 0px 0px 45px var(--light-grey);
 		transform: translate(-50%, -50%);
 	}
 
@@ -882,7 +884,7 @@ footer p:nth-child(2){
 		box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
 	
 	}
-	
+
 	/* Mobile Popup content */
 	#popup .popup-content{
 		position: relative;
