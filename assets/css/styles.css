@@ -617,7 +617,7 @@ footer p:nth-child(2){
 	.hero{
 		height: 100vh;
 		width: 100vw;
-		background-color: var(--dark-black);
+		background-color: var(--darker-black);
 		display: block;
 	}
 
@@ -647,7 +647,7 @@ footer p:nth-child(2){
 	/*  Mobile nav content */
 	.content{
 		position: relative;
-		top: 40%;
+		top: 42%;
 		left: 0%;
 		padding-left: 8%;
 		max-width: 80% !important;
@@ -659,14 +659,14 @@ footer p:nth-child(2){
 	/*  Mobile h1: The big words Phan Tai Duc */
 	h1{
 		color: white;
-		margin: 20px 0px;
-		font-size: 50px;
+		margin: 40px 0px;
+		font-size: 70px;
 		letter-spacing: 2px;
 	}
 
 	/*  Mobile Put span "Tai Duc" down a new line */
 	.content h1 span{
-		font-size: 60px;
+		font-size: 80px;
 		margin-top: 20px ;
 		margin-left: 0px;
 		display: block;
@@ -676,7 +676,7 @@ footer p:nth-child(2){
 	h3{
 		color: white;
 		margin-bottom: 50px;
-		font-size: 20px;
+		font-size: 25px;
 		display: inline;
 	}
 
@@ -684,16 +684,17 @@ footer p:nth-child(2){
 	h4{
 		color: var(--light-pink);
 		letter-spacing: 1.5px;
-		font-size: 15px;
+		font-size: 20px;
 	}
 
 	/*  Mobile Short contact form */
 	.newslatter form{
 		position: relative;
-		right: 10%;
-		max-width: 80%;
+		/* right: 10%; */
+		max-width: 110%;
 		padding: auto;
 		margin: auto;
+		margin-top: 30px;
 		transition: transform .4s;
 	}
 
@@ -1064,6 +1065,10 @@ footer p:nth-child(2){
 		max-width: 20px;
 	}
 
+	/* Mobile disable clock */
+	.clock{
+		display: none;
+	}
 }
 
 
