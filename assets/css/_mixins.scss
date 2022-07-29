@@ -1,0 +1,37 @@
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin absoluteAlign($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin flexAlign(){
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin text($size: 16px, $weight: 400, $text_transform: none, $decoration: none){
+    font-size: $size;
+    font-weight: $weight;
+    text-transform: $text_transform;
+    text-decoration: $decoration;
+}
+
+@mixin maxWidth($value){
+    @media screen and (max-width: $value){
+        @content;
+    }
+}
+
+@mixin minWidth($value){
+    @media screen and (min-width: $value){
+        @content;
+    }
+}

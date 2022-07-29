@@ -1,1242 +1,951 @@
 * {
-	padding: 0;
-	margin: 0;
-	font-family: 'Josefin Sans', sans-serif;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
 }
+
 html::-webkit-scrollbar {
-	display: none;
-  }
-:root{
-	--red: #f9004d;
-	--light-pink: #fcfc;
-	--dark-black: #191919;
-	--light-black: #1e1e1e;
-	--light-grey: #858585;
-	--darker-black: #101010;
+  display: none;
 }
 
 @keyframes animate {
-	0%, 100%{
-		transform: translateY(10px);
-	}
-	50%{
-		transform: translateY(-10px);
-	}
-}
-
-@keyframes shake {
-	10%, 90% {
-		transform: translate3d(-1px, 0, 0);
-	}
-	20%, 80% {
-		transform: translate3d(2px, 0, 0);
-	}
-	30%, 50%, 70% {
-	  transform: translate3d(-4px, 0, 0);
-	}
-	40%, 60% {
-	  transform: translate3d(4px, 0, 0);
-	}
+  0%, 100% {
+    transform: translateY(10px);
   }
-  
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 @keyframes tilt-shaking {
-	0% { transform: rotate(0deg); }
-	25% { transform: rotate(5deg); }
-	50% { transform: rotate(0eg); }
-	75% { transform: rotate(-5deg); }
-	100% { transform: rotate(0deg); }
-}
-
-body{
-	/* background-color: var(--dark-black); */
-	width: 100vw;
-	height: 100vh;
-	margin: 0px;
-	padding: 0px;
-}
-
-
-/* clock */
-.clock{
-	width: 350px;
-	height: 350px;
-	position: absolute;
-	top: 30%;
-	right: 20%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: url(../img/clock.png);
-	background-size: cover;
-	border: 4px solid var(--dark-black);
-	border-radius: 50%;
-	box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
-		inset	0 -15px 15px rgba(255, 255, 255, 0.05),
-				0  15px 15px rgba(0, 0, 0, 0.05),
-		inset	0  15px 15px rgba(0, 0, 0, 0.05);
-}
-
-/* clock */
-.clock::before{
-	content: '';
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	background-color: white;
-	border-radius: 50%;
-	z-index: 10000;
-}
-
-.clock .hour,
-.clock .min,
-.clock .sec {
-	position: absolute;
-}
-
-/* Hour hand size */
-.clock .hour, .hr{
-	width: 160px;
-	height: 160px;
-}
-
-/* Minute hand size */
-.clock .min, .mn{
-	width: 190px;
-	height: 190px;
-}
-
-/* Second hand size */
-.clock .sec, .sc{
-	width: 230px;
-	height: 230px;
-}
-
-/* Hands clock General attributes */
-.hr, .mn, .sc {
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	border-radius: 50%;
-}
-
-/* Hour hand */
-.hr::before{
-	content: '';
-	position: absolute;
-	width: 8px;
-	height: 80px;
-	background: var(--red);
-	z-index: 10;
-	border-radius: 6px 6px 0 0;
-}
-
-/* Minute hand */
-.mn::before{
-	content: '';
-	position: absolute;
-	width: 4px;
-	height: 90px;
-	background: white;
-	z-index: 11;
-	border-radius: 6px 6px 0 0;
-}
-
-
-/* Second hand */
-.sc::before{
-	content: '';
-	position: absolute;
-	width: 2px;
-	height: 150px;
-	background: white;
-	z-index: 12;
-	border-radius: 6px 6px 0 0;
-}
-
-
-
-
-
-.hero {
-	background-color: var(--dark-black);
-	/* background-color: #091921; */
-	height: 100vh;
-	width: 100%;
-	background-size: cover;
-	background-position: center;
-}
-
-nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-top: 45px;
-	padding-left: 8%;
-	padding-right: 8%;
-}
-
-.logo {
-	color: white;
-	font-size: 35px;
-	letter-spacing: 1px;
-	cursor: pointer;
-	position: relative;
-}
-
-.logo:hover{
-	animation: tilt-shaking .5s infinite;
-}
-
-span {
-	color: var(--red);
-}
-
-nav ul li {
-	list-style-type: none;
-	display: inline-block;
-	padding: 10px 25px;
-	transition: transform .4s;
-
-}
-
-nav ul li:hover{
-	transform: scale(1.2);
-}
-
-nav ul li a{
-	color: white;
-	text-decoration: none;
-	padding-top: 50px;
-	font-weight: bold;
-	font-size: 20px;
-	text-transform: capitalize;
-
-
-	background:
- 	bottom var(--p1, 10px) left 50% /100% var(--p, 2px) no-repeat,
-    linear-gradient(currentColor 0 0) bottom -2px right 50%/var(--d, 0%) 3px no-repeat;
-  	transition: 0.5s;
-
-}
-
-nav ul li a:hover{
-	color: var(--red);
-	--d: 100%;
-	--p: 3px;
-	--p1: 4px;
-}
-
-.btn{
-	background-color: var(--red);
-	border-radius: 30px;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 10px 25px;
-	transition: transform .7s;
-}
-
-.btn:hover{
-	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
-	transform: scale(1.2);
-}
-
-/* content: below hero section and included by hero div */
-.content{
-	position: absolute;
-	top: 50%;
-	left: 8%;
-	transform: translateY(-50%);
-}
-
-/* h1: The big words Phan Tai Duc */
-h1{
-	color: white;
-	margin: 20px 0px 20px;
-	font-size: 75px;
-}
-
-/* h3: Short description "I'm a student" */
-h3{
-	color: white;
-	margin-bottom: 50px;
-	font-size: 25px;
-}
-
-/* h4: greeting "Hello, I am" */
-h4{
-	color: var(--light-pink);
-	letter-spacing: 2px;
-	font-size: 25px;
-}
-
-/* Short contact form */
-.newslatter form{
-	width: 380px;
-	max-width: 100%;
-	position: relative;
-	transition: transform .4s;
-}
-
-.newslatter form:hover{
-	transform: scale(1.07);
-}
-
-input[name='email'] {
-	display: inline-block;
-	width: 100%;
-	padding: 14px 130px 14px 15px;
-	border: 2px solid var(--red);
-	border-radius: 30px;
-	outline: none;
-}
-
-input[name="email"]:hover{
-	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
-}
-
-input[name='submit']{
-	display: inline;
-	position: absolute;
-	outline: none;
-	border: none;
-	padding: 10px 30px;
-	border-radius: 30px;
-	cursor: pointer;
-	background-color: var(--red);
-	color: white;
-	top: 6px;
-	right: 6px;
-	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
-}
-
-input[name="submit"]:hover {
-	animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
-	transform: translate3d(0, 0, 0);
-	perspective: 1000px;
-}
-
-/* About section */
-.about{
-	width: 100%;
-	height: 100vh;
-	padding: 150px 0px;
-	background-color: var(--light-black);
-	
-}
-
-/* div Main in About section */
-.main{
-	width: 1130px;
-	margin: 0px auto;
-	max-width: 95%;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-}
-
-
-
-/* Clock Glass */
-.box-clock{
-	position: absolute;
-	z-index: 1;
-	width: 400px;
-	height: 400px;
-	/* background: white;
-	opacity: .5; */
-	top: 110%;
-	backdrop-filter: blur(25px);
-	border-radius: 50%;
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	animation: animate 5s ease-in-out infinite;
-}
-
-/* .clock-glass-shadow{
-	position: absolute;
-	margin: 10vh 15vw ;
-} */
-
-/* 
-.clock-glass-shadow::before{
-	content: '';
-	position: absolute;
-	bottom: -150px;
-	width: 100%;
-	height: 60px;
-	background: radial-gradient(rgba(255, 255, 255, 0.2), transparent, transparent);
-} */
-
-.clock-glass{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	bottom: 10px;
-	right: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: radial-gradient(transparent, rgba(255, 255, 255, 0.2)), url(../img/clock.png);
-	background-size: cover;
-	border-radius: 50%;
-	backdrop-filter: blur(25px);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-bottom: none;
-	border-right: none;
-	box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1),
-				 10px  10px 20px rgba(0, 0, 0, 0.1),
-				  0px  40px 50px rgba(0, 0, 0, 0.2);
-}
-
-.clock-glass::before{
-	content: '';
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	background: white;
-	border-radius: 50%;
-	z-index: 10000;
-}
-
-
-.hour,
-.min,
-.sec {
-	position: absolute;
-}
-
-/* Hour hand size */
-.hour, .hr{
-	width: 160px;
-	height: 160px;
-}
-
-/* Minute hand size */
-.min, .mn{
-	width: 190px;
-	height: 190px;
-}
-
-/* Second hand size */
-.sec, .sc{
-	width: 230px;
-	height: 230px;
-}
-
-
-.hour, .hr{
-	width: 160px;
-	height: 160px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* gigachad */
-.about img{
-	height: auto;
-	width: auto;
-	display: none;
-}
-
-.about-text{
-	width: 40vw;
-	margin-left: 600px;
-}
-
-/* The big words About Me */
-.about-text h2{
-	color: white;
-	font-size: 75px;
-	text-transform: capitalize;
-	margin-bottom: 20px;
-}
-
-/* About Me - Description */
-.about-text h5{
-	color: white;
-	letter-spacing: 2px;
-	font-size: 22px;
-	margin-bottom: 25px;
-	text-transform: capitalize;
-}
-
-/* Button Let's talk */
-.about-text button{
-	color: white;
-	background-color: var(--red);
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	border-radius: 30px;
-	padding: 13px 30px;
-	transition: .4s;
-	cursor: pointer;
-}
-
-.about-text button a{
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.about-text button:hover{
-	background-color: transparent;
-	border: 4px solid var(--red);
-}
-
-.services{
-	background-color: var(--darker-black);
-	/* background-color: var(--light-pink); */
-	width: 100%;
-	padding: 100px 0px;
-}
-
-.title{
-	color: white;
-	font-size: 60px;
-	display: block;
-	margin: 30px auto;
-	text-align: center;
-}
-
-.box {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 400px;
-}
-
-.card{
-	height: 50vh;
-	width: 46vh;
-	padding: 20px 35px;
-	border-radius: 20px;
-	margin: 15px;
-	position: relative;
-	background-color: var(--dark-black);
-	overflow: hidden;
-	text-align: center;
-}
-
-.card i{
-	font-size: 50px;
-	display: block;
-	text-align: center;
-	margin: 25px 0px;
-	color: var(--red);
-}
-
-.card h5{
-	color: white;
-	font-size: 23px;
-	margin-bottom: 15px;
-}
-
-.pra p{
-	color: var(--light-pink);
-	font-size: 16px;
-	line-height: 27px;
-	margin-bottom: 25px;
-	/* font-weight: bold; */
-}
-
-.card .button{
-	color: white;
-	background-color: var(--red);
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	border-radius: 30px;
-	padding: 9px 22px;
-	transition: .4s;
-	cursor: pointer;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-
-.card .button:hover{
-	background-color: transparent;
-	border: 4px solid var(--red);
-}
-
-footer{
-	position: relative;
-	width: 100%;
-	height: 35vh;
-	background-color: var(--light-black);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-footer p:nth-child(1){
-	font-size: 30px;
-	color: white;
-	margin-top: 50px;
-	margin-bottom: 20px;
-	font-weight: bold;
-}
-footer p:nth-child(2){
-	color: white;
-	font-size: 17px;
-	width: 50vw;
-	text-align: center;
-}
-
-.social{
-	display: flex;
-}
-
-.social a{
-	width: 45px;
-	height: 45px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--red);
-	border-radius: 50%;
-	margin: 22px 10px;
-	color: white;
-	text-decoration: none;
-	font-size: 20px;
-}
-
-.social a:hover{
-	transform: scale(1.3);
-	transition: .4s;
-}
-
-/* Subcribe popup */
-#popup{
-	position: fixed;
-	top: -100%;
-	left: 50%;
-	width: 400px;
-	margin: 30px;
-	z-index: 1000;
-	background: white;
-	padding: 80px 50px 50px;
-	visibility: hidden;
-	transition: .5s;
-	box-shadow: 0px 0px 15px black, 0px 0px 45px var(--light-grey);
-	transform: translate(-50%, -50%);
-}
-
-
-#popup.active{
-	visibility: visible;
-	top: 50%;
-}
-
-.close:hover{
-	box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
-
-}
-
-/* Popup content */
-#popup .popup-content{
-	position: relative;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-
-/* Popup email image */
-#popup .popup-content img{
-	max-width: 80px;
-}
-
-/* The big word Join Us */
-#popup .popup-content h2{
-	font-size: 24px;
-	font-weight: 500;
-	color: #333;
-	margin: 20px 0px 10px;
-}
-
-/* Popup description */
-#popup .popup-content p{
-	text-align: center;
-	font-size: 16px;
-	color: #333;
-}
-
-/* Popup Email input box */
-#popup .popup-content .inputBox {
-	position: relative;
-	width: 100%;
-	margin-top: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-/* Popup Email input box */
-#popup .popup-content .inputBox input{
-	width: 100%;
-	border: 1px solid rgba(0,0,0,0.2);
-	padding: 15px;
-	outline: none;
-	font-size: 18px;
-}
-
-/* Popup submit button */
-#popup .popup-content .inputBox input[type="submit"]{
-	max-width: 150px;
-	color: white;
-	background-color: #004fac;
-	box-shadow: none;
-	border: none;
-	border-radius: 0px;
-}
-
-/* Popup close button */
-.close{
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	cursor: pointer;
-}
-
-/* Popup close image button */
-.close img{
-	max-width: 20px;
-	display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Mobile phone: Width < 740px */
-@media only screen and (max-width: 46.1875em){
-
-	/* Mobile Hero Section */
-	.hero{
-		height: 100vh;
-		width: 100vw;
-		background-color: var(--darker-black);
-		display: block;
-	}
-
-	/*  Mobile Disable menu */
-	nav ul{
-		display: none;
-	}
-
-	/*  Mobile Subcribe button */
-	.btn{
-		background-color: var(--red);
-		border-radius: 30px;
-		color: white;
-		text-decoration: none;
-		border: 2px solid transparent;
-		font-weight: bold;
-		padding: 8px 15px;
-		font-size: 14px;
-		transition: transform .4s;
-		box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
-	}
-
-	.btn:active{
-		transform: scale(1.2);
-	}
-
-	/*  Mobile nav content */
-	.content{
-		position: relative;
-		top: 42%;
-		left: 0%;
-		padding-left: 8%;
-		max-width: 80% !important;
-		display: block;
-		transform: translateY(-50%);
-
-	}
-
-	/*  Mobile h1: The big words Phan Tai Duc */
-	h1{
-		color: white;
-		margin: 40px 0px;
-		font-size: 65px;
-		letter-spacing: 2px;
-	}
-
-	/*  Mobile Put span "Tai Duc" down a new line */
-	.content h1 span{
-		font-size: 70px;
-		margin-top: 20px ;
-		margin-left: 0px;
-		display: block;
-	}
-
-	/*  Mobile h3: Short description "I'm a student" */
-	h3{
-		color: white;
-		margin-bottom: 50px;
-		font-size: 25px;
-		display: inline;
-	}
-
-	/*  Mobile h4: greeting "Hello, I am" */
-	h4{
-		color: var(--light-pink);
-		letter-spacing: 1.5px;
-		font-size: 20px;
-	}
-
-	/*  Mobile Short contact form */
-	.newslatter form{
-		position: relative;
-		/* right: 10%; */
-		max-width: 110%;
-		padding: auto;
-		margin: auto;
-		margin-top: 30px;
-		transition: transform .4s;
-	}
-
-	.newslatter form:hover{
-		transform: scale(1.07);
-	}
-		
-	input[name='email'] {
-		display: inline-block;
-		width: 100%;
-		margin-top: 25px;
-		padding: 14px 0px 14px 15px;
-		border: 2px solid var(--red);
-		border-radius: 30px;
-		outline: none;
-	}
-
-	input[name="email"]:hover{
-		box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
-	}
-
-
-	input[name='submit']{
-		display: inline;
-		position: absolute;
-		outline: none;
-		border: none;
-		padding: 10px 30px;
-		border-radius: 30px;
-		cursor: pointer;
-		background-color: var(--red);
-		color: white;
-		top: 30px;
-		right: 6px;
-		box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
-	}
-	
-	input[name="submit"]:hover {
-		animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
-		transform: translate3d(0, 0, 0);
-		perspective: 1000px;
-	}
-
-	/*  Mobile about section */
-	.about{
-		background-color: var(--dark-black);
-		height: 100vh;
-		padding-top: 100px;
-		display: block;
-		justify-content: center;
-		align-items: center;
-	}
-
-	/*  Mobile div Main in About section */
-	.main{
-		width: 100%;
-		display: block;
-		justify-content: center;
-		align-items: center;
-		/* padding:0px 30px; */
-		max-width: 100%;
-	}
-	
-	/*  Mobile gigachad */
-	.about img{
-		position: relative;
-		align-items: center;
-		display: block;
-		height: 200px;
-		width: 200px;
-		margin: auto;
-		display: none;
-	}
-
-	.about-text{
-		width: 80vw;
-		display: block;
-		justify-content: center;
-		align-items: center;
-		margin: auto;
-		/* margin: 5px; */
-		margin-top: 300px;
-	}
-	
-
-	/*  Mobile The big words About Me */
-	.about-text h2{
-		color: white;
-		font-size: 30px;
-		text-align: center;
-		text-transform: capitalize;
-		margin-bottom: 20px;
-	}
-	
-	/*  Mobile About Me - Description */
-	.about-text h5{
-		text-align: center;
-		color: white;
-		letter-spacing: 2px;
-		font-size: 22px;
-		margin-bottom: 25px;
-		text-transform: capitalize;
-	}
-
-	/*  Mobile Button Let's talk */
-	.about-text button{
-		position: relative;
-		display: flex;
-		justify-content: center;
-		background-color: var(--red);
-		border: 2px solid transparent;
-		border-radius: 30px;
-		padding: 13px 30px;
-		margin-left: auto;
-		margin-right: auto;
-		transition: .4s;
-	}
-
-	.about-text button a{
-		color: white;
-		text-decoration: none;
-		font-weight: bold;
-	}
-
-	.about-text button:hover{
-		background-color: transparent;
-		border: 4px solid var(--red);
-	}
-
-	/* Modile service section	 */
-	.services{
-		background-color: var(--darker-black);
-		width: 100%;
-		padding: 100px 0px;
-	}
-
-	/* Mobile big word OUR SERVICES */
-	.title{
-		color: white;
-		font-size: 50px;
-		display: block;
-		margin: 30px 30px;
-		text-align: center;
-	}
-
-	/* Mobile Service box (include cards) */
-	.box {
-		display: block;
-		justify-content: center;
-		align-items: center;
-	}
-
-	/* Mobile services - cards */
-	.card{
-		height: 50vh;
-		width: 40vh;
-		padding: 20px 35px;
-		border-radius: 20px;
-		margin: auto;
-		margin-bottom: 30px;
-		position: relative;
-		background-color: var(--dark-black);
-		overflow: hidden;
-		text-align: center;
-	}
-
-	/* Mobile service-cards icons */
-	.card i{
-		font-size: 50px;
-		display: block;
-		text-align: center;
-		margin: 25px 0px;
-		color: var(--red);
-	}
-
-	/* Mobile service-cards titles */
-	.card h5{
-		color: white;
-		font-size: 23px;
-		margin-bottom: 15px;
-	}
-
-	/* Mobile service-cards description */
-	.pra p{
-		color: var(--light-pink);
-		font-size: 16px;
-		line-height: 27px;
-		margin-bottom: 25px;
-		/* font-weight: bold; */
-	}
-
-	/* Mobile service-card ReadMore buttons */
-	.card .button{
-		color: white;
-		background-color: var(--red);
-		text-decoration: none;
-		border: 2px solid transparent;
-		font-weight: bold;
-		border-radius: 30px;
-		padding: 9px 22px;
-		transition: .4s;
-		cursor: pointer;
-		text-decoration: none;
-		font-weight: bold;
-	}
-
-
-	.card .button:hover{
-		background-color: transparent;
-		border: 4px solid var(--red);
-	}
-
-	/* Mobile footer */
-	footer{
-		position: relative;
-		width: 100%;
-		height: 200px;
-		margin: 0px;
-		/* padding-top: 10px; */
-		background-color: var(--light-black);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	/* Mobile footer-MyName */
-	footer p:nth-child(1){
-		display: block;
-		font-size: 27px;
-		color: white;
-		margin-top: 30px;
-		margin-bottom: 20px;
-		font-weight: bold;
-	}
-
-	/* Mobile footer-[contact me] script */
-	footer p:nth-child(2){
-		color: white;
-		font-size: 17px;
-		width: 50vw;
-		text-align: center;
-	}
-
-	/* Mobile social icons */
-	.social{
-		display: flex;
-	}
-
-	/* Mobile social icon text */
-	.social a{
-		width: 45px;
-		height: 45px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--red);
-		border-radius: 50%;
-		margin: 22px 10px;
-		color: white;
-		text-decoration: none;
-		font-size: 20px;
-	}
-
-	.social a:hover{
-		transform: scale(1.3);
-		transition: .4s;
-	}
-
-
-	/* Popup Section */
-
-	/* Subcribe popup */
-	#popup{
-		position: fixed;
-		top: -100%;
-		left: 50%;
-		width: 80vw;
-		margin: 0px;
-		z-index: 1000;
-		background: white;
-		padding: 80px 50px 50px;
-		visibility: hidden;
-		transition: .5s;
-		box-shadow: 0px 0px 15px black, 0px 0px 45px var(--light-grey);
-		transform: translate(-50%, -50%);
-	}
-
-
-	#popup.active{
-		visibility: visible;
-		top: 50%;
-	}
-
-	.close:hover{
-		box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
-	
-	}
-
-	/* Mobile Popup content */
-	#popup .popup-content{
-		position: relative;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
-
-	/* Mobile Popup email image */
-	#popup .popup-content img{
-		max-width: 80px;
-	}
-
-	/* Mobile Popup The big word Join Us */
-	#popup .popup-content h2{
-		font-size: 24px;
-		font-weight: 500;
-		color: #333;
-		margin: 20px 0px 10px;
-	}
-
-	/* Mobile Popup description */
-	#popup .popup-content p{
-		text-align: center;
-		font-size: 16px;
-		color: #333;
-	}
-
-	/* Mobile Popup Email input box */
-	#popup .popup-content .inputBox {
-		position: relative;
-		width: 100%;
-		margin-top: 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	/* Mobile Popup Email input box */
-	#popup .popup-content .inputBox input{
-		width: 100%;
-		border: 1px solid rgba(0,0,0,0.2);
-		padding: 15px;
-		outline: none;
-		font-size: 18px;
-	}
-
-	/* Mobile Popup submit button */
-	#popup .popup-content .inputBox input[type="submit"]{
-		max-width: 150px;
-		color: white;
-		background-color: #004fac;
-		box-shadow: none;
-		border: none;
-		border-radius: 0px;
-	}
-
-	/* Mobile Popup close button */
-	.close{
-		position: absolute;
-		top: 30px;
-		right: 30px;
-		cursor: pointer;
-	}
-
-	/* Mobile Popup close image button */
-	.close img{
-		max-width: 20px;
-	}
-
-	/* Mobile disable clock */
-	.clock{
-		display: none;
-	}
-
-	/* .clock-glass, .box-clock{
-		display: none;
-	} */
-
-	.box-clock{
-		width: 250px;
-		height: 250px;
-		top: 115%;
-		left: 18%;
-		/* margin: auto; */
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+body {
+  background-color: #191919;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  /* clock */
+  /* About section */
+  /* Subcribe popup */
+}
+body .clock {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  bottom: auto;
+  left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/clock.png);
+  background-size: cover;
+  border: 4px solid #191919;
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.05);
+  /* Second hand size */
+  /* Hour hand size */
+  /* Minute hand size */
+  /* Hands clock General attributes */
+}
+@media screen and (max-width: 46.1875em) {
+  body .clock {
+    display: none;
+  }
+}
+body .clock::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 10000;
+}
+body .clock .hour,
+body .clock .min,
+body .clock .sec {
+  position: absolute;
+}
+body .clock .sec,
+body .clock .sec .sc {
+  width: 230px;
+  height: 230px;
+}
+body .clock .hour,
+body .clock .hour .hr {
+  width: 160px;
+  height: 160px;
+}
+body .clock .min,
+body .clock .min .mn {
+  width: 190px;
+  height: 190px;
+}
+body .clock .sec .sc,
+body .clock .hour .hr,
+body .clock .min .mn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  align-items: baseline;
+  border-radius: 50%;
+}
+body .clock .hour .hr::before {
+  width: 8px;
+  height: 80px;
+  content: "";
+  position: absolute;
+  background: #f9004d;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+body .clock .min .mn::before {
+  width: 4px;
+  height: 90px;
+  content: "";
+  position: absolute;
+  background: white;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+body .clock .sec .sc::before {
+  width: 2px;
+  height: 150px;
+  content: "";
+  position: absolute;
+  background: white;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+body .hero {
+  background-color: var(--dark-black);
+  /* background-color: #091921; */
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  /* content: below hero section and included by hero div */
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: #101010;
+    display: block;
+  }
+}
+body .hero nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 45px 8% 0 8%;
+}
+body .hero nav .logo {
+  position: relative;
+  color: white;
+  font-size: 35px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+body .hero nav .logo:hover {
+  animation: tilt-shaking 0.5s infinite;
+}
+body .hero nav .logo span {
+  color: #f9004d;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero nav ul {
+    display: none;
+  }
+}
+body .hero nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 25px;
+  transition: transform 0.4s;
+}
+body .hero nav ul li:hover {
+  transform: scale(1.2);
+}
+body .hero nav ul li a {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+  padding-top: 50px;
+  background: bottom var(--p1, 10px) left 50%/100% var(--p, 2px) no-repeat, linear-gradient(currentColor 0 0) bottom -2px right 50%/var(--d, 0%) 3px no-repeat;
+  transition: 0.5s;
+}
+body .hero nav ul li a:hover {
+  color: #f9004d;
+  --d: 100%;
+  --p: 3px;
+  --p1: 4px;
+}
+body .hero nav .btn {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: none;
+  text-decoration: none;
+  background-color: #f9004d;
+  border-radius: 30px;
+  color: white;
+  border: 2px solid transparent;
+  padding: 10px 25px;
+  transition: transform 0.7s;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero nav .btn {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: none;
+    text-decoration: none;
+    background-color: #f9004d;
+    border-radius: 30px;
+    color: white;
+    border: 2px solid transparent;
+    padding: 8px 15px;
+    transition: transform 0.4s;
+    box-shadow: 0px 0px 5px black, 0px 0px 15px #858585;
+  }
+}
+body .hero nav .btn:hover {
+  box-shadow: 0px 0px 5px black, 0px 0px 15px var(--light-grey);
+  transform: scale(1.2);
+}
+body .hero .content {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 8%;
+  transform: translateY(-50%);
+  /* h1: The big words Phan Tai Duc */
+  /* h3: Short description "I'm a student" */
+  /* h4: greeting "Hello, I am" */
+  /* Short contact form */
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content {
+    position: absolute;
+    top: 42%;
+    right: auto;
+    bottom: auto;
+    left: 0%;
+    position: relative;
+    padding-left: 8%;
+    max-width: 80% !important;
+    display: block;
+    transform: translateY(-50%);
+  }
+}
+body .hero .content h1 {
+  color: white;
+  margin: 20px 0px 20px;
+  font-size: 75px;
+  font-weight: 700;
+  text-transform: none;
+  text-decoration: none;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content h1 {
+    color: white;
+    margin: 40px 0px;
+    font-size: 65px;
+    letter-spacing: 2px;
+  }
+}
+body .hero .content h1 span {
+  color: #f9004d;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content h1 span {
+    font-size: 70px;
+    margin-top: 20px;
+    margin-left: 0px;
+    display: block;
+  }
+}
+body .hero .content h3 {
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: none;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content h3 {
+    color: white;
+    margin-bottom: 50px;
+    font-size: 25px;
+    display: inline;
+  }
+}
+body .hero .content h4 {
+  color: rgba(255, 204, 255, 0.8);
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content h4 {
+    color: rgba(255, 204, 255, 0.8);
+    letter-spacing: 1.5px;
+    font-size: 20px;
+  }
+}
+body .hero .content .newslatter form {
+  width: 380px;
+  max-width: 100%;
+  position: relative;
+  transition: transform 0.4s;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content .newslatter form {
+    position: relative;
+    max-width: 110%;
+    padding: auto;
+    margin: auto;
+    margin-top: 30px;
+    transition: transform 0.4s;
+  }
+}
+body .hero .content .newslatter form:hover {
+  transform: scale(1.07);
+}
+body .hero .content .newslatter form input[name=email] {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 130px 14px 15px;
+  border: 2px solid #f9004d;
+  border-radius: 30px;
+  outline: none;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content .newslatter form input[name=email] {
+    display: inline-block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px 0px 14px 15px;
+    border: 2px solid #f9004d;
+    border-radius: 30px;
+    outline: none;
+  }
+}
+body .hero .content .newslatter form input[name=email]:hover {
+  box-shadow: 0px 0px 5px black, 0px 0px 15px #858585;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content .newslatter form input[name=email]:hover {
+    box-shadow: 0px 0px 5px black, 0px 0px 15px #858585;
+  }
+}
+body .hero .content .newslatter form input[name=submit] {
+  display: inline;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  bottom: auto;
+  left: auto;
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #f9004d;
+  color: white;
+  box-shadow: 0px 0px 5px black, 0px 0px 15px #858585;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content .newslatter form input[name=submit] {
+    position: absolute;
+    top: 30px;
+    right: 6px;
+    bottom: auto;
+    left: auto;
+    display: inline;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #f9004d;
+    color: white;
+    box-shadow: 0px 0px 5px black, 0px 0px 15px #858585;
+  }
+}
+body .hero .content .newslatter form input[name=submit]:hover {
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+@media screen and (max-width: 46.1875em) {
+  body .hero .content .newslatter form input[name=submit]:hover {
+    animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+  }
+}
+body .about {
+  width: 100%;
+  height: 100vh;
+  padding: 150px 0px;
+  background-color: #1e1e1e;
+  /* div Main in About section */
+}
+@media screen and (max-width: 46.1875em) {
+  body .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    background-color: #191919;
+    height: 100vh;
+    padding-top: 100px;
+  }
+}
+body .about .main {
+  width: 1130px;
+  margin: 0px auto;
+  max-width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  /* Clock Glass */
+  /* gigachad */
+}
+@media screen and (max-width: 46.1875em) {
+  body .about .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+body .about .main .clock-glass-shadow .box-clock {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 110%;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  backdrop-filter: blur(25px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  animation: animate 5s ease-in-out infinite;
+}
+@media screen and (max-width: 46.1875em) {
+  body .about .main .clock-glass-shadow .box-clock {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 115%;
+    right: auto;
+    bottom: auto;
+    left: 20%;
+    margin: auto;
+  }
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(transparent, rgba(255, 255, 255, 0.2)), url(../img/clock.png);
+  background-size: cover;
+  border-radius: 50%;
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+  border-right: none;
+  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.1), 0px 40px 50px rgba(0, 0, 0, 0.2);
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  z-index: 10000;
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass .hour,
+body .about .main .clock-glass-shadow .box-clock .clock-glass .min,
+body .about .main .clock-glass-shadow .box-clock .clock-glass .sec {
+  position: absolute;
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass .sec,
+body .about .main .clock-glass-shadow .box-clock .clock-glass .sec .sc {
+  width: 230px;
+  height: 230px;
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass .hour,
+body .about .main .clock-glass-shadow .box-clock .clock-glass .hour .hr {
+  width: 160px;
+  height: 160px;
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass .min,
+body .about .main .clock-glass-shadow .box-clock .clock-glass .min .mn {
+  width: 190px;
+  height: 190px;
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass .sec .sc,
+body .about .main .clock-glass-shadow .box-clock .clock-glass .hour .hr,
+body .about .main .clock-glass-shadow .box-clock .clock-glass .min .mn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  align-items: baseline;
+  border-radius: 50%;
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass .hour .hr::before {
+  width: 8px;
+  height: 80px;
+  content: "";
+  position: absolute;
+  background: #f9004d;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass .min .mn::before {
+  width: 4px;
+  height: 90px;
+  content: "";
+  position: absolute;
+  background: white;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+body .about .main .clock-glass-shadow .box-clock .clock-glass .sec .sc::before {
+  width: 2px;
+  height: 150px;
+  content: "";
+  position: absolute;
+  background: white;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+body .about .main .about img {
+  display: none;
+}
+@media screen and (max-width: 46.1875em) {
+  body .about .main .about img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    align-items: center;
+    display: block;
+    margin: auto;
+    display: none;
+  }
+}
+body .about .main .about-text {
+  width: 40vw;
+  margin-left: 600px;
+  /* The big words About Me */
+  /* About Me - Description */
+  /* Button Let's talk */
+}
+@media screen and (max-width: 46.1875em) {
+  body .about .main .about-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    width: 80vw;
+    margin: 300px auto auto auto;
+  }
+}
+body .about .main .about-text h2 {
+  color: white;
+  font-size: 75px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 46.1875em) {
+  body .about .main .about-text h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+body .about .main .about-text h5 {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 46.1875em) {
+  body .about .main .about-text h5 {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+  }
+}
+body .about .main .about-text h5 span {
+  color: #f9004d;
+}
+body .about .main .about-text button {
+  color: white;
+  background-color: #f9004d;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 13px 30px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+@media screen and (max-width: 46.1875em) {
+  body .about .main .about-text button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f9004d;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    padding: 13px 30px;
+    margin: auto;
+    transition: 0.4s;
+  }
+}
+body .about .main .about-text button a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media screen and (max-width: 46.1875em) {
+  body .about .main .about-text button a {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: none;
+    text-decoration: none;
+    color: white;
+  }
+}
+body .about .main .about-text button:hover {
+  background-color: transparent;
+  border: 4px solid #f9004d;
+}
+body .services {
+  background-color: #101010;
+  width: 100%;
+  padding: 100px 0px;
+}
+body .services .title {
+  color: white;
+  font-size: 60px;
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+}
+@media screen and (max-width: 46.1875em) {
+  body .services .title {
+    margin: 30px 30px;
+    font-size: 50px;
+  }
+}
+body .services .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+@media screen and (max-width: 46.1875em) {
+  body .services .box {
+    display: block;
+  }
+}
+body .services .box .card {
+  height: 50vh;
+  width: 46vh;
+  padding: 20px 35px;
+  border-radius: 20px;
+  margin: 15px;
+  position: relative;
+  background-color: #191919;
+  overflow: hidden;
+  text-align: center;
+}
+@media screen and (max-width: 46.1875em) {
+  body .services .box .card {
+    width: 40vh;
+    margin: auto auto 30px auto;
+  }
+}
+body .services .box .card i {
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin: 25px 0px;
+  color: #f9004d;
+}
+body .services .box .card h5 {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+body .services .box .card .pra p {
+  color: rgba(255, 204, 255, 0.8);
+  font-size: 16px;
+  line-height: 27px;
+  margin-bottom: 25px;
+  /* font-weight: bold; */
+}
+body .services .box .card .button {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: none;
+  text-decoration: none;
+  color: white;
+  background-color: #f9004d;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  padding: 9px 22px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+body .services .box .card .button:hover {
+  background-color: transparent;
+  border: 4px solid #f9004d;
+}
+body footer {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #1e1e1e;
+  flex-direction: column;
+}
+@media screen and (max-width: 46.1875em) {
+  body footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #1e1e1e;
+    flex-direction: column;
+  }
+}
+body footer p:nth-child(1) {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: none;
+  text-decoration: none;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 46.1875em) {
+  body footer p:nth-child(1) {
+    font-size: 27px;
+    font-weight: bold;
+    text-transform: none;
+    text-decoration: none;
+    margin: 50px auto 20px auto;
+  }
+}
+body footer p:nth-child(2) {
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: none;
+  text-decoration: none;
+  color: white;
+  width: 50vw;
+  text-align: center;
+}
+body footer .social {
+  display: flex;
+}
+body footer .social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: none;
+  text-decoration: none;
+  background-color: #f9004d;
+  border-radius: 50%;
+  margin: 22px 10px;
+  color: white;
+}
+body footer .social a:hover {
+  transform: scale(1.3);
+  transition: 0.4s;
+}
+body #popup {
+  position: absolute;
+  top: -100%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  position: fixed;
+  width: 400px;
+  margin: 30px;
+  z-index: 1000;
+  background: white;
+  padding: 80px 50px 50px;
+  visibility: hidden;
+  transition: 0.5s;
+  box-shadow: 0px 0px 15px black, 0px 0px 45px #858585;
+  transform: translate(-50%, -50%);
+  /* Popup close button */
+  /* Popup content */
+}
+@media screen and (max-width: 46.1875em) {
+  body #popup {
+    position: absolute;
+    top: -100%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    position: fixed;
+    width: 80vw;
+    margin: 0px;
+    z-index: 1000;
+    background: white;
+    padding: 80px 50px 50px;
+    visibility: hidden;
+    transition: 0.5s;
+    box-shadow: 0px 0px 15px black, 0px 0px 45px #858585;
+    transform: translate(-50%, -50%);
+  }
+}
+body #popup.active {
+  visibility: visible;
+  top: 50%;
+}
+body #popup .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: auto;
+  left: auto;
+  cursor: pointer;
+  /* Popup close image button */
+}
+body #popup .close :hover {
+  box-shadow: 0px 0px 5px black, 0px 0px 15px #858585;
+}
+body #popup .close img {
+  max-width: 20px;
+}
+body #popup .popup-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  /* Popup email image */
+  /* The big word Join Us */
+  /* Popup description */
+  /* Popup Email input box */
+}
+body #popup .popup-content img {
+  max-width: 80px;
+}
+body #popup .popup-content h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  margin: 20px 0px 10px;
+}
+body #popup .popup-content p {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+body #popup .popup-content .inputBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  /* Popup Email input box */
+  /* Popup submit button */
+}
+body #popup .popup-content .inputBox input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  outline: none;
+  font-size: 18px;
+}
+body #popup .popup-content .inputBox input[type=submit] {
+  max-width: 150px;
+  color: white;
+  background-color: #004fac;
+  box-shadow: none;
+  border: none;
+  border-radius: 0px;
+}
+
+/*# sourceMappingURL=styles.css.map */
