@@ -100,12 +100,31 @@
 		</div>
 	</div>
 	
-	<!-- About section -->
-	<section class="about">
-		<div class="main">
+
+		<!-- Clock -->
+		
+		<!-- About section -->
+		<section class="about">
+			<div class="main">
+				<div class="clock-glass-shadow">
+					<div class="box-clock">
+						<div class="clock-glass">
+							<div class="hour">
+								<div class="hr" id="hr_gl"></div>
+							</div>
+							<div class="min">
+								<div class="mn" id="mn_gl"></div>
+							</div>
+							<div class="sec">
+								<div class="sc" id="sc_gl"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 
 			<!-- Gigachad image -->
-			<img class="gigachad" src="assets/img/frame.png">
+			<!-- <img class="gigachad" src="assets/img/frame.png"> -->
 			
 			<!-- About Text -->
 			<div class="about-text">
@@ -204,13 +223,18 @@
 
 
 
-	<script type="text/javascript">
+	<script>
 
 		const deg = 6;
-		const hr = document.querySelector('#hr')
-		const mn = document.querySelector('#mn')
-		const sc = document.querySelector('#sc')
+		const hr = document.querySelector('#hr');
+		const mn = document.querySelector('#mn');
+		const sc = document.querySelector('#sc');
 
+		const hr_gl = document.querySelector('#hr_gl');
+		const mn_gl = document.querySelector('#mn_gl');
+		const sc_gl = document.querySelector('#sc_gl');
+
+		
 		setInterval(() => {
 
 			let day = new Date();
@@ -221,6 +245,10 @@
 			hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
 			mn.style.transform = `rotateZ(${mm}deg)`;
 			sc.style.transform = `rotateZ(${ss}deg)`;
+	
+			hr_gl.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+			mn_gl.style.transform = `rotateZ(${mm}deg)`;
+			sc_gl.style.transform = `rotateZ(${ss}deg)`;
 		})
 
 
@@ -228,6 +256,7 @@
 			const popup = document.getElementById('popup');
 			popup.classList.toggle('active');
 		}
+
 	</script>
 
 </body>
