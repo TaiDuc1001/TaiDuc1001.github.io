@@ -44,6 +44,10 @@
   box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -452,13 +456,13 @@ body .about .main .clock-glass-shadow .box-clock {
 }
 @media screen and (max-width: 46.1875em) {
   body .about .main .clock-glass-shadow .box-clock {
-    width: 250px;
-    height: 250px;
+    width: 50vw;
+    height: 50vw;
     position: absolute;
     top: 115%;
-    right: auto;
+    right: 25vw;
     bottom: auto;
-    left: 20%;
+    left: 25vw;
     margin: auto;
   }
 }
@@ -693,19 +697,18 @@ body .services .box {
 }
 body .services .box .card {
   width: 46vh;
-  height: 50vh;
+  height: auto;
   background-color: #343837;
   border-radius: 20px;
   padding: 20px 35px;
   margin: 15px;
   position: relative;
-  overflow: hidden;
   text-align: center;
 }
 @media screen and (max-width: 46.1875em) {
   body .services .box .card {
-    width: 40vh;
-    height: 50vh;
+    min-width: 40vh;
+    min-height: none;
     margin: auto auto 30px auto;
   }
 }
@@ -755,7 +758,7 @@ body .services .box .card .button:hover {
 }
 body footer {
   width: 100%;
-  height: 25vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -766,7 +769,8 @@ body footer {
 @media screen and (max-width: 46.1875em) {
   body footer {
     width: 100%;
-    height: 200px;
+    height: 35vh;
+    padding-bottom: 5%;
   }
 }
 body footer p:nth-child(1) {

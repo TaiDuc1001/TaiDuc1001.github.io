@@ -9,9 +9,9 @@
 	box-sizing: border-box;
 }
 
-// html::-webkit-scrollbar {
-// 	display: none;
-// }
+html::-webkit-scrollbar {
+	display: none;
+}
 
 body {
 	// background-color: $background_color_hero_section;
@@ -386,8 +386,8 @@ body {
 
 					// Mobile
 					@include maxWidth($mobile_width) {
-						@include size(250px);
-						@include absoluteAlign(115%, auto, auto, 20%);
+						@include size(50vw);
+						@include absoluteAlign(115%, 25vw, auto, 25vw);
 						margin: auto;
 					}
 
@@ -603,17 +603,17 @@ body {
 			}
 
 			.card {
-				@include size(46vh, 50vh);
+				@include size(46vh, auto);
 				@include backgroundProperty($primary_variant_color, 20px);
 				padding: 20px 35px;
 				margin: 15px;
 				position: relative;
-				overflow: hidden;
 				text-align: center;
 
 				// Mobile
 				@include maxWidth($mobile_width) {
-					@include size(40vh, 50vh);
+					@include minSize(40vh, none);
+					// @include size(40vh, auto);
 					margin: auto auto 30px auto;
 				}
 
@@ -659,15 +659,16 @@ body {
 	}
 
 	footer {
-		@include size(100%, 25vh);
+		@include size(100%, 35vh);
 		@include flexAlign();
 		position: relative;
 		background-color: $background_color_footer;
 		flex-direction: column;
-
+		
 		// Mobile
 		@include maxWidth($mobile_width) {
-			@include size(100%, 200px);
+			@include size(100%, 35vh);
+			padding-bottom: 5%;
 		}
 
 		p {
