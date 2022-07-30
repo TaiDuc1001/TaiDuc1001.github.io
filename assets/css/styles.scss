@@ -20,6 +20,188 @@ body {
 	margin: 0px;
 	padding: 0px;
 
+	.shadow_screen {
+		@include minSize(100%, 100%);
+		@include backgroundProperty(black, 0);
+		opacity: .0;
+		z-index: 8;
+		transition: all .9s ease;
+		position: fixed;
+		// display: none;
+	}
+
+	.sidebar {
+		@include absoluteAlign(0, auto, auto, 0);
+		@include backgroundProperty($unsusceptible_green, 0);
+		@include size(78px, 100%);
+		@include maxSize(230px);
+		// @include minSize(200px);
+		position: fixed;
+		padding: 6px 14px;
+		transition: all .5s ease;
+		z-index: 9999;
+
+
+		&.active {
+			@include size(45vw, 100%);
+			z-index: 9999;
+
+			~ .shadow_screen {
+				transition: all .5s ease;
+				z-index: 9000;
+				opacity: .6;
+			}
+
+			#menu-button {
+				@include absoluteAlign(6px, auto, auto, 90%);
+				z-index: 100000;
+
+			}
+
+			.logo-content {
+				.logo {
+					opacity: 1;
+					pointer-events: none;
+					z-index: 100000;
+
+				}
+
+				ul {
+					li {
+						.tooltip {
+							display: none !important;
+							z-index: 100000;
+
+						}
+
+						a {
+							.links-name {
+								opacity: 1;
+								pointer-events: auto;
+								transition: all .5s ease;
+								z-index: 100000;
+
+							}
+						}
+					}
+				}
+			}
+
+
+		}
+
+		.logo-content {
+			.logo {
+				color: $white;
+				@include flexAlign();
+				justify-content: flex-start;
+				@include size(100%, 50px);
+				opacity: 0;
+				pointer-events: none;
+				z-index: 100000;
+				transition: all .5s ease;
+
+
+				i {
+					font-size: 28px;
+					margin-right: 5px;
+					z-index: 100000;
+
+				}
+
+				.logo-name {
+					@include text($white, 20px, 400, none, none);
+					margin-top: 5px;
+					z-index: 100000;
+
+				}
+
+			}
+
+			ul {
+				margin: 20px auto auto auto;
+				z-index: 100000;
+
+
+				li {
+					@include size(100%, 50px);
+					position: relative;
+					margin: 0 5px;
+					list-style: none;
+					line-height: 50px;
+
+
+					&:hover {
+						.tooltip {
+							@include absoluteAlign(50%, auto, auto, 122px);
+							transition: all .5s ease;
+							opacity: 1;
+						}
+					}
+
+					a {
+						@include text($white, 18px, bold, none, none);
+						@include flexAlign();
+						justify-content: flex-start;
+						transition: 0.4s ease;
+						border-radius: 12px;
+						white-space: nowrap;
+
+						.links-name {
+							opacity: 0;
+							pointer-events: none;
+							transition: all .5s ease;
+
+						}
+
+						&:hover {
+							background: $white;
+							color: $unsusceptible_green;
+						}
+
+						i {
+							@include size(auto, 50px);
+							@include minSize(50px, none);
+							text-align: center;
+							line-height: 50px;
+							border-radius: 12px;
+							z-index: 100000;
+
+						}
+					}
+
+					.tooltip {
+						@include absoluteAlign(0%, auto, auto, 122px);
+						@include backgroundProperty($white, 6px);
+						@include size(122px, 35px);
+						line-height: 35px;
+						text-align: center;
+						box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+						transform: translate(-50%, -50%);
+						transition: 0s;
+						opacity: 0;
+						pointer-events: none;
+						display: block !important;
+
+					}
+				}
+			}
+		}
+
+		#menu-button {
+			@include absoluteAlign(6px, auto, auto, 55%);
+			@include text($white, 20px, bold, none, none);
+			@include size(50px);
+			text-align: center;
+			line-height: 50px;
+			transform: translateX(-50%);
+			z-index: 1000;
+			cursor: pointer;
+			transition: all .5s ease;
+
+		}
+	}
+
 
 	.clock {
 		@include size(350px);
@@ -664,7 +846,7 @@ body {
 		position: relative;
 		background-color: $background_color_footer;
 		flex-direction: column;
-		
+
 		// Mobile
 		@include maxWidth($mobile_width) {
 			@include size(100%, 35vh);

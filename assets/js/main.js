@@ -7,6 +7,12 @@ const hr_gl = document.querySelector('#hr_gl');
 const mn_gl = document.querySelector('#mn_gl');
 const sc_gl = document.querySelector('#sc_gl');
 
+// let menu_btn = document.querySelector("#menu-button");
+
+// menu_btn.onClick = function(){
+//     sideBar.classList.toggle("active");
+// }
+
 
 setInterval(
     () => {
@@ -30,4 +36,10 @@ setInterval(
 function popupToggle() {
     const popup = document.getElementById('popup');
     popup.classList.toggle('active');
+}
+function sideBarToggle() {
+    // const sideBar = document.getElementById('sidebar');
+    let sideBar = document.querySelector(".sidebar");
+
+    sideBar.classList.toggle('active');
 }
