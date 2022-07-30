@@ -251,7 +251,7 @@ body .hero .content {
 @media screen and (max-width: 46.1875em) {
   body .hero .content {
     position: absolute;
-    top: 42%;
+    top: 38%;
     right: auto;
     bottom: auto;
     left: 0%;

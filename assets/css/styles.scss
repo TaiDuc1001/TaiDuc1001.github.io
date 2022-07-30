@@ -220,7 +220,7 @@ body {
 
 			// Mobile
 			@include maxWidth($mobile_width) {
-				@include absoluteAlign(42%, auto, auto, 0%);
+				@include absoluteAlign(38%, auto, auto, 0%);
 				position: relative;
 				padding-left: 8%;
 				display: block;
