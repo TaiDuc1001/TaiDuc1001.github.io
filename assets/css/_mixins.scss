@@ -11,27 +11,48 @@
     left: $left;
 }
 
-@mixin flexAlign(){
+@mixin flexAlign() {
     display: flex;
-	justify-content: center;
-	align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
-@mixin text($size: 16px, $weight: 400, $text_transform: none, $decoration: none){
+@mixin text($color, $size: 16px, $weight: 400, $text_transform: none, $decoration: none) {
+    color: $color;
     font-size: $size;
     font-weight: $weight;
     text-transform: $text_transform;
     text-decoration: $decoration;
 }
 
-@mixin maxWidth($value){
-    @media screen and (max-width: $value){
+@mixin maxWidth($value) {
+    @media screen and (max-width: $value) {
         @content;
     }
 }
 
-@mixin minWidth($value){
-    @media screen and (min-width: $value){
+@mixin minWidth($value) {
+    @media screen and (min-width: $value) {
         @content;
     }
+}
+
+@mixin backgroundProperty($color, $border_radius) {
+    background-color: $color;
+    border-radius: $border_radius;
+}
+
+@mixin imageProperty($background_size: auto, $background_position: 0% 0%) {
+    background-size: $background_size;
+    background-position: $background_position;
+}
+
+@mixin maxSize($max_width, $max_height: none) {
+    max-width: $max_width;
+    max-height: $max_height;
+}
+
+@mixin minSize($min_width, $min_height: none) {
+    min-width: $min_width;
+    min-height: $min_height;
 }

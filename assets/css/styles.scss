@@ -1,3 +1,7 @@
+@import "./variables";
+@import "./keyframes";
+@import "./mixins";
+
 * {
 	padding: 0;
 	margin: 0;
@@ -9,10 +13,6 @@ html::-webkit-scrollbar {
 	display: none;
 }
 
-@import "./variables";
-@import "./keyframes";
-@import "./mixins";
-
 body {
 	background-color: $dark_black;
 	width: 100vw;
@@ -21,7 +21,6 @@ body {
 	padding: 0px;
 
 
-	/* clock */
 	.clock {
 		@include size(350px);
 		@include absoluteAlign(30%, 20%);
@@ -36,7 +35,7 @@ body {
 			inset 0 15px 15px rgba(0, 0, 0, 0.05);
 
 		// Mobile
-		@include maxWidth(46.1875em) {
+		@include maxWidth($mobile_width) {
 			display: none;
 		}
 
@@ -56,28 +55,21 @@ body {
 
 		}
 
-		/* Second hand size */
 		.sec,
 		.sec .sc {
-			width: 230px;
-			height: 230px;
+			@include size(230px);
 		}
 
-		/* Hour hand size */
 		.hour,
 		.hour .hr {
-			width: 160px;
-			height: 160px;
+			@include size(160px);
 		}
 
-		/* Minute hand size */
 		.min,
 		.min .mn {
-			width: 190px;
-			height: 190px;
+			@include size(190px);
 		}
 
-		/* Hands clock General attributes */
 		.sec .sc,
 		.hour .hr,
 		.min .mn {
@@ -91,11 +83,10 @@ body {
 			.hr {
 				&::before {
 					@include size(8px, 80px);
+					@include backgroundProperty($red, 6px 6px 0 0);
 					content: '';
 					position: absolute;
-					background: $red;
 					z-index: 10;
-					border-radius: 6px 6px 0 0;
 				}
 			}
 		}
@@ -103,12 +94,11 @@ body {
 		.min {
 			.mn {
 				&::before {
+					@include backgroundProperty($white, 6px 6px 0 0);
 					@include size(4px, 90px);
 					content: '';
 					position: absolute;
-					background: $white;
 					z-index: 11;
-					border-radius: 6px 6px 0 0;
 				}
 			}
 		}
@@ -117,11 +107,10 @@ body {
 			.sc {
 				&::before {
 					@include size(2px, 150px);
+					@include backgroundProperty($white, 6px 6px 0 0);
 					content: '';
 					position: absolute;
-					background: $white;
 					z-index: 12;
-					border-radius: 6px 6px 0 0;
 				}
 			}
 		}
@@ -129,14 +118,11 @@ body {
 	}
 
 	.hero {
-		background-color: var(--dark-black);
-		/* background-color: #091921; */
 		@include size(100%, 100vh);
-		background-size: cover;
-		background-position: center;
+		@include imageProperty(cover, center);
 
 		// Mobile
-		@include maxWidth(46.1875em) {
+		@include maxWidth($mobile_width) {
 			@include size(100vw, 100vh);
 			background-color: $darker_black;
 			display: block;
@@ -148,11 +134,16 @@ body {
 			padding: 45px 8% 0 8%;
 
 			.logo {
+				@include text($white, 35px, bold, none, none);
 				position: relative;
 				color: $white;
-				font-size: 35px;
 				letter-spacing: 1px;
 				cursor: pointer;
+
+				// Mobile
+				@include maxWidth($mobile_width) {
+					animation: tilt-shaking .5s 10;
+				}
 
 				&:hover {
 					animation: tilt-shaking .5s infinite;
@@ -166,7 +157,7 @@ body {
 			ul {
 
 				// Mobile
-				@include maxWidth(46.1875em) {
+				@include maxWidth($mobile_width) {
 					display: none;
 				}
 
@@ -181,11 +172,10 @@ body {
 					}
 
 					a {
-						@include text(20px, bold, capitalize, none);
+						@include text($white, 20px, bold, capitalize, none);
 						color: $white;
 						padding-top: 50px;
 
-						// make underline animation
 						background:
 							bottom var(--p1, 10px) left 50% /100% var(--p, 2px) no-repeat,
 							linear-gradient(currentColor 0 0) bottom -2px right 50%/var(--d, 0%) 3px no-repeat;
@@ -203,21 +193,15 @@ body {
 			}
 
 			.btn {
-				@include text(16px, bold, none, none);
-				background-color: $red;
-				border-radius: 30px;
-				color: $white;
+				@include text($white, 16px, bold, none, none);
+				@include backgroundProperty($red, 30px);
 				border: 2px solid transparent;
 				padding: 10px 25px;
 				transition: transform .7s;
 
 				// Mobile
-				@include maxWidth(46.1875em) {
-					@include text(14px, bold, none, none);
-					background-color: $red;
-					border-radius: 30px;
-					color: $white;
-					border: 2px solid transparent;
+				@include maxWidth($mobile_width) {
+					@include text($white, 14px, bold, none, none);
 					padding: 8px 15px;
 					transition: transform .4s;
 					box-shadow: 0px 0px 5px black, 0px 0px 15px $light_grey;
@@ -231,13 +215,12 @@ body {
 
 		}
 
-		/* content: below hero section and included by hero div */
 		.content {
 			@include absoluteAlign(50%, auto, auto, 8%);
 			transform: translateY(-50%);
 
 			// Mobile
-			@include maxWidth(46.1875em) {
+			@include maxWidth($mobile_width) {
 				@include absoluteAlign(42%, auto, auto, 0%);
 				position: relative;
 				padding-left: 8%;
@@ -246,17 +229,14 @@ body {
 				transform: translateY(-50%);
 			}
 
-			/* h1: The big words Phan Tai Duc */
 			h1 {
-				color: $white;
 				margin: 20px 0px 20px;
-				@include text(75px, 700, none, none);
+				@include text($white, 75px, bold, none, none);
 
 				// Mobile
-				@include maxWidth(46.1875em) {
-					color: $white;
+				@include maxWidth($mobile_width) {
+					@include text($white, 65px, bold, none, none);
 					margin: 40px 0px;
-					font-size: 65px;
 					letter-spacing: 2px;
 				}
 
@@ -265,61 +245,50 @@ body {
 					color: $red;
 
 					// Mobile
-					@include maxWidth(46.1875em) {
-						font-size: 70px;
-						margin-top: 20px;
-						margin-left: 0px;
+					@include maxWidth($mobile_width) {
+						@include text($red, 70px, bold, none, none);
+						margin: 20px auto auto 0;
 						display: block;
 					}
 				}
 			}
 
-			/* h3: Short description "I'm a student" */
 			h3 {
-				@include text(25px, 700, none, none);
-				color: $white;
-				margin-bottom: 50px;
+				@include text($white, 25px, 700, none, none);
+				margin: auto auto 50px auto;
 
 				// Mobile
-				@include maxWidth(46.1875em) {
-					color: $white;
-					margin-bottom: 50px;
-					font-size: 25px;
+				@include maxWidth($mobile_width) {
 					display: inline;
 				}
 			}
 
-			/* h4: greeting "Hello, I am" */
 			h4 {
-				color: $light_pink;
-				@include text(25px, 700, none, none);
+				@include text($light_pink, 25px, 700, none, none);
 				letter-spacing: 2px;
 
 				// Mobile
-				@include maxWidth(46.1875em) {
-					color: $light_pink;
+				@include maxWidth($mobile_width) {
+					@include text($light_pink, 20px, 700, none, none);
 					letter-spacing: 1.5px;
-					font-size: 20px;
 				}
 			}
 
 
-			/* Short contact form */
 			.newslatter {
 				form {
-					width: 380px;
-					max-width: 100%;
+					@include size(380px, auto);
+					@include maxSize(100%, none);
 					position: relative;
 					transition: transform .4s;
 
 
 					// Mobile
-					@include maxWidth(46.1875em) {
+					@include maxWidth($mobile_width) {
+						@include maxSize(110%, none);
 						position: relative;
-						max-width: 110%;
 						padding: auto;
-						margin: auto;
-						margin-top: 30px;
+						margin: 30px auto auto auto;
 						transition: transform .4s;
 					}
 
@@ -329,60 +298,40 @@ body {
 
 
 					input[name='email'] {
+						@include size(100%, auto);
+						@include backgroundProperty($white, 30px);
 						display: inline-block;
-						width: 100%;
 						padding: 14px 130px 14px 15px;
 						border: 2px solid $red;
-						border-radius: 30px;
 						outline: none;
 
 						// Mobile
-						@include maxWidth(46.1875em) {
-							display: inline-block;
-							width: 100%;
-							margin-top: 25px;
-							padding: 14px 0px 14px 15px;
-							border: 2px solid $red;
-							border-radius: 30px;
-							outline: none;
+						@include maxWidth($mobile_width) {
+							margin: 25px auto auto auto;
 						}
 
 						&:hover {
 							box-shadow: 0px 0px 5px black, 0px 0px 15px $light_grey;
 
-							// Mobile
-							@include maxWidth(46.1875em) {
-								box-shadow: 0px 0px 5px black, 0px 0px 15px $light_grey;
-							}
 						}
 					}
 
 
 
 					input[name='submit'] {
-						display: inline;
 						@include absoluteAlign(6px, 6px, auto, auto);
+						@include backgroundProperty($red, 30px);
+						@include text($white, 12px, 400, none, none);
+						display: inline;
 						outline: none;
 						border: none;
 						padding: 10px 30px;
-						border-radius: 30px;
 						cursor: pointer;
-						background-color: $red;
-						color: $white;
 						box-shadow: 0px 0px 5px black, 0px 0px 15px $light_grey;
 
 						// Mobile
-						@include maxWidth(46.1875em) {
+						@include maxWidth($mobile_width) {
 							@include absoluteAlign(30px, 6px);
-							display: inline;
-							outline: none;
-							border: none;
-							padding: 10px 30px;
-							border-radius: 30px;
-							cursor: pointer;
-							background-color: $red;
-							color: white;
-							box-shadow: 0px 0px 5px black, 0px 0px 15px $light_grey;
 						}
 
 						&:hover {
@@ -390,12 +339,6 @@ body {
 							transform: translate3d(0, 0, 0);
 							perspective: 1000px;
 
-							// Mobile
-							@include maxWidth(46.1875em) {
-								animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
-								transform: translate3d(0, 0, 0);
-								perspective: 1000px;
-							}
 						}
 					}
 
@@ -406,50 +349,42 @@ body {
 	}
 
 
-	/* About section */
 	.about {
 		@include size(100%, 100vh);
+		@include backgroundProperty($light_black, 0);
 		padding: 150px 0px;
-		background-color: $light_black;
 
 		// Mobile
-		@include maxWidth(46.1875em) {
+		@include maxWidth($mobile_width) {
 			@include flexAlign();
-			display: block;
-			background-color: $dark_black;
-			height: 100vh;
-			padding-top: 100px;
+			padding: 100px auto auto auto;
 		}
 
-		/* div Main in About section */
 		.main {
-			width: 1130px;
-			margin: 0px auto;
-			max-width: 95%;
 			@include flexAlign();
+			@include size(1130px, auto);
+			@include maxSize(95%, none);
 			justify-content: space-around;
+			margin: 0px auto;
 
 			// Mobile
-			@include maxWidth(46.1875em) {
-				@include flexAlign();
-				display: block;
-				width: 100%;
-				max-width: 100%;
+			@include maxWidth($mobile_width) {
+				@include size(100%, auto);
+				@include maxSize(100%, none);
 			}
 
-			/* Clock Glass */
 			.clock-glass-shadow {
 				.box-clock {
 					@include size(400px);
 					@include absoluteAlign(110%);
-					z-index: 1;
+					@include backgroundProperty(transparent, 50%);
 					backdrop-filter: blur(25px);
-					border-radius: 50%;
 					border: 1px solid rgba(255, 255, 255, 0.5);
 					animation: animate 5s ease-in-out infinite;
+					z-index: 1;
 
 					// Mobile
-					@include maxWidth(46.1875em) {
+					@include maxWidth($mobile_width) {
 						@include size(250px);
 						@include absoluteAlign(115%, auto, auto, 20%);
 						margin: auto;
@@ -470,12 +405,10 @@ body {
 							0px 40px 50px rgba(0, 0, 0, 0.2);
 
 						&::before {
+							@include size(15px);
+							@include backgroundProperty($white, 50%);
 							content: '';
 							position: absolute;
-							width: 15px;
-							height: 15px;
-							background: white;
-							border-radius: 50%;
 							z-index: 10000;
 						}
 
@@ -488,20 +421,17 @@ body {
 
 						.sec,
 						.sec .sc {
-							width: 230px;
-							height: 230px;
+							@include size(230px);
 						}
 
 						.hour,
 						.hour .hr {
-							width: 160px;
-							height: 160px;
+							@include size(160px);
 						}
 
 						.min,
 						.min .mn {
-							width: 190px;
-							height: 190px;
+							@include size(190px);
 						}
 
 						.sec .sc,
@@ -517,11 +447,10 @@ body {
 							.hr {
 								&::before {
 									@include size(8px, 80px);
+									@include backgroundProperty($red, 6px 6px 0 0);
 									content: '';
 									position: absolute;
-									background: $red;
 									z-index: 10;
-									border-radius: 6px 6px 0 0;
 								}
 							}
 						}
@@ -530,11 +459,10 @@ body {
 							.mn {
 								&::before {
 									@include size(4px, 90px);
+									@include backgroundProperty($white, 6px 6px 0 0);
 									content: '';
 									position: absolute;
-									background: $white;
 									z-index: 11;
-									border-radius: 6px 6px 0 0;
 								}
 							}
 						}
@@ -543,11 +471,10 @@ body {
 							.sc {
 								&::before {
 									@include size(2px, 150px);
+									@include backgroundProperty($white, 6px 6px 0 0);
 									content: '';
 									position: absolute;
-									background: $white;
 									z-index: 12;
-									border-radius: 6px 6px 0 0;
 								}
 							}
 						}
@@ -558,15 +485,14 @@ body {
 				}
 			}
 
-			/* gigachad */
 			.about img {
 				display: none;
 
 				// Mobile
-				@include maxWidth(46.1875em) {
+				@include maxWidth($mobile_width) {
+					@include flexAlign();
 					@include size(200px);
 					position: relative;
-					align-items: center;
 					display: block;
 					margin: auto;
 					display: none;
@@ -574,48 +500,38 @@ body {
 			}
 
 			.about-text {
-				width: 40vw;
-				margin-left: 600px;
+				@include size(40vw, auto);
+				margin: auto auto auto 600px;
 
 				// Mobile
-				@include maxWidth(46.1875em) {
+				@include maxWidth($mobile_width) {
+					@include size(80vw, auto);
 					@include flexAlign();
 					display: block;
-					width: 80vw;
 					margin: 300px auto auto auto;
 				}
 
-				/* The big words About Me */
 				h2 {
-					color: $white;
-					font-size: 75px;
-					text-transform: capitalize;
-					margin-bottom: 20px;
+					@include text($white, 75px, bold, capitalize, none);
+					margin: auto auto 20px auto;
 
 					// Mobile
-					@include maxWidth(46.1875em) {
-						@include text(30px, 700, capitalize, none);
-						color: $white;
+					@include maxWidth($mobile_width) {
+						@include text($white, 30px, 700, capitalize, none);
 						text-align: center;
-						margin-bottom: 20px;
+						margin: auto auto 20px auto;
 					}
 				}
 
-				/* About Me - Description */
 				h5 {
-					color: $white;
+					@include text($white, 22px, 700, capitalize, none);
 					letter-spacing: 2px;
-					font-size: 22px;
-					margin-bottom: 25px;
-					text-transform: capitalize;
+					margin: auto auto 25px auto;
 
 					// Mobile
-					@include maxWidth(46.1875em) {
-						@include text(22px, 700, capitalize, none);
+					@include maxWidth($mobile_width) {
+						@include text($white, 22px, 700, capitalize, none);
 						text-align: center;
-						color: $white;
-						letter-spacing: 2px;
-						margin-bottom: 25px;
 					}
 
 					span {
@@ -624,40 +540,24 @@ body {
 				}
 
 
-				/* Button Let's talk */
 				button {
-					color: white;
-					background-color: $red;
-					text-decoration: none;
+					@include text($white, 16px, bold, none, none);
+					@include backgroundProperty($red, 30px);
 					border: 2px solid transparent;
-					font-weight: bold;
-					border-radius: 30px;
 					padding: 13px 30px;
 					transition: .4s;
 					cursor: pointer;
 
 					// Mobile
-					@include maxWidth(46.1875em) {
+					@include maxWidth($mobile_width) {
 						@include flexAlign();
 						position: relative;
-						background-color: $red;
-						border: 2px solid transparent;
-						border-radius: 30px;
-						padding: 13px 30px;
 						margin: auto;
-						transition: .4s;
 					}
 
 					a {
-						color: white;
-						text-decoration: none;
-						font-weight: bold;
+						@include text($white, 16px, bold, none, none);
 
-						// Mobile
-						@include maxWidth(46.1875em) {
-							@include text(16px, bold, none, none);
-							color: $white;
-						}
 					}
 
 					&:hover {
@@ -674,83 +574,73 @@ body {
 
 
 	.services {
-		background-color: $darker_black;
-		width: 100%;
+		@include backgroundProperty($darker_black, 0);
+		@include size(100%, auto);
 		padding: 100px 0px;
 
-
 		.title {
-			color: $white;
-			font-size: 60px;
+			@include text($white, 60px, bold, none, none);
 			display: block;
 			margin: 30px auto;
 			text-align: center;
 
 			// Mobile
-			@include maxWidth(46.1875em) {
+			@include maxWidth($mobile_width) {
+				@include text($white, 50px, bold, none, none);
 				margin: 30px 30px;
-				font-size: 50px;
 			}
 		}
 
 
 		.box {
 			@include flexAlign();
-			min-height: 400px;
+			@include minSize(none, 400px);
 
 			// Mobile
-			@include maxWidth(46.1875em) {
+			@include maxWidth($mobile_width) {
 				display: block;
 			}
 
 			.card {
-				height: 50vh;
-				width: 46vh;
+				@include size(46vh, 50vh);
+				@include backgroundProperty($dark_black, 20px);
 				padding: 20px 35px;
-				border-radius: 20px;
 				margin: 15px;
 				position: relative;
-				background-color: $dark_black;
 				overflow: hidden;
 				text-align: center;
 
 				// Mobile
-				@include maxWidth(46.1875em) {
-					width: 40vh;
+				@include maxWidth($mobile_width) {
+					@include size(40vh, 50vh);
 					margin: auto auto 30px auto;
 				}
 
 				i {
-					font-size: 50px;
+					@include text($red, 50px, bold, none, none);
 					display: block;
 					text-align: center;
 					margin: 25px 0px;
-					color: $red;
 				}
 
 				h5 {
-					color: $white;
-					font-size: 23px;
+					@include text($white, 23px, bold, none, none);
 					margin-bottom: 15px;
 				}
 
 
 				.pra {
 					p {
-						color: $light_pink;
-						font-size: 16px;
+						@include text($light_pink, 16px, 400, none, none);
 						line-height: 27px;
 						margin-bottom: 25px;
-						/* font-weight: bold; */
 					}
 				}
 
 				.button {
-					@include text(16px, bold, none, none);
-					color: $white;
-					background-color: $red;
+					@include text($white, 16px, bold, none, none);
+					@include backgroundProperty($red, 30px);
 					border: 2px solid transparent;
-					border-radius: 30px;
 					padding: 9px 22px;
 					transition: .4s;
 					cursor: pointer;
@@ -775,7 +665,7 @@ body {
 		flex-direction: column;
 
 		// Mobile
-		@include maxWidth(46.1875em) {
+		@include maxWidth($mobile_width) {
 			@include size(100%, 200px);
 			@include flexAlign();
 			position: relative;
@@ -785,22 +675,18 @@ body {
 
 		p {
 			&:nth-child(1) {
-				@include text(30px, bold, none, none);
-				color: $white;
-				margin-top: 50px;
-				margin-bottom: 20px;
+				@include text($white, 30px, bold, none, none);
+				margin: 50px auto 20px auto;
 
 				// Mobile
-				@include maxWidth(46.1875em) {
-					@include text(27px, bold, none, none);
-					margin: 50px auto 20px auto;
+				@include maxWidth($mobile_width) {
+					@include text($white, 27px, bold, none, none);
 				}
 			}
 
 			&:nth-child(2) {
-				@include text(17px, bold, none, none);
-				color: $white;
-				width: 50vw;
+				@include text($white, 17px, bold, none, none);
+				@include size(50vw, auto);
 				text-align: center;
 			}
 		}
@@ -812,11 +698,9 @@ body {
 			a {
 				@include size(45px);
 				@include flexAlign();
-				@include text(20px, bold, none, none);
-				background-color: $red;
-				border-radius: 50%;
+				@include text($white, 20px, bold, none, none);
+				@include backgroundProperty($red, 50%);
 				margin: 22px 10px;
-				color: $white;
 
 				&:hover {
 					transform: scale(1.3);
@@ -829,33 +713,23 @@ body {
 	}
 
 
-	/* Subcribe popup */
 	#popup {
 		@include absoluteAlign(-100%, auto, auto, 50%);
+		@include size(400px, auto);
+		@include backgroundProperty($white, 0);
 		position: fixed;
-		width: 400px;
 		margin: 30px;
-		z-index: 1000;
-		background: $white;
 		padding: 80px 50px 50px;
 		visibility: hidden;
 		transition: .5s;
 		box-shadow: 0px 0px 15px black, 0px 0px 45px $light_grey;
 		transform: translate(-50%, -50%);
+		z-index: 1000000;
 
 		// Mobile
-		@include maxWidth(46.1875em) {
-			@include absoluteAlign(-100%, auto, auto, 50%);
-			position: fixed;
-			width: 80vw;
+		@include maxWidth($mobile_width) {
+			@include size(80vw, auto);
 			margin: 0px;
-			z-index: 1000;
-			background: $white;
-			padding: 80px 50px 50px;
-			visibility: hidden;
-			transition: .5s;
-			box-shadow: 0px 0px 15px black, 0px 0px 45px $light_grey;
-			transform: translate(-50%, -50%);
 		}
 
 		&.active {
@@ -863,74 +737,61 @@ body {
 			top: 50%;
 		}
 
-		/* Popup close button */
 		.close {
 			@include absoluteAlign(30px, 30px, auto, auto);
 			cursor: pointer;
 
-			:hover {
+			&:hover {
 				box-shadow: 0px 0px 5px black, 0px 0px 15px $light_grey;
 
 			}
 
-			/* Popup close image button */
 			img {
-				max-width: 20px;
+				@include maxSize(20px, none);
 			}
 
 		}
 
-		/* Popup content */
 		.popup-content {
 			@include flexAlign();
 			position: relative;
 			width: 100%;
 			flex-direction: column;
 
-			/* Popup email image */
 			img {
-				max-width: 80px;
+				@include maxSize(80px, none);
 			}
 
-			/* The big word Join Us */
 			h2 {
-				font-size: 24px;
-				font-weight: 500;
-				color: $dark_grey;
+				@include text($dark_grey, 24px, 500, none, none);
 				margin: 20px 0px 10px;
 			}
 
-			/* Popup description */
 			p {
+				@include text($dark_grey, 16px, 500, none, none);
 				text-align: center;
-				font-size: 16px;
-				color: $dark_grey;
 			}
 
-			/* Popup Email input box */
 			.inputBox {
 				@include flexAlign();
+				@include size(100%, auto);
 				position: relative;
-				width: 100%;
-				margin-top: 20px;
+				margin: 20px auto auto auto;
 
-				/* Popup Email input box */
 				input {
-					width: 100%;
+					@include text($dark_grey, 18px, 500, none, none);
+					@include size(100%, auto);
 					border: 1px solid rgba(0, 0, 0, 0.2);
 					padding: 15px;
 					outline: none;
-					font-size: 18px;
 				}
 
-				/* Popup submit button */
 				input[type="submit"] {
-					max-width: 150px;
-					color: $white;
-					background-color: $blue;
+					@include text($white, 18px, 500, none, none);
+					@include backgroundProperty($blue, 0px);
+					@include maxSize(150px, none);
 					box-shadow: none;
 					border: none;
-					border-radius: 0px;
 				}
 			}
 		}
