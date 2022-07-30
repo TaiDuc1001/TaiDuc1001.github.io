@@ -1,11 +1,78 @@
-$red: #f9004d;
-$light_pink: #fcfc;
-$dark_black: #191919;
-$light_grey: #858585;
-$dark_grey: #333;
-$darker_black: #101010;
-$light_black: #1e1e1e;
-$white: white;
-$blue: #004fac;
-
+// Media
 $mobile_width: 46.1875em;
+
+// ===================================================
+// ===================================================
+
+// Colors
+
+// red
+$red: #f9004d;
+
+// pink
+$light_pink: #fcfc;
+
+// black
+$light_black: #1e1e1e;
+$dark_black: #191919;
+$darker_black: #101010;
+
+// grey
+$light_grey: #858585;
+$lighter_grey: #cccccc;
+$dark_grey: #333;
+$charcoal: #343837;
+
+// white
+$white: white;
+
+// blue
+$blue: #004fac;
+$indiscernible_ocean_blue: #03719C;
+
+// green
+$unsusceptible_green: #0F9B8E;
+
+
+// ===================================================
+// Assign color
+$placeholder: $dark_grey;
+$background_color_hero_section: $dark_black;
+$background_color_about_section: $light_black;
+$background_color_service_section: $darker_black;
+$background_color_footer: $light_black;
+
+// Primary
+$primary_color: $red;
+$on_primary_color: $white;
+
+// Primary variant
+$primary_variant_color: $charcoal;
+$on_primary_variant_color: $lighter_grey;
+
+// Secondary
+$secondary_color: $white;
+$on_secondary_color: $light_pink;
+
+// Secondary Variant
+
+
+// ===================================================
+// Test
+$background_color_hero_section: $dark_black;
+$background_color_about_section: $light_black;
+$background_color_service_section: $darker_black;
+$background_color_footer: $light_black;
+
+// Primary
+$primary_color: $red;
+$on_primary_color: $white;
+
+// Primary variant
+$primary_variant_color: $charcoal;
+$on_primary_variant_color: $lighter_grey;
+
+// Secondary
+$secondary_color: $white;
+$on_secondary_color: $light_pink;
+

@@ -14,7 +14,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-	background-color: $dark_black;
+	// background-color: $background_color_hero_section;
 	width: 100vw;
 	height: 100vh;
 	margin: 0px;
@@ -27,7 +27,7 @@ body {
 		@include flexAlign();
 		background: url(../img/clock.png);
 		background-size: cover;
-		border: 4px solid $dark_black;
+		border: 4px solid $background_color_hero_section;
 		border-radius: 50%;
 		box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
 			inset 0 -15px 15px rgba(255, 255, 255, 0.05),
@@ -43,7 +43,7 @@ body {
 			content: '';
 			position: absolute;
 			@include size(15px);
-			background-color: $white;
+			background-color: $on_primary_color;
 			border-radius: 50%;
 			z-index: 10000;
 		}
@@ -83,7 +83,7 @@ body {
 			.hr {
 				&::before {
 					@include size(8px, 80px);
-					@include backgroundProperty($red, 6px 6px 0 0);
+					@include backgroundProperty($primary_color, 6px 6px 0 0);
 					content: '';
 					position: absolute;
 					z-index: 10;
@@ -94,7 +94,7 @@ body {
 		.min {
 			.mn {
 				&::before {
-					@include backgroundProperty($white, 6px 6px 0 0);
+					@include backgroundProperty($secondary_color, 6px 6px 0 0);
 					@include size(4px, 90px);
 					content: '';
 					position: absolute;
@@ -107,7 +107,7 @@ body {
 			.sc {
 				&::before {
 					@include size(2px, 150px);
-					@include backgroundProperty($white, 6px 6px 0 0);
+					@include backgroundProperty($secondary_color, 6px 6px 0 0);
 					content: '';
 					position: absolute;
 					z-index: 12;
@@ -120,11 +120,11 @@ body {
 	.hero {
 		@include size(100%, 100vh);
 		@include imageProperty(cover, center);
+		background-color: $background_color_hero_section;
 
 		// Mobile
 		@include maxWidth($mobile_width) {
 			@include size(100vw, 100vh);
-			background-color: $darker_black;
 			display: block;
 		}
 
@@ -134,9 +134,8 @@ body {
 			padding: 45px 8% 0 8%;
 
 			.logo {
-				@include text($white, 35px, bold, none, none);
+				@include text($secondary_color, 35px, bold, none, none);
 				position: relative;
-				color: $white;
 				letter-spacing: 1px;
 				cursor: pointer;
 
@@ -150,7 +149,7 @@ body {
 				}
 
 				span {
-					color: $red;
+					color: $primary_color;
 				}
 			}
 
@@ -172,8 +171,7 @@ body {
 					}
 
 					a {
-						@include text($white, 20px, bold, capitalize, none);
-						color: $white;
+						@include text($secondary_color, 20px, bold, capitalize, none);
 						padding-top: 50px;
 
 						background:
@@ -182,7 +180,7 @@ body {
 						transition: 0.5s;
 
 						&:hover {
-							color: $red;
+							color: $primary_color;
 							--d: 100%;
 							--p: 3px;
 							--p1: 4px;
@@ -193,15 +191,15 @@ body {
 			}
 
 			.btn {
-				@include text($white, 16px, bold, none, none);
-				@include backgroundProperty($red, 30px);
+				@include text($on_primary_color, 16px, bold, none, none);
+				@include backgroundProperty($primary_color, 30px);
 				border: 2px solid transparent;
 				padding: 10px 25px;
 				transition: transform .7s;
 
 				// Mobile
 				@include maxWidth($mobile_width) {
-					@include text($white, 14px, bold, none, none);
+					@include text($on_primary_color, 14px, bold, none, none);
 					padding: 8px 15px;
 					transition: transform .4s;
 					box-shadow: 0px 0px 5px black, 0px 0px 15px $light_grey;
@@ -231,22 +229,22 @@ body {
 
 			h1 {
 				margin: 20px 0px 20px;
-				@include text($white, 75px, bold, none, none);
+				@include text($secondary_color, 75px, bold, none, none);
 
 				// Mobile
 				@include maxWidth($mobile_width) {
-					@include text($white, 65px, bold, none, none);
+					@include text($secondary_color, 65px, bold, none, none);
 					margin: 40px 0px;
 					letter-spacing: 2px;
 				}
 
 
 				span {
-					color: $red;
+					color: $primary_color;
 
 					// Mobile
 					@include maxWidth($mobile_width) {
-						@include text($red, 70px, bold, none, none);
+						@include text($primary_color, 70px, bold, none, none);
 						margin: 20px auto auto 0;
 						display: block;
 					}
@@ -254,7 +252,7 @@ body {
 			}
 
 			h3 {
-				@include text($white, 25px, 700, none, none);
+				@include text($secondary_color, 25px, 700, none, none);
 				margin: auto auto 50px auto;
 
 				// Mobile
@@ -264,12 +262,12 @@ body {
 			}
 
 			h4 {
-				@include text($light_pink, 25px, 700, none, none);
+				@include text($on_secondary_color, 25px, 700, none, none);
 				letter-spacing: 2px;
 
 				// Mobile
 				@include maxWidth($mobile_width) {
-					@include text($light_pink, 20px, 700, none, none);
+					@include text($on_secondary_color, 20px, 700, none, none);
 					letter-spacing: 1.5px;
 				}
 			}
@@ -299,10 +297,11 @@ body {
 
 					input[name='email'] {
 						@include size(100%, auto);
-						@include backgroundProperty($white, 30px);
+						@include backgroundProperty($on_primary_color, 30px);
+						color: red !important;
 						display: inline-block;
 						padding: 14px 130px 14px 15px;
-						border: 2px solid $red;
+						border: 2px solid $primary_color;
 						outline: none;
 
 						// Mobile
@@ -320,8 +319,8 @@ body {
 
 					input[name='submit'] {
 						@include absoluteAlign(6px, 6px, auto, auto);
-						@include backgroundProperty($red, 30px);
-						@include text($white, 12px, 400, none, none);
+						@include backgroundProperty($primary_color, 30px);
+						@include text($on_primary_color, 12px, 400, none, none);
 						display: inline;
 						outline: none;
 						border: none;
@@ -351,7 +350,7 @@ body {
 
 	.about {
 		@include size(100%, 100vh);
-		@include backgroundProperty($light_black, 0);
+		@include backgroundProperty($background_color_about_section, 0);
 		padding: 150px 0px;
 
 		// Mobile
@@ -406,7 +405,7 @@ body {
 
 						&::before {
 							@include size(15px);
-							@include backgroundProperty($white, 50%);
+							@include backgroundProperty($on_primary_color, 50%);
 							content: '';
 							position: absolute;
 							z-index: 10000;
@@ -447,7 +446,7 @@ body {
 							.hr {
 								&::before {
 									@include size(8px, 80px);
-									@include backgroundProperty($red, 6px 6px 0 0);
+									@include backgroundProperty($primary_color, 6px 6px 0 0);
 									content: '';
 									position: absolute;
 									z-index: 10;
@@ -459,7 +458,7 @@ body {
 							.mn {
 								&::before {
 									@include size(4px, 90px);
-									@include backgroundProperty($white, 6px 6px 0 0);
+									@include backgroundProperty($on_primary_color, 6px 6px 0 0);
 									content: '';
 									position: absolute;
 									z-index: 11;
@@ -471,7 +470,7 @@ body {
 							.sc {
 								&::before {
 									@include size(2px, 150px);
-									@include backgroundProperty($white, 6px 6px 0 0);
+									@include backgroundProperty($on_primary_color, 6px 6px 0 0);
 									content: '';
 									position: absolute;
 									z-index: 12;
@@ -485,7 +484,7 @@ body {
 				}
 			}
 
-			.about img {
+			img {
 				display: none;
 
 				// Mobile
@@ -512,37 +511,37 @@ body {
 				}
 
 				h2 {
-					@include text($white, 75px, bold, capitalize, none);
+					@include text($secondary_color, 75px, bold, capitalize, none);
 					margin: auto auto 20px auto;
 
 					// Mobile
 					@include maxWidth($mobile_width) {
-						@include text($white, 30px, 700, capitalize, none);
+						@include text($secondary_color, 30px, 700, capitalize, none);
 						text-align: center;
 						margin: auto auto 20px auto;
 					}
 				}
 
 				h5 {
-					@include text($white, 22px, 700, capitalize, none);
+					@include text($secondary_color, 22px, 700, capitalize, none);
 					letter-spacing: 2px;
 					margin: auto auto 25px auto;
 
 					// Mobile
 					@include maxWidth($mobile_width) {
-						@include text($white, 22px, 700, capitalize, none);
+						@include text($secondary_color, 22px, 700, capitalize, none);
 						text-align: center;
 					}
 
 					span {
-						color: $red;
+						color: $primary_color;
 					}
 				}
 
 
 				button {
-					@include text($white, 16px, bold, none, none);
-					@include backgroundProperty($red, 30px);
+					@include text($on_primary_color, 16px, bold, none, none);
+					@include backgroundProperty($primary_color, 30px);
 					border: 2px solid transparent;
 					padding: 13px 30px;
 					transition: .4s;
@@ -556,13 +555,13 @@ body {
 					}
 
 					a {
-						@include text($white, 16px, bold, none, none);
+						@include text($on_primary_color, 16px, bold, none, none);
 
 					}
 
 					&:hover {
 						background-color: transparent;
-						border: 4px solid $red;
+						border: 4px solid $primary_color;
 
 					}
 				}
@@ -574,19 +573,19 @@ body {
 
 
 	.services {
-		@include backgroundProperty($darker_black, 0);
+		@include backgroundProperty($background_color_service_section, 0);
 		@include size(100%, auto);
 		padding: 100px 0px;
 
 		.title {
-			@include text($white, 60px, bold, none, none);
+			@include text($secondary_color, 60px, bold, none, none);
 			display: block;
 			margin: 30px auto;
 			text-align: center;
 
 			// Mobile
 			@include maxWidth($mobile_width) {
-				@include text($white, 50px, bold, none, none);
+				@include text($secondary_color, 50px, bold, none, none);
 				margin: 30px 30px;
 			}
 		}
@@ -603,7 +602,7 @@ body {
 
 			.card {
 				@include size(46vh, 50vh);
-				@include backgroundProperty($dark_black, 20px);
+				@include backgroundProperty($primary_variant_color, 20px);
 				padding: 20px 35px;
 				margin: 15px;
 				position: relative;
@@ -617,29 +616,29 @@ body {
 				}
 
 				i {
-					@include text($red, 50px, bold, none, none);
+					@include text($primary_color, 50px, bold, none, none);
 					display: block;
 					text-align: center;
 					margin: 25px 0px;
 				}
 
 				h5 {
-					@include text($white, 23px, bold, none, none);
+					@include text($secondary_color, 23px, bold, none, none);
 					margin-bottom: 15px;
 				}
 
 
 				.pra {
 					p {
-						@include text($light_pink, 16px, 400, none, none);
+						@include text($on_primary_variant_color, 16px, 400, none, none);
 						line-height: 27px;
 						margin-bottom: 25px;
 					}
 				}
 
 				.button {
-					@include text($white, 16px, bold, none, none);
-					@include backgroundProperty($red, 30px);
+					@include text($on_primary_color, 16px, bold, none, none);
+					@include backgroundProperty($primary_color, 30px);
 					border: 2px solid transparent;
 					padding: 9px 22px;
 					transition: .4s;
@@ -647,7 +646,7 @@ body {
 
 					&:hover {
 						background-color: transparent;
-						border: 4px solid $red;
+						border: 4px solid $primary_color;
 					}
 				}
 			}
@@ -661,31 +660,27 @@ body {
 		@include size(100%, 25vh);
 		@include flexAlign();
 		position: relative;
-		background-color: $light_black;
+		background-color: $background_color_footer;
 		flex-direction: column;
 
 		// Mobile
 		@include maxWidth($mobile_width) {
 			@include size(100%, 200px);
-			@include flexAlign();
-			position: relative;
-			background-color: $light_black;
-			flex-direction: column;
 		}
 
 		p {
 			&:nth-child(1) {
-				@include text($white, 30px, bold, none, none);
+				@include text($secondary_color, 30px, bold, none, none);
 				margin: 50px auto 20px auto;
 
 				// Mobile
 				@include maxWidth($mobile_width) {
-					@include text($white, 27px, bold, none, none);
+					@include text($secondary_color, 27px, bold, none, none);
 				}
 			}
 
 			&:nth-child(2) {
-				@include text($white, 17px, bold, none, none);
+				@include text($secondary_color, 17px, bold, none, none);
 				@include size(50vw, auto);
 				text-align: center;
 			}
@@ -698,8 +693,8 @@ body {
 			a {
 				@include size(45px);
 				@include flexAlign();
-				@include text($white, 20px, bold, none, none);
-				@include backgroundProperty($red, 50%);
+				@include text($on_primary_color, 20px, bold, none, none);
+				@include backgroundProperty($primary_color, 50%);
 				margin: 22px 10px;
 
 				&:hover {
@@ -716,7 +711,7 @@ body {
 	#popup {
 		@include absoluteAlign(-100%, auto, auto, 50%);
 		@include size(400px, auto);
-		@include backgroundProperty($white, 0);
+		@include backgroundProperty($secondary_color, 0);
 		position: fixed;
 		margin: 30px;
 		padding: 80px 50px 50px;
@@ -779,7 +774,7 @@ body {
 				margin: 20px auto auto auto;
 
 				input {
-					@include text($dark_grey, 18px, 500, none, none);
+					@include text($placeholder, 18px, 500, none, none);
 					@include size(100%, auto);
 					border: 1px solid rgba(0, 0, 0, 0.2);
 					padding: 15px;
@@ -787,8 +782,8 @@ body {
 				}
 
 				input[type="submit"] {
-					@include text($white, 18px, 500, none, none);
-					@include backgroundProperty($blue, 0px);
+					@include text($on_primary_color, 18px, 500, none, none);
+					@include backgroundProperty($primary_color, 0px);
 					@include maxSize(150px, none);
 					box-shadow: none;
 					border: none;

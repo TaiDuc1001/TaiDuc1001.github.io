@@ -49,7 +49,6 @@ html::-webkit-scrollbar {
 }
 
 body {
-  background-color: #191919;
   width: 100vw;
   height: 100vh;
   margin: 0px;
@@ -148,12 +147,12 @@ body .hero {
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-color: #191919;
 }
 @media screen and (max-width: 46.1875em) {
   body .hero {
     width: 100vw;
     height: 100vh;
-    background-color: #101010;
     display: block;
   }
 }
@@ -171,7 +170,6 @@ body .hero nav .logo {
   text-transform: none;
   text-decoration: none;
   position: relative;
-  color: white;
   letter-spacing: 1px;
   cursor: pointer;
 }
@@ -206,7 +204,6 @@ body .hero nav ul li a {
   font-weight: bold;
   text-transform: capitalize;
   text-decoration: none;
-  color: white;
   padding-top: 50px;
   background: bottom var(--p1, 10px) left 50%/100% var(--p, 2px) no-repeat, linear-gradient(currentColor 0 0) bottom -2px right 50%/var(--d, 0%) 3px no-repeat;
   transition: 0.5s;
@@ -357,6 +354,7 @@ body .hero .content .newslatter form input[name=email] {
   height: auto;
   background-color: white;
   border-radius: 30px;
+  color: red !important;
   display: inline-block;
   padding: 14px 130px 14px 15px;
   border: 2px solid #f9004d;
@@ -549,11 +547,11 @@ body .about .main .clock-glass-shadow .box-clock .clock-glass .sec .sc::before {
   position: absolute;
   z-index: 12;
 }
-body .about .main .about img {
+body .about .main img {
   display: none;
 }
 @media screen and (max-width: 46.1875em) {
-  body .about .main .about img {
+  body .about .main img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -697,7 +695,7 @@ body .services .box {
 body .services .box .card {
   width: 46vh;
   height: 50vh;
-  background-color: #191919;
+  background-color: #343837;
   border-radius: 20px;
   padding: 20px 35px;
   margin: 15px;
@@ -731,7 +729,7 @@ body .services .box .card h5 {
   margin-bottom: 15px;
 }
 body .services .box .card .pra p {
-  color: rgba(255, 204, 255, 0.8);
+  color: #cccccc;
   font-size: 16px;
   font-weight: 400;
   text-transform: none;
@@ -770,12 +768,6 @@ body footer {
   body footer {
     width: 100%;
     height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: #1e1e1e;
-    flex-direction: column;
   }
 }
 body footer p:nth-child(1) {
@@ -927,7 +919,7 @@ body #popup .popup-content .inputBox input[type=submit] {
   font-weight: 500;
   text-transform: none;
   text-decoration: none;
-  background-color: #004fac;
+  background-color: #f9004d;
   border-radius: 0px;
   max-width: 150px;
   max-height: none;
