@@ -9,9 +9,9 @@
 	box-sizing: border-box;
 }
 
-html::-webkit-scrollbar {
-	display: none;
-}
+// html::-webkit-scrollbar {
+// 	display: none;
+// }
 
 body {
 	// background-color: $background_color_hero_section;
@@ -29,10 +29,10 @@ body {
 		background-size: cover;
 		border: 4px solid $background_color_hero_section;
 		border-radius: 50%;
-		box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
-			inset 0 -15px 15px rgba(255, 255, 255, 0.05),
-			0 15px 15px rgba(0, 0, 0, 0.05),
-			inset 0 15px 15px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.1),
+			inset 0 -15px 15px rgba(255, 255, 255, 0.1),
+			0 15px 15px rgba(0, 0, 0, 0.1),
+			inset 0 15px 15px rgba(0, 0, 0, 0.1);
 
 		// Mobile
 		@include maxWidth($mobile_width) {
@@ -43,7 +43,7 @@ body {
 			content: '';
 			position: absolute;
 			@include size(15px);
-			background-color: $on_primary_color;
+			background-color: $on_primary_variant_color;
 			border-radius: 50%;
 			z-index: 10000;
 		}
@@ -125,6 +125,7 @@ body {
 		// Mobile
 		@include maxWidth($mobile_width) {
 			@include size(100vw, 100vh);
+			@include maxSize(none, 100%);
 			display: block;
 		}
 
@@ -222,8 +223,9 @@ body {
 				@include absoluteAlign(42%, auto, auto, 0%);
 				position: relative;
 				padding-left: 8%;
-				max-width: 80% !important;
 				display: block;
+				max-width: 80% !important;
+				max-height: 80% !important;
 				transform: translateY(-50%);
 			}
 
@@ -349,7 +351,7 @@ body {
 
 
 	.about {
-		@include size(100%, 100vh);
+		@include size(100%, 95vh);
 		@include backgroundProperty($background_color_about_section, 0);
 		padding: 150px 0px;
 
