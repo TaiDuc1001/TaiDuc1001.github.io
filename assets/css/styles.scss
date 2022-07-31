@@ -9,9 +9,9 @@
 	box-sizing: border-box;
 }
 
-html::-webkit-scrollbar {
-	display: none !important;
-}
+// html::-webkit-scrollbar {
+// 	display: none !important;
+// }
 
 body {
 	// background-color: $background_color_hero_section;
@@ -20,37 +20,76 @@ body {
 	margin: 0px;
 	padding: 0px;
 
-	.shadow_screen {
-		@include minSize(100%, 100%);
-		@include backgroundProperty(black, 0);
-		opacity: .0;
-		z-index: 8;
-		transition: all .9s ease;
-		position: fixed;
-		// display: none;
-	}
+	// .shadow_screen {
+	// 	@include minSize(100%, 100%);
+	// 	@include backgroundProperty(black, 0);
+	// 	opacity: .0;
+	// 	z-index: 8;
+	// 	transition: all .9s ease;
+	// 	position: fixed;
+	// 	// display: none;
+	// }
 
 	.sidebar {
 		@include absoluteAlign(0, auto, auto, 0);
 		@include backgroundProperty($unsusceptible_green, 0);
 		@include size(78px, 100%);
 		@include maxSize(230px);
-		// @include minSize(200px);
+		@include minSize(78px);
 		position: fixed;
 		padding: 6px 14px;
 		transition: all .5s ease;
 		z-index: 9999;
 
+		@include minWidth($mobile_width){
+			display: none;
+		}
+
+		~.hero {
+
+			@include maxWidth($mobile_width){
+				align-items: flex-start;
+				width: calc(100% - 78px);
+				margin-left: 78px;
+			}
+			
+		}
+
+		~.about {
+			@include maxWidth($mobile_width){
+				align-items: flex-start;
+				width: calc(100% - 78px);
+				margin-left: 78px;
+			}
+		}
+
+		~.services {
+			@include maxWidth($mobile_width){
+				align-items: flex-start;
+				width: calc(100% - 78px);
+				margin-left: 78px;
+			}
+
+			.main {
+				.clock-glass-shadow {
+					.clock-glass {}
+				}
+			}
+
+		}
+
+		~ footer {
+			@include maxWidth($mobile_width){
+				width: calc(100% - 78px);
+				margin-left: 78px;
+			}
+
+		}
 
 		&.active {
 			@include size(45vw, 100%);
 			z-index: 9999;
 
-			~ .shadow_screen {
-				transition: all .5s ease;
-				z-index: 9000;
-				opacity: .6;
-			}
 
 			#menu-button {
 				@include absoluteAlign(6px, auto, auto, 90%);
@@ -535,12 +574,12 @@ body {
 	.about {
 		@include size(100%, 95vh);
 		@include backgroundProperty($background_color_about_section, 0);
-		padding: 150px 0px;
+		padding: auto 0px 2vh 0;
 
 		// Mobile
 		@include maxWidth($mobile_width) {
 			@include flexAlign();
-			padding: 100px auto auto auto;
+			padding: auto auto auto auto;
 		}
 
 		.main {
@@ -548,18 +587,24 @@ body {
 			@include size(1130px, auto);
 			@include maxSize(95%, none);
 			justify-content: space-around;
-			margin: 0px auto;
-
+			// margin: 0px auto;
+			padding-top: 20vh;
+			padding-left: 50vw;
+			
 			// Mobile
 			@include maxWidth($mobile_width) {
-				@include size(100%, auto);
+				@include size(100%, 100%);
 				@include maxSize(100%, none);
+				display: block;
+				margin: 0px auto;
+				padding: 0;
+
 			}
 
 			.clock-glass-shadow {
 				.box-clock {
 					@include size(400px);
-					@include absoluteAlign(110%);
+					@include absoluteAlign(110%, auto, auto, 78px);
 					@include backgroundProperty(transparent, 50%);
 					backdrop-filter: blur(25px);
 					border: 1px solid rgba(255, 255, 255, 0.5);
@@ -568,9 +613,11 @@ body {
 
 					// Mobile
 					@include maxWidth($mobile_width) {
-						@include size(50vw);
-						@include absoluteAlign(115%, 25vw, auto, 25vw);
+						@include size(calc(50vw));
+						position: relative;
+						top: 10vh;
 						margin: auto;
+						left: 0;
 					}
 
 					.clock-glass {
@@ -586,6 +633,10 @@ body {
 						box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1),
 							10px 10px 20px rgba(0, 0, 0, 0.1),
 							0px 40px 50px rgba(0, 0, 0, 0.2);
+
+						@include maxWidth($mobile_width) {
+							scale: 0.8x;
+						}
 
 						&::before {
 							@include size(15px);
@@ -641,6 +692,7 @@ body {
 						.min {
 							.mn {
 								&::before {
+
 									@include size(4px, 90px);
 									@include backgroundProperty($on_primary_color, 6px 6px 0 0);
 									content: '';
@@ -684,14 +736,18 @@ body {
 
 			.about-text {
 				@include size(40vw, auto);
-				margin: auto auto auto 600px;
+				margin: 0px auto auto auto;
 
 				// Mobile
 				@include maxWidth($mobile_width) {
 					@include size(80vw, auto);
+					min-height: 60vh;
 					@include flexAlign();
+					max-width: 70vw;
 					display: block;
-					margin: 300px auto auto auto;
+					margin: auto auto 0px auto;
+					padding-top: 20vh;
+					padding-bottom: 20vh !important;
 				}
 
 				h2 {
@@ -788,7 +844,9 @@ body {
 				@include size(46vh, auto);
 				@include backgroundProperty($primary_variant_color, 20px);
 				padding: 20px 35px;
+				max-width: 70vw;
 				margin: 15px;
+				right: 5px;
 				position: relative;
 				text-align: center;
 

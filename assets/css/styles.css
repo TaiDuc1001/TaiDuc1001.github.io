@@ -44,25 +44,11 @@
   box-sizing: border-box;
 }
 
-html::-webkit-scrollbar {
-  display: none !important;
-}
-
 body {
   width: 100vw;
   height: 100vh;
   margin: 0px;
   padding: 0px;
-}
-body .shadow_screen {
-  min-width: 100%;
-  min-height: 100%;
-  background-color: black;
-  border-radius: 0;
-  opacity: 0;
-  z-index: 8;
-  transition: all 0.9s ease;
-  position: fixed;
 }
 body .sidebar {
   position: absolute;
@@ -76,20 +62,49 @@ body .sidebar {
   height: 100%;
   max-width: 230px;
   max-height: none;
+  min-width: 78px;
+  min-height: none;
   position: fixed;
   padding: 6px 14px;
   transition: all 0.5s ease;
   z-index: 9999;
 }
+@media screen and (min-width: 46.1875em) {
+  body .sidebar {
+    display: none;
+  }
+}
+@media screen and (max-width: 46.1875em) {
+  body .sidebar ~ .hero {
+    align-items: flex-start;
+    width: calc(100% - 78px);
+    margin-left: 78px;
+  }
+}
+@media screen and (max-width: 46.1875em) {
+  body .sidebar ~ .about {
+    align-items: flex-start;
+    width: calc(100% - 78px);
+    margin-left: 78px;
+  }
+}
+@media screen and (max-width: 46.1875em) {
+  body .sidebar ~ .services {
+    align-items: flex-start;
+    width: calc(100% - 78px);
+    margin-left: 78px;
+  }
+}
+@media screen and (max-width: 46.1875em) {
+  body .sidebar ~ footer {
+    width: calc(100% - 78px);
+    margin-left: 78px;
+  }
+}
 body .sidebar.active {
   width: 45vw;
   height: 100%;
   z-index: 9999;
-}
-body .sidebar.active ~ .shadow_screen {
-  transition: all 0.5s ease;
-  z-index: 9000;
-  opacity: 0.6;
 }
 body .sidebar.active #menu-button {
   position: absolute;
@@ -590,14 +605,14 @@ body .about {
   height: 95vh;
   background-color: #1e1e1e;
   border-radius: 0;
-  padding: 150px 0px;
+  padding: auto 0px 2vh 0;
 }
 @media screen and (max-width: 46.1875em) {
   body .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px auto auto auto;
+    padding: auto auto auto auto;
   }
 }
 body .about .main {
@@ -609,14 +624,18 @@ body .about .main {
   max-width: 95%;
   max-height: none;
   justify-content: space-around;
-  margin: 0px auto;
+  padding-top: 20vh;
+  padding-left: 50vw;
 }
 @media screen and (max-width: 46.1875em) {
   body .about .main {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 100%;
     max-height: none;
+    display: block;
+    margin: 0px auto;
+    padding: 0;
   }
 }
 body .about .main .clock-glass-shadow .box-clock {
@@ -626,7 +645,7 @@ body .about .main .clock-glass-shadow .box-clock {
   top: 110%;
   right: auto;
   bottom: auto;
-  left: auto;
+  left: 78px;
   background-color: transparent;
   border-radius: 50%;
   backdrop-filter: blur(25px);
@@ -638,12 +657,10 @@ body .about .main .clock-glass-shadow .box-clock {
   body .about .main .clock-glass-shadow .box-clock {
     width: 50vw;
     height: 50vw;
-    position: absolute;
-    top: 115%;
-    right: 25vw;
-    bottom: auto;
-    left: 25vw;
+    position: relative;
+    top: 10vh;
     margin: auto;
+    left: 0;
   }
 }
 body .about .main .clock-glass-shadow .box-clock .clock-glass {
@@ -663,6 +680,11 @@ body .about .main .clock-glass-shadow .box-clock .clock-glass {
   border-bottom: none;
   border-right: none;
   box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.1), 0px 40px 50px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 46.1875em) {
+  body .about .main .clock-glass-shadow .box-clock .clock-glass {
+    scale: 0.8x;
+  }
 }
 body .about .main .clock-glass-shadow .box-clock .clock-glass::before {
   width: 15px;
@@ -749,17 +771,21 @@ body .about .main img {
 body .about .main .about-text {
   width: 40vw;
   height: auto;
-  margin: auto auto auto 600px;
+  margin: 0px auto auto auto;
 }
 @media screen and (max-width: 46.1875em) {
   body .about .main .about-text {
     width: 80vw;
     height: auto;
+    min-height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 70vw;
     display: block;
-    margin: 300px auto auto auto;
+    margin: auto auto 0px auto;
+    padding-top: 20vh;
+    padding-bottom: 20vh !important;
   }
 }
 body .about .main .about-text h2 {
@@ -881,7 +907,9 @@ body .services .box .card {
   background-color: #343837;
   border-radius: 20px;
   padding: 20px 35px;
+  max-width: 70vw;
   margin: 15px;
+  right: 5px;
   position: relative;
   text-align: center;
 }
