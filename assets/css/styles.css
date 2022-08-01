@@ -58,14 +58,14 @@ body .sidebar {
   left: 0;
   background-color: #0F9B8E;
   border-radius: 0;
-  width: 78px;
+  width: 65px;
   height: 100%;
   max-width: 230px;
   max-height: none;
-  min-width: 78px;
+  min-width: 65px;
   min-height: none;
   position: fixed;
-  padding: 6px 14px;
+  padding: 6px 0px;
   transition: all 0.5s ease;
   z-index: 9999;
 }
@@ -77,28 +77,28 @@ body .sidebar {
 @media screen and (max-width: 46.1875em) {
   body .sidebar ~ .hero {
     align-items: flex-start;
-    width: calc(100% - 78px);
-    margin-left: 78px;
+    width: calc(100% - 65px);
+    margin-left: 65px;
   }
 }
 @media screen and (max-width: 46.1875em) {
   body .sidebar ~ .about {
     align-items: flex-start;
-    width: calc(100% - 78px);
-    margin-left: 78px;
+    width: calc(100% - 65px);
+    margin-left: 65px;
   }
 }
 @media screen and (max-width: 46.1875em) {
   body .sidebar ~ .services {
     align-items: flex-start;
-    width: calc(100% - 78px);
-    margin-left: 78px;
+    width: calc(100% - 65px);
+    margin-left: 65px;
   }
 }
 @media screen and (max-width: 46.1875em) {
   body .sidebar ~ footer {
-    width: calc(100% - 78px);
-    margin-left: 78px;
+    width: calc(100% - 65px);
+    margin-left: 65px;
   }
 }
 body .sidebar.active {
@@ -144,7 +144,8 @@ body .sidebar .logo-content .logo {
 }
 body .sidebar .logo-content .logo i {
   font-size: 28px;
-  margin-right: 5px;
+  margin-right: 10px;
+  margin-left: 20px;
   z-index: 100000;
 }
 body .sidebar .logo-content .logo .logo-name {
@@ -161,7 +162,7 @@ body .sidebar .logo-content ul {
   z-index: 100000;
 }
 body .sidebar .logo-content ul li {
-  width: 100%;
+  width: 80%;
   height: 50px;
   position: relative;
   margin: 0 5px;
@@ -234,7 +235,7 @@ body .sidebar #menu-button {
   top: 6px;
   right: auto;
   bottom: auto;
-  left: 55%;
+  left: 48%;
   color: white;
   font-size: 20px;
   font-weight: bold;

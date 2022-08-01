@@ -33,14 +33,14 @@ body {
 	.sidebar {
 		@include absoluteAlign(0, auto, auto, 0);
 		@include backgroundProperty($unsusceptible_green, 0);
-		@include size(78px, 100%);
+		@include size(65px, 100%);
 		@include maxSize(230px);
-		@include minSize(78px);
+		@include minSize(65px);
 		position: fixed;
-		padding: 6px 14px;
+		padding: 6px 0px;
 		transition: all .5s ease;
 		z-index: 9999;
-
+		
 		@include minWidth($mobile_width){
 			display: none;
 		}
@@ -49,8 +49,8 @@ body {
 
 			@include maxWidth($mobile_width){
 				align-items: flex-start;
-				width: calc(100% - 78px);
-				margin-left: 78px;
+				width: calc(100% - 65px);
+				margin-left: 65px;
 			}
 			
 		}
@@ -58,16 +58,16 @@ body {
 		~.about {
 			@include maxWidth($mobile_width){
 				align-items: flex-start;
-				width: calc(100% - 78px);
-				margin-left: 78px;
+				width: calc(100% - 65px);
+				margin-left: 65px;
 			}
 		}
 
 		~.services {
 			@include maxWidth($mobile_width){
 				align-items: flex-start;
-				width: calc(100% - 78px);
-				margin-left: 78px;
+				width: calc(100% - 65px);
+				margin-left: 65px;
 			}
 
 			.main {
@@ -80,8 +80,8 @@ body {
 
 		~ footer {
 			@include maxWidth($mobile_width){
-				width: calc(100% - 78px);
-				margin-left: 78px;
+				width: calc(100% - 65px);
+				margin-left: 65px;
 			}
 
 		}
@@ -143,7 +143,8 @@ body {
 
 				i {
 					font-size: 28px;
-					margin-right: 5px;
+					margin-right: 10px;
+					margin-left: 20px;
 					z-index: 100000;
 
 				}
@@ -163,7 +164,7 @@ body {
 
 
 				li {
-					@include size(100%, 50px);
+					@include size(80%, 50px);
 					position: relative;
 					margin: 0 5px;
 					list-style: none;
@@ -228,7 +229,7 @@ body {
 		}
 
 		#menu-button {
-			@include absoluteAlign(6px, auto, auto, 55%);
+			@include absoluteAlign(6px, auto, auto, 48%);
 			@include text($white, 20px, bold, none, none);
 			@include size(50px);
 			text-align: center;
