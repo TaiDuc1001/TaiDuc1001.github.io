@@ -63,7 +63,7 @@ body {
 			}
 		}
 
-		~.services {
+		~.projects {
 			@include maxWidth($mobile_width){
 				align-items: flex-start;
 				width: calc(100% - 65px);
@@ -813,7 +813,7 @@ body {
 	}
 
 
-	.services {
+	.projects {
 		@include backgroundProperty($background_color_service_section, 0);
 		@include size(100%, auto);
 		padding: 100px 0px;

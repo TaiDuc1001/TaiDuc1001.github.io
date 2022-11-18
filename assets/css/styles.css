@@ -89,7 +89,7 @@ body .sidebar {
   }
 }
 @media screen and (max-width: 46.1875em) {
-  body .sidebar ~ .services {
+  body .sidebar ~ .projects {
     align-items: flex-start;
     width: calc(100% - 65px);
     margin-left: 65px;
@@ -863,14 +863,14 @@ body .about .main .about-text button:hover {
   background-color: transparent;
   border: 4px solid #48b4d5;
 }
-body .services {
+body .projects {
   background-color: #101010;
   border-radius: 0;
   width: 100%;
   height: auto;
   padding: 100px 0px;
 }
-body .services .title {
+body .projects .title {
   color: #d8e4ec;
   font-size: 60px;
   font-weight: bold;
@@ -881,7 +881,7 @@ body .services .title {
   text-align: center;
 }
 @media screen and (max-width: 46.1875em) {
-  body .services .title {
+  body .projects .title {
     color: #d8e4ec;
     font-size: 30px;
     font-weight: bold;
@@ -891,7 +891,7 @@ body .services .title {
     padding-right: 10px;
   }
 }
-body .services .box {
+body .projects .box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -899,11 +899,11 @@ body .services .box {
   min-height: 400px;
 }
 @media screen and (max-width: 46.1875em) {
-  body .services .box {
+  body .projects .box {
     display: block;
   }
 }
-body .services .box .card {
+body .projects .box .card {
   width: 46vh;
   height: auto;
   background-color: #343837;
@@ -915,11 +915,11 @@ body .services .box .card {
   text-align: center;
 }
 @media screen and (max-width: 46.1875em) {
-  body .services .box .card {
+  body .projects .box .card {
     margin: auto auto 30px auto;
   }
 }
-body .services .box .card i {
+body .projects .box .card i {
   color: #48b4d5;
   font-size: 50px;
   font-weight: bold;
@@ -929,7 +929,7 @@ body .services .box .card i {
   text-align: center;
   margin: 25px 0px;
 }
-body .services .box .card h5 {
+body .projects .box .card h5 {
   color: #d8e4ec;
   font-size: 23px;
   font-weight: bold;
@@ -937,7 +937,7 @@ body .services .box .card h5 {
   text-decoration: none;
   margin-bottom: 15px;
 }
-body .services .box .card .pra p {
+body .projects .box .card .pra p {
   color: #dfdbe2;
   font-size: 16px;
   font-weight: 400;
@@ -946,7 +946,7 @@ body .services .box .card .pra p {
   line-height: 27px;
   margin-bottom: 25px;
 }
-body .services .box .card .button {
+body .projects .box .card .button {
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -959,7 +959,7 @@ body .services .box .card .button {
   transition: 0.4s;
   cursor: pointer;
 }
-body .services .box .card .button:hover {
+body .projects .box .card .button:hover {
   background-color: transparent;
   border: 4px solid #48b4d5;
 }
