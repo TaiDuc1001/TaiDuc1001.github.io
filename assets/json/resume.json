@@ -48,55 +48,41 @@
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "50% Scholarship",
+      "date": "2023-05-24",
+      "awarder": "FPT University HCMC",
+      "url": "https://drive.google.com/file/d/1H58X8tHVlCdGHw_wA5S4UA4awSxoU49R/view?usp=drive_link",
+      "summary": "The scholarship is awarded to excellent students having participated in the FPT entrance test."
+    },
+    {
+      "title": "Semi-Finalist TechGenius Competition 2021",
+      "date": "2021-12-22",
+      "awarder": "RMIT University Vietnam and Hoa Hoc Tro magazine",
+      "url": "https://drive.google.com/file/d/19BuKHbbF9Tm-4rYypzof1sF0FaOVfOOC/view?usp=drive_link",
+      "summary": "The TechGenius is an annual event designed to foster and showcase young talents in technology through collaborative team efforts and innovative projects."
     }
   ],
   "certificates": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
+      "name": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+      "date": "2024-01-16",
+      "issuer": "DeepLearning.ai",
+      "url": "https://coursera.org/share/37862fe9ae377926cf6cfeb46c4acde9",
       "icon": "fa-solid fa-location-dot"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
+      "name": "Generative AI with Large Language Models",
+      "date": "2024-01-19",
+      "issuer": "DeepLearning.ai",
+      "url": "https://coursera.org/share/9321aa29b26fd403992ab7f3920a3b04",
       "icon": "fa-solid fa-tag"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
+      "name": "Foundations: Data, Data, Everywhere",
+      "date": "2024-02-05",
+      "issuer": "Google",
+      "url": "https://coursera.org/share/868d48d4758dcff6e01baea6e125e608",
       "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
     }
   ],
   "publications": [
