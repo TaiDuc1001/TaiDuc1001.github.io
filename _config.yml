@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title:  # the website title (if blank, full name will be used instead)
 first_name: Duc
 middle_name: Tai
 last_name: Phan
@@ -634,8 +634,8 @@ jsonresume:
   - education
   - projects
   # - volunteer
-  # - awards
-  # - certificates
+  - awards
+  - certificates
   # - publications
   - skills
   - languages
