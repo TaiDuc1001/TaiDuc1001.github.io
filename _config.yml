@@ -633,7 +633,7 @@ jsonresume:
   - work
   - education
   - projects
-  # - volunteer
+  - volunteer
   - awards
   - certificates
   # - publications

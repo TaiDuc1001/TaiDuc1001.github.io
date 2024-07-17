@@ -163,6 +163,20 @@
       ]
     }
   ],
+  "volunteer": [
+    {
+      "organization": "FPT University",
+      "location": "Thu Duc city, HCMC",
+      "position": "Mam - Children Dream Foundation",
+      "url": "https://www.facebook.com/mamchildrendreamfoundation",
+      "startDate": "2024-05-22",
+      "endDate": "2024-07-17",
+      "summary": "Organized the 'Mầm - Children's Dream Foundation' project, which aimed to support underprivileged children's education through fundraising and selling mini plant pot kits.",
+      "highlights": ["Raised over 3 million VND, exceeding the initial goal.", 
+                  "Donated educational supplies, including textbooks and learning tools, to children.",
+                  "Awarded a 'Letter of Thanks' by the Hiep Binh Phuoc Ward Youth Union for the project's efforts."]
+    }
+  ],
   "references": [
     {
       "name": "Dr. Dang Ngoc Minh Duc",
