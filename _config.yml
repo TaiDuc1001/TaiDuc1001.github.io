@@ -50,7 +50,7 @@ rss_icon: true
 navbar_fixed: true
 footer_fixed: false
 search_enabled: true
-socials_in_search: true
+socials_in_search: false
 
 # Dimensions
 max_width: 930px
@@ -80,17 +80,17 @@ flickr_id: # your flickr id
 github_username: TaiDuc1001 # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
-instagram_id: # your instagram id
+instagram_id: ducphan1001 # your instagram id
 kaggle_id: ducphan1001 # your kaggle id
 keybase_username: # your keybase user name
 lastfm_id: # your lastfm id
 lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 linkedin_username: tai-duc-phan-563b19287 # your LinkedIn user name
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-medium_username: # your Medium username
+medium_username: phantaiduc2005 # your Medium username
 orcid_id: 0009-0005-2578-0626 # your ORCID ID
 osf_id: # your OSF ID
-pinterest_id: # your pinterest id
+pinterest_id: taiduc1001 # your pinterest id
 publons_id: # your ID on Publons
 quora_username: Tài-Đức-Phan-1 # your Quora username
 research_gate_profile: # your profile on ResearchGate
@@ -106,9 +106,9 @@ whatsapp_number: # your WhatsApp number (full phone number in international form
 wikidata_id: # your wikidata id
 wikipedia_id: # your wikipedia id (Case sensitive)
 work_url: # work page URL
-x_username: # your X handle
+x_username: CallMeDucky1001 # your X handle
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
-zotero_username: # your zotero username
+zotero_username: taiduc1001 # your zotero username
 
 contact_note: # >
   # You can even add a little note about which of these is the best way to reach you.
@@ -131,10 +131,10 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
-permalink: /blog/:year/:title/
-lsi: false # produce an index for related posts
+# blog_name: al-folio # blog_name will be displayed in your blog page
+# blog_description: a simple whitespace theme for academics
+# permalink: /blog/:year/:title/
+# lsi: false # produce an index for related posts
 
 # Pagination
 pagination:
@@ -166,13 +166,13 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+# external_sources:
+#   - name: medium.com
+#     rss_url: https://medium.com/@al-folio/feed
+#   - name: Google Blog
+#     posts:
+#       - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
+#         published_date: 2024-05-14
 
 # -----------------------------------------------------------------------------
 # Newsletter
