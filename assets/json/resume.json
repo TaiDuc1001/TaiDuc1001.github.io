@@ -5,7 +5,6 @@
     "image": "",
     "email": "phantaiduc2005@gmail.com",
     "phone": "(+84) 902-244-389",
-    "url": "https://TaiDuc1001.github.io",
     "summary": "An AI Researcher with strong background on mathematics and computer science. My research interests include machine learning, deep learning and computer vision.",
     "location": {
       "address": "Lien khu 5-6 Street, Binh Hung Hoa B Ward, Binh Tan District",
@@ -26,6 +25,7 @@
     {
       "name": "AiTA Lab - FPT University",
       "position": "AI Researcher",
+      "url": "https://aita-lab.github.io/",
       "startDate": "2024-04-01",
       "summary": "Research on machine learning, deep learning and computer vision with my mentor."
     }
