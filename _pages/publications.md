@@ -9,7 +9,6 @@ nav_order: 3
 
 <!-- _pages/publications.md -->
 <div class="publications">
-    <p>No publications yet.</p>
 
 {% bibliography %}
 
