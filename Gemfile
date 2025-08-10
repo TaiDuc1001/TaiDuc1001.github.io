@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
+
+# Required for Ruby 3.4.0+ compatibility
+gem 'observer'
+gem 'logger'
+
 group :jekyll_plugins do
     gem 'classifier-reborn'
     gem 'jekyll'

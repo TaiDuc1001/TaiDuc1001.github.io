@@ -20,22 +20,23 @@ RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en \
     LC_ALL=en_US.UTF-8 \
-    JEKYLL_ENV=production
+    JEKYLL_ENV=production \
+    SASS_SILENCE_DEPRECATIONS=* \
+    SCSS_SILENCE_DEPRECATIONS=*
 
 RUN mkdir /srv/jekyll
 
-ADD Gemfile.lock /srv/jekyll
 ADD Gemfile /srv/jekyll
 
 WORKDIR /srv/jekyll
 
-# install jekyll and dependencies
 RUN gem install jekyll bundler
 
-RUN bundle install --no-cache
-# && rm -rf /var/lib/gems/3.1.0/cache
-EXPOSE 8080
+RUN bundle install
 
 COPY bin/entry_point.sh /tmp/entry_point.sh
+RUN sed -i 's/\r$//' /tmp/entry_point.sh && chmod +x /tmp/entry_point.sh
+EXPOSE 8080
+
 
 CMD ["/tmp/entry_point.sh"]

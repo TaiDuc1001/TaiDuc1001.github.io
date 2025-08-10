@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-**Short Bio:** My name is Phan Tai Duc (Phan Tài Đức - Vietnamese). I’m currently studying as a first-year student at FPT University, majoring in Software Engineer. I’m enthusiastic about AI developments, machine learning, mathematical algorithms, and the way deep models can solve real-world problems.
+**Short Bio:** My name is Phan Tai Duc (Phan Tài Đức - Vietnamese). I am a person who is deeply enthusiastic about exploring new AI research and mathematical expression. My goal in the next few years is to become an AI Engineer role, focusing on advancements in Computer Vision and NLP, especially on time series forecasting. I am currently a third-year student and an AI Researcher Assistant with 1 year of experience specializing in Computer Vision at the AiTA Lab - Artificial Intelligence of Technologies and Application - at FPT University HCMC. My expertise includes image classification, object detection, and face recognition.
 
 **Research Interests:** Artificial Intelligence, Deep Learning, Machine Learning, Computer Vision, NLP, GenAI. My main research field is applying machine learning techniques to a specific use case in CV and NLP.
 

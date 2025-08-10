@@ -16,6 +16,29 @@
   },
   "work": [
     {
+      "name": "AI Intern - IMT Solution",
+      "position": "AI Intern",
+      "url": "https://imt-soft.com/",
+      "startDate": "2025-08-11",
+      "summary": "Working on automation projects with NLP and LLM processing."
+    },
+    {
+      "name": "AI Engineer Part-time - ABC Studio",
+      "position": "AI Engineer Part-time",
+      "url": "https://abcstudio.co/",
+      "startDate": "2025-01-25",
+      "endDate": "2025-04-20",
+      "summary": "Join the AI team to implementing real-time direction predictions by keypoint regression on Jetson Orin"
+    },
+    {
+      "name": "AI Engineer Intern - ABC Studio",
+      "position": "AI Engineer Intern",
+      "url": "https://abcstudio.co/",
+      "startDate": "2024-11-01",
+      "endDate": "2025-01-25",
+      "summary": "Join the AI team to implementing Smart Traffic Management System."
+    },
+    {
       "name": "AiTA Lab - FPT University",
       "position": "AI Researcher",
       "url": "https://aita-lab.github.io/",
@@ -40,6 +63,13 @@
     }
   ],
   "awards": [
+    {
+      "title": "2nd Prize in Student Research Competition",
+      "date": "2025-08-10",
+      "awarder": "FPT University HCMC",
+      "url": "https://www.facebook.com/share/p/19cC2Mf7pB/",
+      "summary": "Achieve 2nd prize at ResFes for ALMUS paper."
+    },
     {
       "title": "50% Scholarship",
       "date": "2023-05-24",
