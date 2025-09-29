@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 📰 02 papers are accepted at The 17th International Conference on Management of Digital Ecosystems, Ho Chi Minh City, Vietnam.
-date: 2025-26-09
+date: 2025-09-26
 inline: false
 related_posts: false
 ---
