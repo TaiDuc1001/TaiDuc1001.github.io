@@ -1,3 +1,61 @@
+@INPROCEEDINGS{Phan2509:DAAL,
+    AUTHOR={Duc Tai Phan and Nhut Minh Nguyen and Duc Ngoc Minh Dang},
+    TITLE="{DAAL:} Dual Ambiguity in Active Learning for Object Detection with {YOLOE}",
+    BOOKTITLE={17th International Conference on Management of Digital Ecosystems},
+    ADDRESS={Ho Chi Minh City, Vietnam},
+    MONTH=sep,
+    YEAR=2025,
+    KEYWORDS={YOLO, Active Learning, Object Detection, Epistemic Uncertainty, Aleatoric Uncertainty},
+    ABSTRACT={The high cost of annotating vast datasets poses a significant challenge in object detection, hindering the development of robust models. By selectively annotating the most instructive samples, active learning has become a viable strategy for addressing this problem and improving model performance and labeling efficiency. However, the two main types of model uncertainty—epistemic, which captures the model's uncertainty in classifying an object, and aleatoric, which addresses the inherent ambiguity in an object's presence and location—are frequently not balanced in traditional active learning techniques. In this paper, we introduce DAAL (Dual Ambiguity Active Learning), a novel framework that quantifies and combines both epistemic and aleatoric ambiguity into a single, weighted score. Epistemic ambiguity measures the model's indecision in assigning semantic labels, while aleatoric ambiguity assesses the conviction in object presence and localization. By combining these, DAAL selects the most informative images for annotation, optimizing model performance under limited labeling budgets. Extensive experiments on popular benchmarks demonstrate that DAAL consistently outperforms traditional methods, achieving superior accuracy under the same limited labeling budget. This affirms its effectiveness in creating more efficient annotation workflows for object detection.},
+    selected = {true},
+    preview={daal-mainflow.png},
+}
+
+@INPROCEEDINGS{Phan2509:ALMUS,
+    AUTHOR={Duc Tai Phan and Nhut Minh Nguyen and Khang Phuc Nguyen and Tri Pham and
+    Duc Ngoc Minh Dang},
+    TITLE="{ALMUS:} Enhancing Active Learning for Object Detection with {Metric-Based}
+    Uncertainty Sampling",
+    BOOKTITLE={25th Asia-Pacific Network Operations and Management Symposium 2025
+    (APNOMS'2025)},
+    ADDRESS={Kaohsiung, Taiwan},
+    PAGES=6,
+    DAYS=20,
+    MONTH=sep,
+    YEAR=2025,
+    KEYWORDS={Active Learning; Object Detection; Uncertainty Sampling; Metric-based
+    Sampling},
+    ABSTRACT={Object detection is critical in computer vision but often requires large
+    amounts of labeled data for effective training. Active learning (AL) has
+    emerged as a promising solution to reduce the annotation burden by
+    selecting the most informative samples for labeling. However, existing AL
+    methods for object detection primarily focus on uncertainty sampling, which
+    may not effectively balance the dual challenges of classification and
+    localization.
+    In this study, we explore active learning for object detection, with the
+    objective of optimizing model performance while substantially reducing the
+    demand for annotated data. 
+    We propose a novel Active Learning with Metric-based Uncertainty Sampling
+    (ALMUS) that works effectively for the object detection task.
+    This approach prioritizes selecting images containing objects from
+    categories where the model exhibits suboptimal performance, as determined
+    by category-specific evaluation metrics. 
+    To balance the annotation budget across different object classes, we
+    propose a dynamic allocation strategy that considers the difficulty of each
+    class and the distribution of object instances within the dataset. This
+    combination of strategies enables our method to effectively address the
+    dual challenges of classification and localization in object detection
+    tasks while still focusing on the rarest and most challenging classes.
+    We conduct extensive experiments on the PASCAL VOC 2007 and 2012 datasets,
+    demonstrating that our method outperforms several active learning
+    baselines. Our results indicate that the proposed approach enhances model
+    performance and accelerates convergence, making it a valuable contribution
+    to the field of active learning in object detection.},
+    selected = {true},
+    preview={ALMUS_workflow.png},
+}
+
+
 @INPROCEEDINGS{Dang2410:Improving,
     AUTHOR={Duc Tai Phan and Nam Phuong Tran and Duc Ngoc Minh Dang},
     TITLE={Improving Face Attendance Checking System with Ensemble Learning},
@@ -10,19 +68,4 @@
     preview={ATC_EnsembleLearning_Workflow.png},
     code={https://anonymous.4open.science/r/Face-Attendance-Checking-2640/},
     ABSTRACT={In many industrialized countries, implementing an efficient face attendance checking system is crucial for effective staff management. The face attendance system nowadays encounters such problems. The biggest challenge to be concerned with is the various light and angle conditions, which can damage the performance of these systems. In this paper, we present an innovative approach that combines the results of GoogLeNet, VGGFace, and FaceNet to achieve higher accuracy through Ensemble Learning. With this solution, newer systems can achieve better results. Our system encompasses image capture, face detection, database management, and feature extraction for face recognition. All related code is available at https://anonymous.4open.science/r/Face-Attendance-Checking-2640/},
-}
-
-@INPROCEEDINGS{Tran2410:Real,
-    AUTHOR={Nam Phuong Tran and Nhat Truong Pham and Nam Van Hai Phan and Duc Tai Phan and Tuan Cuong Nguyen and Duc Ngoc Minh Dang},
-    TITLE={Towards Real-time Vietnamese Traffic Sign Recognition on Embedded Systems},
-    BOOKTITLE={2024 15th International Conference on Information and Communication Technology Convergence (ICTC) (ICTC 2024)},
-    ADDRESS={Jeju Island, Korea (South)},
-    PAGES={6},
-    MONTH={oct},
-    YEAR={2024},
-    preview={ICTC_TrafficSign_Workflow.png},
-    selected = {true},
-    KEYWORDS={Traffic Sign Recognition; Object Detection; Quantization; Vietnamese
-    Traffic Sign dataset; Deep learning},
-    ABSTRACT={In recent years, AI development has brought many significant changes in various aspects of our daily lives. Integrating AI technology into various applications has revolutionized multiple domains, and one particularly vital area is traffic sign recognition, which significantly enhances driver safety. This paper presents an approach to traffic sign recognition specifically designed for the Jetson Nano 2GB device. By utilizing the YOLOv8 Nano model, the proposed approach achieves a remarkable frame rate of up to 32 frames per second (FPS). To optimize inference speed on Jetson with limited memory, the approach incorporates TensorRT and quantization techniques. In addition, this paper introduces a dataset called the Vietnamese Traffic Sign Detection Database 100 (VTSDB100). This dataset is an extension of the VTSDB46 dataset and encompasses a comprehensive collection of 100 different classes of traffic signs. These signs were captured in diverse locations within Ho Chi Minh City, Vietnam, providing a rich and diverse dataset for training and evaluating traffic sign recognition models. An extensive experiment and analysis are also conducted using various object detection methods on the VTSDB100 dataset. The findings highlight the potential of deploying the proposed approach on resource-constrained devices and provide valuable insights for further research and development in the field of AI-powered driver safety systems.}
 }

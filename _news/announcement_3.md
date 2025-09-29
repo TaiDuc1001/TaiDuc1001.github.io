@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📰 02 papers is accepted at The 25th Asia-Pacific Network Operations and Management Symposium (APNOMS 2025), Kaohsiung, Taiwan.
+title: 📰 02 papers are accepted at The 25th Asia-Pacific Network Operations and Management Symposium (APNOMS 2025), Kaohsiung, Taiwan.
 date: 2025-08-02
 inline: false
 related_posts: false
