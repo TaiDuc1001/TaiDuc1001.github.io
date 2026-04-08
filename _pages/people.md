@@ -14,5 +14,4 @@ profiles:
     more_info: >
     #   <p>Department of Computing Fundamental</p>
     #   <p>FPT University, Ho Chi Minh Campus 71216</p>
-
 ---

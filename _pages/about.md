@@ -22,6 +22,7 @@ social: true # includes social icons at the bottom of the page
 **Research Interests:** Artificial Intelligence, Deep Learning, Machine Learning, Computer Vision, NLP, GenAI. My main research field is applying machine learning techniques to a specific use case in CV and NLP.
 
 **Inspirational Quotes:**
+
 <blockquote>
 <p><q><i>ABC - Always Be Curious</i></q> - <a href="https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw">Josh Starmer</a></p>
 </blockquote>

@@ -55,11 +55,7 @@
       "startDate": "2023-09-07",
       "endDate": "2026-11-07 (Expected)",
       "score": "3.5",
-      "courses": [
-              "Computer Networking",
-              "Operating System",
-              "Web Development"
-            ]
+      "courses": ["Computer Networking", "Operating System", "Web Development"]
     }
   ],
   "awards": [
@@ -136,30 +132,19 @@
       "name": "Machine Learning",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Active Learning",
-        "Ensemble Learning"
-      ]
+      "keywords": ["Active Learning", "Ensemble Learning"]
     },
     {
       "name": "Computer Vision",
       "level": "Intermediate",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Object classification",
-        "Object detection",
-        "Object recognition"
-      ]
+      "keywords": ["Object classification", "Object detection", "Object recognition"]
     },
     {
       "name": "Image Generative AI",
       "level": "Intermediate",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Generative Adversarial Networks",
-        "Variational Autoencoder",
-        "Diffusion Models"
-      ]
+      "keywords": ["Generative Adversarial Networks", "Variational Autoencoder", "Diffusion Models"]
     }
   ],
   "languages": [
@@ -179,11 +164,7 @@
       "name": "Natural Language Processing",
       "level": "Beginner",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Word Embedding",
-        "Text Classification",
-        "Statistical NLP"
-      ]
+      "keywords": ["Word Embedding", "Text Classification", "Statistical NLP"]
     }
   ],
   "volunteer": [
@@ -195,9 +176,11 @@
       "startDate": "2024-05-22",
       "endDate": "2024-07-17",
       "summary": "Organized the 'Mầm - Children's Dream Foundation' project, which aimed to support underprivileged children's education through fundraising and selling mini plant pot kits.",
-      "highlights": ["Raised over 3 million VND, exceeding the initial goal.", 
-                  "Donated educational supplies, including textbooks and learning tools, to children.",
-                  "Awarded a 'Letter of Thanks' by the Hiep Binh Phuoc Ward Youth Union for the project's efforts."]
+      "highlights": [
+        "Raised over 3 million VND, exceeding the initial goal.",
+        "Donated educational supplies, including textbooks and learning tools, to children.",
+        "Awarded a 'Letter of Thanks' by the Hiep Binh Phuoc Ward Youth Union for the project's efforts."
+      ]
     }
   ],
   "references": [

@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title:  blank # the website title (if blank, full name will be used instead)
+title: blank # the website title (if blank, full name will be used instead)
 first_name: Duc
 middle_name: Tai
 last_name: Phan
@@ -18,7 +18,7 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: td.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://TaiDuc1001.github.io # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
+baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -94,7 +94,7 @@ pinterest_id: taiduc1001 # your pinterest id
 publons_id: # your ID on Publons
 quora_username: Tài-Đức-Phan-1 # your Quora username
 research_gate_profile: # your profile on ResearchGate
-scholar_userid:  # your Google Scholar ID
+scholar_userid: # your Google Scholar ID
 scopus_id: # your profile on Scopus
 semanticscholar_id: # your Semantic Scholar ID
 spotify_id: # your spotify id
@@ -369,8 +369,8 @@ filtered_bibtex_keywords:
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit:  # leave blank to always show all authors
-more_authors_animation_delay:  # more authors are revealed on click using animation; smaller delay means faster animation
+max_author_limit: # leave blank to always show all authors
+more_authors_animation_delay: # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
 enable_publication_thumbnails: true
