@@ -71,7 +71,13 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2.2"
-          bundler-cache: true
+          bundler-cache: false
+      - name: Install Ruby dependencies
+        env:
+          BUNDLE_LOCKFILE_CHECKSUMS: "false"
+        run: |
+          bundle config set path vendor/bundle
+          bundle install --jobs 4 --retry 3
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
