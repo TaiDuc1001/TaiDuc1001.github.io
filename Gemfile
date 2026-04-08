@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Required for Ruby 3.4.0+ compatibility
 gem 'observer'
 gem 'logger'
+gem 'ostruct'
 
 group :jekyll_plugins do
     gem 'classifier-reborn'
