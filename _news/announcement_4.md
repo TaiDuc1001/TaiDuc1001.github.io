@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎓 2nd Prize in Student Research Competition at FPT University!
+<span style='color: #F29105;'><b>🎓 Achieved 2nd Prize in the Student Research Festival at <a href='https://daihoc.fpt.edu.vn/hcm/' style='color: #F29105; text-decoration: underline; text-decoration-color: #F29105; text-underline-offset: 3px; font-style: italic;'>FPT University</a>.</b></span>
