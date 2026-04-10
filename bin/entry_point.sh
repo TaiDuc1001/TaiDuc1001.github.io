@@ -1,25 +1,40 @@
 #!/bin/bash
 
 CONFIG_FILE=_config.yml 
+BIB_SOURCE_DIR=_bibliography/papers
+BIB_BUILD_SCRIPT=bin/build_bibliography.rb
 
 # Set environment variables to suppress Sass warnings
 export SASS_SILENCE_DEPRECATIONS=*
 export SCSS_SILENCE_DEPRECATIONS=*
 
-/bin/bash -c "rm -f Gemfile.lock && exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --force_polling"&
+build_bibliography() {
+  ruby "$BIB_BUILD_SCRIPT"
+}
+
+start_jekyll() {
+  /bin/bash -c "rm -f Gemfile.lock && exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --force_polling"&
+  JEKYLL_PID=$!
+}
+
+build_bibliography
+start_jekyll
 
 while true; do
 
-  inotifywait -q -e modify,move,create,delete $CONFIG_FILE
-
-  if [ $? -eq 0 ]; then
+  if changed_path=$(inotifywait -q -r -e modify,move,create,delete --format '%w%f' "$CONFIG_FILE" "$BIB_SOURCE_DIR"); then
  
-    echo "Change detected to $CONFIG_FILE, restarting Jekyll"
+    if [ "$changed_path" = "$CONFIG_FILE" ]; then
+      echo "Change detected to $CONFIG_FILE, restarting Jekyll"
 
-    jekyll_pid=$(pgrep -f jekyll)
-    kill -KILL $jekyll_pid
+      kill -KILL "$JEKYLL_PID"
 
-    /bin/bash -c "rm -f Gemfile.lock && exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --force_polling"&
+      build_bibliography
+      start_jekyll
+    else
+      echo "Change detected in bibliography sources, rebuilding _papers.bib"
+      build_bibliography
+    fi
 
   fi
 

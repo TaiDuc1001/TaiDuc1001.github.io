@@ -1,3 +1,5 @@
 <div class="publications">
-  {% bibliography --group_by none --query @*[selected=true]* %}
+  <p><span style="display: inline-block; width: 15px; height: 15px; background-color: #600;"></span> denotes journal</p>
+  <p><span style="display: inline-block; width: 15px; height: 15px; background-color: #215d42;"></span> denotes conference</p>
+  {% bibliography --group_by year --query @*[selected=true]* %}
 </div>

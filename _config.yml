@@ -313,14 +313,13 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Phan]
-  first_name: [Tai-Duc, Duc Tai, Duc]
+  name: "Duc Tai Phan"
 
   style: apa
   locale: en
 
   source: /_bibliography/
-  bibliography: papers.bib
+  bibliography: _papers.bib
   bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
@@ -336,6 +335,8 @@ scholar:
   query: "@*"
   group_by: year
   group_order: descending
+  sort_by: month
+  order: descending
 
 # Display different badges withs stats for your publications
 enable_publication_badges:
@@ -358,6 +359,8 @@ filtered_bibtex_keywords:
     blog,
     code,
     html,
+    journal_url,
+    booktitle_url,
     pdf,
     poster,
     preview,

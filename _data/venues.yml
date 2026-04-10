@@ -1,9 +1,19 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"APNOMS":
+  url: https://sites.google.com/view/apnoms2025/
+  color: "#215d42"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"MEDES":
+  url: https://conferences.sigappfr.org/medes2025/
+  color: "#215d42"
 
-"Vision":
-  color: "#009f36"
+"RIVF":
+  "url": https://rivf2024.duytan.edu.vn/
+  color: "#215d42"
+
+"KBS":
+  "url": https://www.sciencedirect.com/journal/knowledge-based-systems
+  color: "#600"
+
+"JPA":
+  url: https://www.sciencedirect.com/journal/journal-of-pharmaceutical-analysis
+  color: "#600"

@@ -1,1 +1,1 @@
-bundle exec jekyll build
+bundle exec ruby bin/build_bibliography.rb && bundle exec jekyll build
