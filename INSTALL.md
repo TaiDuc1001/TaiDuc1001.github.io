@@ -91,6 +91,8 @@ Assuming you have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Bundler](
 $ bundle install
 # assuming pip is your Python package manager
 $ pip install jupyter
+$ sudo apt-get install biber
+$ ./bin/install_tectonic.sh
 $ bundle exec jekyll serve
 ```
 

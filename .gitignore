@@ -11,3 +11,5 @@ assets/libs/
 node_modules/
 vendor
 .idea
+assets/pdf/cv.pdf
+assets/latex/cv.tex

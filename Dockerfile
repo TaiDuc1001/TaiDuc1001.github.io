@@ -4,6 +4,9 @@ ENV DEBIAN_FRONTEND noninteractive
 Label MAINTAINER Amir Pourmand
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
+    biber \
+    ca-certificates \
+    curl \
     locales \
     imagemagick \
     build-essential \
@@ -36,6 +39,10 @@ RUN bundle install
 
 COPY bin/entry_point.sh /tmp/entry_point.sh
 RUN sed -i 's/\r$//' /tmp/entry_point.sh && chmod +x /tmp/entry_point.sh
+COPY bin/install_tectonic.sh /tmp/install_tectonic.sh
+RUN sed -i 's/\r$//' /tmp/install_tectonic.sh && chmod +x /tmp/install_tectonic.sh && /tmp/install_tectonic.sh
+COPY bin/preload_latex_packages.sh /tmp/preload_latex_packages.sh
+RUN sed -i 's/\r$//' /tmp/preload_latex_packages.sh && chmod +x /tmp/preload_latex_packages.sh && /tmp/preload_latex_packages.sh
 EXPOSE 8080
 
 

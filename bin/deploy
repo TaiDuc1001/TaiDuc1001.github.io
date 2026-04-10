@@ -93,6 +93,8 @@ git checkout -b $DEPLOY_BRANCH
 export JEKYLL_ENV=production
 
 # Build site
+bundle exec ruby bin/build_bibliography.rb
+ruby bin/generate_cv_latex.rb
 bundle exec jekyll build
 
 # Purge unused css

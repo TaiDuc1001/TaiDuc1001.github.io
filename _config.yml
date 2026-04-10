@@ -250,6 +250,19 @@ keep_files:
   - CNAME
   - .nojekyll
 
+watch_excludes:
+  - assets/pdf/cv.pdf
+
+# -----------------------------------------------------------------------------
+# CV LaTeX build settings
+# -----------------------------------------------------------------------------
+
+cv_latex:
+  enabled: true
+  source: assets/latex/cv.tex
+  output_dir: assets/pdf
+  output_name: cv.pdf
+
 # Plug-ins
 plugins:
   - jekyll-archives

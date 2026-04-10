@@ -29,10 +29,17 @@ jobs:
               "giscus.repo": "${{ github.repository }}",
               "baseurl": ""
             }
+      - name: Install Tectonic 🧾
+        run: |
+          sudo ./bin/install_tectonic.sh
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
+          sudo apt-get update
+          sudo apt-get install -y biber
           export JEKYLL_ENV=production
+          bundle exec ruby bin/build_bibliography.rb
+          ruby bin/generate_cv_latex.rb
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
