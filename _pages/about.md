@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>phantaiduc2005@gmail.com</p>
+    <p>ducptse194683@fpt.edu.vn</p>
     <p>AI Researcher</p>
 
 news: true # includes a list of news items

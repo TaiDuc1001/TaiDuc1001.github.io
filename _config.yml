@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Duc
 middle_name: Tai
 last_name: Phan
-email: phantaiduc2005@gmail.com
+email: ducptse194683@fpt.edu.vn
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   An Artificial Intelligence Researcher.
 footer_text: >
@@ -75,26 +75,26 @@ blogger_url: # your blogger URL
 bluesky_url: # your bluesky URL
 dblp_url: # your DBLP profile url
 discord_id: 872093361325109329 # your discord id (18-digit unique numerical identifier)
-facebook_id: ducphan1001 # your facebook id
+facebook_id: # your facebook id
 flickr_id: # your flickr id
 github_username: TaiDuc1001 # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
-instagram_id: ducphan1001 # your instagram id
-kaggle_id: ducphan1001 # your kaggle id
+instagram_id: # your instagram id
+kaggle_id: # your kaggle id
 keybase_username: # your keybase user name
 lastfm_id: # your lastfm id
 lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 linkedin_username: tai-duc-phan-563b19287 # your LinkedIn user name
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-medium_username: phantaiduc2005 # your Medium username
+medium_username: # your Medium username
 orcid_id: 0009-0005-2578-0626 # your ORCID ID
 osf_id: # your OSF ID
-pinterest_id: taiduc1001 # your pinterest id
+pinterest_id: # your pinterest id
 publons_id: # your ID on Publons
-quora_username: Tài-Đức-Phan-1 # your Quora username
-research_gate_profile: # your profile on ResearchGate
-scholar_userid: # your Google Scholar ID
+quora_username: # your Quora username
+research_gate_profile: Duc-Phan-39 # your profile on ResearchGate
+scholar_userid: Yj6Wo9EAAAAJ # your Google Scholar ID
 scopus_id: # your profile on Scopus
 semanticscholar_id: # your Semantic Scholar ID
 spotify_id: # your spotify id
@@ -108,7 +108,7 @@ wikipedia_id: # your wikipedia id (Case sensitive)
 work_url: # work page URL
 x_username: CallMeDucky1001 # your X handle
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
-zotero_username: taiduc1001 # your zotero username
+zotero_username: # your zotero username
 
 contact_note: # >
   # You can even add a little note about which of these is the best way to reach you.
