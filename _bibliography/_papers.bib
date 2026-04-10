@@ -18,10 +18,101 @@
     preview={FaceAttendance.png},
     code={https://anonymous.4open.science/r/Face-Attendance-Checking-2640/},
     ABSTRACT={An accurate and efficient attendance system is essential in modern industrial and educational settings. However, traditional methods often suffer from inaccuracies, inefficiencies, and vulnerability to fraud. Recent work usually utilizes a single model for employing the face recognition system, leading to many failures due to the model's low performance. This paper presents an advanced face attendance system using ensemble learning to overcome the limitations of single-model approaches. The proposed system achieves near-perfect accuracy under optimal conditions by integrating the strengths of multiple deep learning models, including ResNet, VGGFace, and FaceNet. The ensemble approach boosts the robustness and reliability of the attendance system, making it a promising solution for real-world deployment in educational and workplace environments. The key contribution of this work is the development of a face attendance system that utilizes the complementary capabilities of different models to deliver significantly improved accuracy and resilience compared to standalone methods.},
-    abbr={RIVF},
+    abbr={RIVF'24},
     doi={10.1109/RIVF64335.2024.11009085},
     isbn={979-8-3315-0507-3},
     html={https://ieeexplore.ieee.org/document/11009085},
+    bibtex_show={true},
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2024-Tran2410-Towards.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{10827558,
+    AUTHOR={Phuong-Nam Tran and Nhat Truong Pham and Nam Van Hai Phan and Duc Tai Phan and Cuong Tuan Nguyen and Duc Ngoc Minh Dang},
+    TITLE={Towards Real-Time Vietnamese Traffic Sign Recognition on Embedded Systems},
+    BOOKTITLE={2024 15th International Conference on Information and Communication Technology Convergence (ICTC 2024)},
+    booktitle_url={https://2024.ictc.org/},
+    ADDRESS={Jeju Island, Republic of Korea},
+    MONTH={oct},
+    YEAR={2024},
+    selected = {false},
+    preview={towards.png},
+    ABSTRACT={AI development has brought many significant changes in various aspects of our daily lives in recent years. Integrating AI technology into various applications has revolutionized multiple domains, and one particularly vital area is traffic sign recognition, which significantly enhances driver safety. This paper presents an approach to traffic sign recognition specifically designed for the Jetson Nano 2GB device. By utilizing the YOLOv8 Nano model, the proposed approach achieves a remarkable frame rate of up to 32 frames per second (FPS). To optimize inference speed on Jetson with limited memory, the approach incorporates TensorRT and quantization techniques. In addition, this paper introduces a dataset called the Vietnamese Traffic Sign Detection Database 100 (VTSDB100). This dataset is an extension of the VTSDB46 dataset and encompasses a comprehensive collection of 100 different classes of traffic signs. These signs were captured in diverse locations within Ho Chi Minh City, Vietnam, providing a rich and diverse dataset for training and evaluating traffic sign recognition models. Extensive experiments and analyses were conducted using various object detection methods on the VTSDB100 dataset. The findings highlight the potential of deploying the proposed approach on resource-constrained devices and provide valuable insights for further research and development in AI-powered driver safety systems.},
+    KEYWORDS={Training;Quantization (signal);Databases;Web services;Urban areas;Object detection;Real-time systems;Safety;Internet of Things;Artificial intelligence;Traffic Sign Recognition;Object Detection;Quantization;Vietnamese Traffic Sign dataset;Deep learning},
+    abbr={ICTC'24},
+    doi={10.1109/ICTC62082.2024.10827558},
+    isbn={979-8-3503-6463-7},
+    html={https://ieeexplore.ieee.org/document/10827558},
+    bibtex_show={true},
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2025-Nguyen2509-CemoBAM.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{11181320,
+    AUTHOR={Nhut Minh Nguyen and Thu Thuy Le and Thanh Trung Nguyen and Duc Tai Phan and Anh Khoa Tran and Duc Ngoc Minh Dang},
+    TITLE="CemoBAM: Advancing Multimodal Emotion Recognition through Heterogeneous Graph Networks and Cross-Modal Attention Mechanisms",
+    BOOKTITLE={2025 25th Asia-Pacific Network Operations and Management Symposium (APNOMS'2025)},
+    booktitle_url={https://sites.google.com/view/apnoms2025/},
+    ADDRESS={Kaohsiung, Taiwan},
+    MONTH=sep,
+    YEAR=2025,
+    KEYWORDS={Human computer interaction;Emotion recognition;Attention mechanisms;Speech recognition;Speech enhancement;Electrostatic discharges;Transformers;Robustness;Noise measurement;Multimodal emotion recognition;Speech emotion recognition;Cross-modal heterogeneous graph attention;Crossmodal convolutional block attention mechanism;Feature fusion},
+    ABSTRACT={Multimodal Speech Emotion Recognition (SER) offers significant advantages over unimodal approaches by integrating diverse information streams such as audio and text. However, effectively fusing these heterogeneous modalities remains a significant challenge. We propose CemoBAM, a novel dualstream architecture that effectively integrates the Heterogeneous Graph Attention Network (CH-GAT) with the Cross-modal Convolutional Block Attention Mechanism (xCBAM). In CemoBAM architecture, the CH-GAT constructs a heterogeneous graph that models intra- and inter-modal relationships, employing multi-head attention to capture fine-grained dependencies across audio and text feature embeddings. The xCBAM enhances feature refinement through a cross-modal transformer with a modified 1D-CBAM, employing bidirectional cross-attention and channel-spatial attention to emphasize emotionally salient features. The CemoBAM architecture surpasses previous state-of-the-art (SOTA) methods by 0.32% on IEMOCAP and 3.25% on ESD datasets. Comprehensive ablation studies validate the impact of Top-K graph construction parameters, fusion strategies, and the complementary contributions of both modules. The results highlight CemoBAM's robustness and potential for advancing multimodal SER applications.},
+    selected={false},
+    bibtex_show={true},
+    abbr={APNOMS'25},
+    preview={CemoBAM.png},
+    doi={10.23919/APNOMS67058.2025.11181320},
+    isbn={978-4-88552-356-4},
+    html={https://ieeexplore.ieee.org/document/11181320},
+    altmetric={true},
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2025-Nguyen2509-GloMER.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{Nguyen2509:GloMER,
+    AUTHOR={Nhut Minh Nguyen and Duc Tai Phan and Duc Ngoc Minh Dang},
+    TITLE="GloMER: Towards Robust Multimodal Emotion Recognition via Gated Fusion and Contrastive Learning",
+    BOOKTITLE={17th International Conference on Management of Digital Ecosystems},
+    booktitle_url={https://conferences.sigappfr.org/medes2025/},
+    ADDRESS={Ho Chi Minh City, Vietnam},
+    MONTH=nov,
+    YEAR=2025,
+    KEYWORDS={Gated Multimodal Unit, Contrastive Learning, Human-Computer Interaction, Multimodal Emotion Recognition.},
+    ABSTRACT={Speech Emotion Recognition (SER) enhances Human-Computer-Interaction (HCI) across healthcare, education, and customer service. Although multimodal approaches that combine audio and text show promise, they face challenges in aligning heterogeneous modalities and achieving balanced feature fusion. In this work, we propose GloMER, a novel multimodal SER architecture that integrates a self-alignment strategy with contrastive learning and a Gated Multimodal Unit (GMU) for adaptive fusion. The self-alignment mechanism ensures semantic consistency while preserving modality diversity. The GMU dynamically regulates modality contributions, ensuring balanced integration and context-aware representations under imbalanced conditions. We evaluate GloMER, achieving state-of-the-art (SOTA) on two benchmark datasets, delivering consistent improvements in multimodal emotion recognition. Ablation studies show that combining classification with alignment improves embedding discriminability, while gated fusion balances modalities and captures complementary cues. These findings establish GloMER as a robust framework for advancing multimodal emotion recognition.},
+    selected = {false},
+    preview={GloMER.png},
+    abbr={MEDES'25},
+    code={https://github.com/nhut-ngnn/GloMER}
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2025-Nguyen2512-YOLOv5.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{11365041,
+    AUTHOR={Phuong Lam Nguyen and Duc Tai Phan and Thanh Trung Nguyen and Nhut Minh Nguyen and Duc Ngoc Minh Dang},
+    TITLE={YOLOv5-Powered Smart Parking System with IoT-Based Real-Time Slot Monitoring},
+    BOOKTITLE={2025 RIVF International Conference on Computing and Communication Technologies (RIVF 2025)},
+    booktitle_url={https://rivf2025.org/},
+    ADDRESS={Ho Chi Minh City, Vietnam},
+    PAGES={693-698},
+    MONTH={dec},
+    YEAR={2025},
+    selected = {false},
+    preview={YOLOv5.png},
+    ABSTRACT={Finding a parking space has become a daily struggle in an era of rapid urbanization and increasing car ownership, contributing to traffic congestion, lost time, and environmental stress. To transform urban parking management, this study presents a novel Smart Parking System (SPS) that seamlessly integrates deep learning and Internet of Things (IoT) technologies. Our SPS delivers a streamlined workflow, featuring real-time slot occupancy detection via a fine-tuned YOLOv5 model analyzing camera feeds, automated entry/exit handling triggered by IoT sensors, and a specialized License Plate Recognition (LPR) model. Additionally, it includes secure cloud-based data logging for effortless tracking and billing. The web dashboard provides real-time, color-coded visualizations of slot availability, supporting efficient parking management. Experimental evaluation demonstrates an accuracy of 90% in license plate recognition and over 99.5% in slot occupancy detection, highlighting the system's reliability and practical applicability for smart city deployment.},
+    KEYWORDS = {YOLO;Analytical models;Smart cities;Automated parking;Real-time systems;Internet of Things;License plate recognition;Monitoring;Traffic congestion;Intelligent sensors;Smart Parking System;License Plate Recognition;Real-Time Slot Monitoring;YOLOv5;Optical Character Recognition;Computer Vision},
+    abbr={RIVF'25},
+    doi={10.1109/RIVF68649.2025.11365041},
+    isbn={979-8-3315-7790-2},
+    html={https://ieeexplore.ieee.org/document/11365041},
     bibtex_show={true},
 }
 
@@ -43,7 +134,7 @@
     ABSTRACT={Object detection is critical in computer vision but often requires large amounts of labeled data for effective training. Active learning (AL) has emerged as a promising solution to reduce the annotation burden by selecting the most informative samples for labeling. However, existing AL methods for object detection primarily focus on uncertainty sampling, which may not effectively balance the dual challenges of classification and localization. In this study, we explore active learning for object detection, with the objective of optimizing model performance while substantially reducing the demand for annotated data. We propose a novel Active Learning with Metric-based Uncertainty Sampling (ALMUS) that works effectively for the object detection task. This approach prioritizes selecting images containing objects from categories where the model exhibits suboptimal performance, as determined by category-specific evaluation metrics. To balance the annotation budget across different object classes, we propose a dynamic allocation strategy that considers the difficulty of each class and the distribution of object instances within the dataset. This combination of strategies enables our method to effectively address the dual challenges of classification and localization in object detection tasks while still focusing on the rarest and most challenging classes. We conduct extensive experiments on the PASCAL VOC 2007 and 2012 datasets, demonstrating that our method outperforms several active learning baselines. Our results indicate that the proposed approach enhances model performance and accelerates convergence, making it a valuable contribution to the field of active learning in object detection.},
     selected={true},
     bibtex_show={true},
-    abbr={APNOMS},
+    abbr={APNOMS'25},
     preview={ALMUS.png},
     doi={10.23919/APNOMS67058.2025.11181447},
     isbn={978-1-23456-789-0},
@@ -67,8 +158,28 @@
     ABSTRACT={The high cost of annotating vast datasets poses a significant challenge in object detection, hindering the development of robust models. By selectively annotating the most instructive samples, active learning has become a viable strategy for addressing this problem and improving model performance and labeling efficiency. However, the two main types of model uncertainty—epistemic, which captures the model's uncertainty in classifying an object, and aleatoric, which addresses the inherent ambiguity in an object's presence and location—are frequently not balanced in traditional active learning techniques. In this paper, we introduce DAAL (Dual Ambiguity Active Learning), a novel framework that quantifies and combines both epistemic and aleatoric ambiguity into a single, weighted score. Epistemic ambiguity measures the model's indecision in assigning semantic labels, while aleatoric ambiguity assesses the conviction in object presence and localization. By combining these, DAAL selects the most informative images for annotation, optimizing model performance under limited labeling budgets. Extensive experiments on popular benchmarks demonstrate that DAAL consistently outperforms traditional methods, achieving superior accuracy under the same limited labeling budget. This affirms its effectiveness in creating more efficient annotation workflows for object detection.},
     selected = {true},
     preview={DAAL.png},
-    abbr={MEDES},
+    abbr={MEDES'25},
     code={https://github.com/TaiDuc1001/DAAL}
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2026-Nguyen2605-Swin2.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{Nguyen2605:Swin2,
+    AUTHOR={Thanh Trung Nguyen and Nhut Minh Nguyen and Duc Tai Phan and Quang Nhan Hoang and Tri Minh Pham and Duc Ngoc Minh Dang},
+    TITLE={Swin Transformer V2 for Optical Chemical Structure Recognition: Comparison with Convolutional Neural Networks and Swin Transformer Variants},
+    BOOKTITLE={The 22nd International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology (ECTI-CON 2025)},
+    booktitle_url={https://ecti-con2025.eng.chula.ac.th/},
+    ADDRESS={Bangkok, Thailand},
+    MONTH={mar},
+    YEAR={2026},
+    selected = {false},
+    preview={swin2.jpg},
+    ABSTRACT={Optical Chemical Structure Recognition (OCSR) is designed to transform images of chemical structures into formats that computers can process, facilitating the extraction of molecular data from scientific publications on a large scale. Although modern deep learning methods have shown encouraging results, the impact of different visual backbone designs on understanding molecular structures has not been thoroughly investigated. This research compares various visual backbones for OCSR using an encoder-decoder architecture. The results show that while Convolutional Neural Network (CNN) architectures deliver excellent accuracy at the character level, Swin Transformer V2 generates more accurate molecular structures, as evidenced by superior Tanimoto similarity metrics. Moreover, even though Swin Transformer V2 has similar computational demands as the original Swin Transformer (V1), it exhibits enhanced training reliability and better capability for structural modeling, underscoring its effectiveness as a dependable visual backbone for OCSR applications.},
+    KEYWORDS = {Optical Chemical Structure Recognition (OCSR); Swin Transformer; Deep Learning; Molecular Graph Extraction; Computer Vision.},
+    abbr={ECTI-CON'25},
+    bibtex_show={true},
 }
 
 % -----------------------------------------------------------------------------
@@ -80,6 +191,7 @@
     TITLE={From object difficulty to image scoring: A strategy for active learning in object detection},
     JOURNAL={Knowledge-Based Systems},
     journal_url={https://www.sciencedirect.com/journal/knowledge-based-systems},
+    MONTH = {apr},
     YEAR={2026},
     selected={true},
     bibtex_show={true},

@@ -4,10 +4,11 @@
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
-        {%- if site.data.venues[entry.abbr] -%}
+        {%- assign venue_key = entry.abbr | replace: '’', "'" | replace: '‘', "'" -%}
+        {%- if site.data.venues[venue_key] -%}
           {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
+          {% if site.data.venues[venue_key].color != blank %}
+            {% assign venue_style = site.data.venues[venue_key].color | prepend: 'style="background-color:' | append: '"' %}
           {%- endif -%}
           <abbr
             class="badge rounded w-100"
@@ -15,8 +16,8 @@
               {{ venue_style }}
             {% endif -%}
           >
-            {% if site.data.venues[entry.abbr].url %}
-              <a href="{{site.data.venues[entry.abbr].url}}">{{ entry.abbr }}</a>
+            {% if site.data.venues[venue_key].url %}
+              <a href="{{site.data.venues[venue_key].url}}">{{ entry.abbr }}</a>
             {% else %}
               <div>{{- entry.abbr -}}</div>
             {% endif %}
@@ -154,13 +155,13 @@
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
     {% if entry.type == 'article' %}
       {% if entry.journal_url %}
-        {% capture entrytype %}<em><a href="{{ entry.journal_url }}">{{entry.journal}}</a></em>{% endcapture %}
+        {% capture entrytype %}<em><a href="{{ entry.journal_url }}" style="color: #FF3636; text-decoration: underline; text-underline-offset: 3px;">{{entry.journal}}</a></em>{% endcapture %}
       {% else %}
         {% capture entrytype %}<em>{{entry.journal}}</em>{% endcapture %}
       {% endif %}
     {% elsif proceedings contains entry.type %}
       {% if entry.booktitle_url %}
-        {% capture entrytype %}<em>In <a href="{{ entry.booktitle_url }}">{{entry.booktitle}}</a></em> {% endcapture %}
+        {% capture entrytype %}<em>In <a href="{{ entry.booktitle_url }}" style="color: #00ab37; text-decoration: underline; text-underline-offset: 3px;">{{entry.booktitle}}</a></em> {% endcapture %}
       {% else %}
         {% capture entrytype %}<em>In {{entry.booktitle}}</em> {% endcapture %}
       {% endif %}

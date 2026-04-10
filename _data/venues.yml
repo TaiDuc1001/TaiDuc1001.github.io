@@ -1,19 +1,28 @@
-"APNOMS":
-  url: https://sites.google.com/view/apnoms2025/
-  color: "#215d42"
-
-"MEDES":
-  url: https://conferences.sigappfr.org/medes2025/
-  color: "#215d42"
-
-"RIVF":
-  "url": https://rivf2024.duytan.edu.vn/
-  color: "#215d42"
-
 "KBS":
   "url": https://www.sciencedirect.com/journal/knowledge-based-systems
   color: "#600"
 
-"JPA":
-  url: https://www.sciencedirect.com/journal/journal-of-pharmaceutical-analysis
-  color: "#600"
+"APNOMS'25":
+  url: https://sites.google.com/view/apnoms2025/
+  color: "#215d42"
+
+"MEDES'25":
+  url: https://conferences.sigappfr.org/medes2025/
+  color: "#215d42"
+
+"RIVF'25":
+  "url": https://rivf2025.org/
+  color: "#215d42"
+
+"ECTI-CON'25":
+  "url": https://ecti-con2025.eng.chula.ac.th/
+  color: "#215d42"
+
+"RIVF'24":
+  "url": https://rivf2024.duytan.edu.vn/
+  color: "#215d42"
+
+"ICTC'24":
+  "url": https://2024.ictc.org/
+  color: "#215d42"
+
