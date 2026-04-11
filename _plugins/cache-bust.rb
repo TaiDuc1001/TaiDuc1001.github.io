@@ -26,11 +26,20 @@ module Jekyll
 
       def file_content
         local_file_name = file_name.slice((file_name.index('assets/')..-1))
-        File.read(local_file_name)
+        return File.read(local_file_name) if File.exist?(local_file_name)
+
+        if local_file_name.end_with?('.css')
+          scss_file_name = local_file_name.sub(/\.css\z/, '.scss')
+          return File.read(scss_file_name) if File.exist?(scss_file_name)
+        end
+
+        ''
       end
 
       def file_contents
-        is_directory? ? file_content : directory_files_content
+        return file_content if directory.nil?
+
+        [file_content, directory_files_content].join
       end
 
       def is_directory?
@@ -43,7 +52,7 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      CacheDigester.new(file_name: file_name, directory: '_sass').digest!
     end
   end
 end
