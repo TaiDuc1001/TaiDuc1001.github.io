@@ -658,7 +658,7 @@ footer.sticky-bottom {
 
 .repo-card__user-head {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.85rem;
   margin-bottom: 0;
 }
@@ -692,7 +692,7 @@ footer.sticky-bottom {
 }
 
 .repo-card--user {
-  min-height: 148px;
+  min-height: 120px;
 }
 
 .repo-card--repo {
