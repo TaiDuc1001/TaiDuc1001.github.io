@@ -1,5 +1,7 @@
 {% assign repo_parts = include.repository | split: '/' %}
 {% assign repo_owner = repo_parts | first %}
+{% assign repo_owner_normalized = repo_owner | downcase %}
+{% assign github_username_normalized = site.github_username | downcase %}
 {% assign github_metadata = site.data.github_metadata | default: empty %}
 {% assign github_repositories = github_metadata.repositories | default: empty %}
 {% assign repo = github_repositories | where: "full_name", include.repository | first %}
@@ -10,7 +12,7 @@
 
 <div class="repo repo--repo p-2">
   <a
-    class="repo-card repo-card--repo{% if repo_owner == site.github_username %} repo-card--self{% endif %}"
+    class="repo-card repo-card--repo{% if repo_owner_normalized == github_username_normalized or repo_owner_normalized == 'aita-lab' %} repo-card--self{% endif %}"
     href="{{ repo_url }}"
     target="_blank"
     rel="noopener noreferrer"

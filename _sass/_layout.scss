@@ -51,3 +51,137 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+/*****************************************************************************
+* Gallery
+*****************************************************************************/
+
+.conference-gallery {
+  margin-top: 0.5rem;
+
+  .conference-gallery__badge {
+    margin-bottom: 0.85rem;
+    border-radius: 0.35rem;
+    border: 1px solid var(--global-divider-color);
+    padding: 0.75rem 0.9rem;
+    background: var(--global-bg-color);
+  }
+
+  .conference-gallery__badge-label {
+    margin: 0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+  }
+
+  .conference-gallery__badge-title {
+    margin: 0.15rem 0 0;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    line-height: 1.25;
+    color: var(--global-text-color);
+  }
+
+  .conference-gallery__badge-subtitle {
+    margin: 0.3rem 0 0;
+    font-size: 0.92rem;
+    color: var(--global-text-color-light);
+  }
+
+  .conference-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .conference-gallery__card {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    grid-column: span 4;
+  }
+
+  // Keep a clear 3-2-2 rhythm similar to the reference page.
+  .conference-gallery__card:nth-child(7n + 1),
+  .conference-gallery__card:nth-child(7n + 2),
+  .conference-gallery__card:nth-child(7n + 3) {
+    grid-column: span 4;
+  }
+
+  .conference-gallery__card:nth-child(7n + 4),
+  .conference-gallery__card:nth-child(7n + 7) {
+    grid-column: span 7;
+  }
+
+  .conference-gallery__card:nth-child(7n + 5),
+  .conference-gallery__card:nth-child(7n + 6) {
+    grid-column: span 5;
+  }
+
+  .conference-gallery__card:only-child {
+    grid-column: 1 / -1;
+    max-width: 920px;
+    margin-inline: auto;
+  }
+
+  .conference-gallery__card figure {
+    margin: 0;
+  }
+
+  .conference-gallery__card picture {
+    display: block;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .conference-gallery__card:hover picture {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  }
+
+  .conference-gallery__image {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    border-radius: 0.25rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .conference-gallery {
+    .conference-gallery__grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .conference-gallery__card {
+      grid-column: span 3;
+    }
+
+    .conference-gallery__card:only-child {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .conference-gallery {
+    .conference-gallery__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .conference-gallery__card {
+      grid-column: 1 / -1;
+    }
+
+    .conference-gallery__card:only-child {
+      max-width: none;
+    }
+  }
+}

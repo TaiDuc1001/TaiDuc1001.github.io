@@ -56,7 +56,7 @@ end
 entries.sort_by! do |entry|
   [
     entry[:order].nil? ? 1 : 0,
-    entry[:order] || 0,
+    entry[:order].nil? ? 0 : -entry[:order],
     entry[:title].downcase
   ]
 end
