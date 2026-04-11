@@ -2,8 +2,26 @@
 
 set -euo pipefail
 
+print_tectonic_version() {
+  local tectonic_bin="$1"
+
+  if "$tectonic_bin" -V >/dev/null 2>&1; then
+    "$tectonic_bin" -V
+    return 0
+  fi
+
+  if "$tectonic_bin" --version >/dev/null 2>&1; then
+    "$tectonic_bin" --version
+    return 0
+  fi
+
+  # Some builds may not expose a version flag; do not fail install just for that.
+  echo "tectonic is available at ${tectonic_bin}, but version flag is unsupported."
+  return 0
+}
+
 if command -v tectonic >/dev/null 2>&1; then
-  tectonic --version
+  print_tectonic_version "$(command -v tectonic)"
   exit 0
 fi
 
@@ -68,7 +86,7 @@ fi
 
 install -m 0755 "$binary_path" "${install_dir}/tectonic"
 
-"${install_dir}/tectonic" --version
+print_tectonic_version "${install_dir}/tectonic"
 
 if [[ "$install_dir" == "${HOME}/.local/bin" ]]; then
   echo "tectonic installed to ${install_dir}. Ensure this directory is in PATH."

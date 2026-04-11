@@ -5,62 +5,6 @@ on:
     branches:
       - master
       - main
-    paths:
-      - "assets/**"
-      - "bin/**"
-      - "_plugins/**"
-      - "**.bib"
-      - "**.tex"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
-  pull_request:
-    branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "bin/**"
-      - "_plugins/**"
-      - "**.bib"
-      - "**.tex"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
   workflow_dispatch:
 
 permissions:
@@ -68,53 +12,36 @@ permissions:
 
 jobs:
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.2.2"
-          bundler-cache: false
-      - name: Install Ruby dependencies
-        env:
-          BUNDLE_LOCKFILE_CHECKSUMS: "false"
+      - name: Build
         run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick biber
+
+          pip3 install --upgrade jupyter
+          sudo ./bin/install_tectonic.sh
+
+          export JEKYLL_ENV=production
+          export BUNDLE_LOCKFILE_CHECKSUMS=false
+
           bundle config set path vendor/bundle
           bundle install --jobs 4 --retry 3
-      - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@main
-        with:
-          commitChange: false
-          valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
-      - name: Install ImageMagick 🖼️
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
-          convert -version
-      - name: Install Tectonic 🧾
-        run: |
-          sudo ./bin/install_tectonic.sh
-      - name: Install and Build 🔧
-        run: |
-          pip3 install --upgrade jupyter
-          sudo apt-get update
-          sudo apt-get install -y biber
-          export JEKYLL_ENV=production
+
+          ruby -e "cfg=File.read('_config.yml'); cfg.sub!(/(giscus:\s*\n(?:[ \t].*\n)*?[ \t]*repo:\s*).*/, '\\1' + ENV.fetch('GITHUB_REPOSITORY')); File.write('_config.yml', cfg)"
+
           bundle exec ruby bin/build_bibliography.rb
           ruby bin/generate_repositories_page.rb
+          ruby bin/generate_gallery_page.rb
+          ruby bin/generate_people_page.rb
           ruby bin/generate_cv_latex.rb
           bundle exec jekyll build
-      - name: Purge unused CSS 🧹
-        run: |
+
           npm install -g purgecss
           purgecss -c purgecss.config.js
-      - name: Deploy 🚀
-        if: github.event_name != 'pull_request'
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
