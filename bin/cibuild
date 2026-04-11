@@ -1,1 +1,1 @@
-bundle exec ruby bin/build_bibliography.rb && ruby bin/generate_cv_latex.rb && bundle exec jekyll build
+bundle exec ruby bin/build_bibliography.rb && ruby bin/generate_repositories_page.rb && ruby bin/generate_cv_latex.rb && bundle exec jekyll build

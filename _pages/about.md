@@ -7,19 +7,19 @@ subtitle: <a href='https://daihoc.fpt.edu.vn/en/'>FPT University, Ho Chi Minh Ca
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p>ducptse194683@fpt.edu.vn</p>
-    <p>AI Researcher</p>
+    <p>Researcher Assistant</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-**Short Bio:** My name is Phan Tai Duc (Phan Tài Đức - Vietnamese). I am a person who is deeply enthusiastic about exploring new AI research and mathematical expression. My goal in the next few years is to become an AI Engineer role, focusing on advancements in Computer Vision and NLP, especially on time series forecasting. I am currently a third-year student and an AI Researcher Assistant with 1 year of experience specializing in Computer Vision at the AiTA Lab - Artificial Intelligence of Technologies and Application - at FPT University HCMC. My expertise includes image classification, object detection, and face recognition.
+**Short Bio:** My name is Duc Tai Phan (Phan Tài Đức in Vietnamese). I am currently a final-year Software Engineering student at [FPT University](https://daihoc.fpt.edu.vn/en/) in Ho Chi Minh City, Vietnam, and a research assistant at the [AiTA Lab](https://aita-lab.github.io/). My work focuses primarily on computer vision, with particular interests in data-efficient learning, especially the combination of few-shot learning and active learning for challenging tasks such as fine-grained image classification and object detection. I am interested in developing practical learning strategies that remain effective under limited supervision and subtle visual differences. In the future, I aim to grow into an AI Engineer while continuing to explore research-driven approaches to difficult machine learning problems.
 
-**Research Interests:** Artificial Intelligence, Deep Learning, Machine Learning, Computer Vision, NLP, GenAI. My main research field is applying machine learning techniques to a specific use case in CV and NLP.
+**Research Interests:** Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Data-Efficient Learning, Few-Shot Learning, Active Learning, Fine-Grained Classification, Object Detection.
 
 **Inspirational Quotes:**
 

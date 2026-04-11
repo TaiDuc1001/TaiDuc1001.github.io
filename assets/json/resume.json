@@ -1,13 +1,11 @@
 {
   "basics": {
-    "name": "Phan Tai Duc",
-    "label": "AI Researcher",
+    "name": "Duc Tai Phan",
+    "label": "Researcher Assistant",
     "image": "",
     "email": "ducptse194683@fpt.edu.vn",
-    "phone": "(+84) 902-244-389",
-    "summary": "An AI Researcher with strong background on mathematics and computer science. My research interests include machine learning, deep learning and computer vision.",
+    "summary": "I am currently a final-year Software Engineering student at FPT University in Ho Chi Minh City, Vietnam, and a research assistant at AiTA Lab. My work focuses primarily on computer vision, with particular interests in data-efficient learning, especially the combination of few-shot learning and active learning for challenging tasks such as fine-grained image classification and object detection. I am interested in developing practical learning strategies that remain effective under limited supervision and subtle visual differences. In the future, I aim to grow into an AI Engineer while continuing to explore research-driven approaches to difficult machine learning problems.",
     "location": {
-      "address": "Lien khu 5-6 Street, Binh Hung Hoa B Ward, Binh Tan District",
       "postalCode": "762000",
       "city": "Ho Chi Minh City",
       "countryCode": "VN",
@@ -16,135 +14,118 @@
   },
   "work": [
     {
-      "name": "AI Intern - IMT Solution",
-      "position": "AI Intern",
+      "name": "IMT Solutions",
+      "position": "AI Engineer",
       "url": "https://imt-soft.com/",
-      "startDate": "2025-08-11",
-      "summary": "Working on automation projects with NLP and LLM processing."
+      "startDate": "2025-08",
+      "endDate": "2026-05",
+      "summary": "AI Engineer, Ho Chi Minh City, Vietnam."
     },
     {
-      "name": "AI Engineer Part-time - ABC Studio",
-      "position": "AI Engineer Part-time",
+      "name": "ABCStudio",
+      "position": "AI Engineer",
       "url": "https://abcstudio.co/",
-      "startDate": "2025-01-25",
-      "endDate": "2025-04-20",
-      "summary": "Join the AI team to implementing real-time direction predictions by keypoint regression on Jetson Orin"
-    },
-    {
-      "name": "AI Engineer Intern - ABC Studio",
-      "position": "AI Engineer Intern",
-      "url": "https://abcstudio.co/",
-      "startDate": "2024-11-01",
-      "endDate": "2025-01-25",
-      "summary": "Join the AI team to implementing Smart Traffic Management System."
-    },
-    {
-      "name": "AiTA Lab - FPT University",
-      "position": "AI Researcher",
-      "url": "https://aita-lab.github.io/",
-      "startDate": "2024-04-01",
-      "summary": "Research on machine learning, deep learning and computer vision with my mentor."
+      "startDate": "2024-10",
+      "endDate": "2025-04",
+      "summary": "AI Engineer, Ho Chi Minh City, Vietnam."
     }
   ],
   "education": [
     {
-      "institution": "FPT University, Ho Chi Minh City, Vietnam",
+      "institution": "FPT University",
       "url": "https://daihoc.fpt.edu.vn/en/",
-      "area": "Software Development",
+      "area": "Software Engineering",
       "studyType": "Bachelor",
       "startDate": "2023-09-07",
-      "endDate": "2026-11-07 (Expected)",
-      "score": "3.5",
-      "courses": ["Computer Networking", "Operating System", "Web Development"]
+      "endDate": "2026-11-07 (Expected)"
     }
   ],
   "awards": [
     {
-      "title": "2nd Prize in Student Research Competition",
-      "date": "2025-08-10",
-      "awarder": "FPT University HCMC",
-      "url": "https://www.facebook.com/share/p/19cC2Mf7pB/",
-      "summary": "Achieve 2nd prize at ResFes for ALMUS paper."
+      "title": "Second Prize, Student Research Festival Fall 2025",
+      "date": "2025-12",
+      "awarder": "FPT University",
+      "summary": ""
     },
     {
-      "title": "50% Scholarship",
-      "date": "2023-05-24",
-      "awarder": "FPT University HCMC",
-      "url": "https://drive.google.com/file/d/1H58X8tHVlCdGHw_wA5S4UA4awSxoU49R/view?usp=drive_link",
-      "summary": "The scholarship is awarded to excellent students having participated in the FPT entrance test."
-    },
-    {
-      "title": "Semi-Finalist TechGenius Competition 2021",
-      "date": "2021-12-22",
-      "awarder": "RMIT University Vietnam and Hoa Hoc Tro magazine",
-      "url": "https://drive.google.com/file/d/19BuKHbbF9Tm-4rYypzof1sF0FaOVfOOC/view?usp=drive_link",
-      "summary": "The TechGenius is an annual event designed to foster and showcase young talents in technology through collaborative team efforts and innovative projects."
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
-      "date": "2024-01-16",
-      "issuer": "DeepLearning.ai",
-      "url": "https://coursera.org/share/37862fe9ae377926cf6cfeb46c4acde9",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Generative AI with Large Language Models",
-      "date": "2024-01-19",
-      "issuer": "DeepLearning.ai",
-      "url": "https://coursera.org/share/9321aa29b26fd403992ab7f3920a3b04",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Foundations: Data, Data, Everywhere",
-      "date": "2024-02-05",
-      "issuer": "Google",
-      "url": "https://coursera.org/share/868d48d4758dcff6e01baea6e125e608",
-      "icon": "fa-solid fa-envelope"
+      "title": "Second Prize, Student Research Festival Summer 2025",
+      "date": "2025-08",
+      "awarder": "FPT University",
+      "summary": ""
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "citationKey": "PHAN2026115946",
+      "name": "From object difficulty to image scoring: A strategy for active learning in object detection",
+      "publisher": "Knowledge-Based Systems",
+      "releaseDate": "2026-04",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0950705126006726",
+      "journal_url": "https://www.sciencedirect.com/journal/knowledge-based-systems"
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "citationKey": "Nguyen2605:Swin2",
+      "name": "Swin Transformer V2 for Optical Chemical Structure Recognition: Comparison with Convolutional Neural Networks and Swin Transformer Variants",
+      "publisher": "The 22nd International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology (ECTI-CON 2025)",
+      "releaseDate": "2026-03",
+      "url": "https://ecti-con2025.eng.chula.ac.th/",
+      "booktitle_url": "https://ecti-con2025.eng.chula.ac.th/"
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
-  ],
-  "skills": [
-    {
-      "name": "Machine Learning",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["Active Learning", "Ensemble Learning"]
+      "citationKey": "11365041",
+      "name": "YOLOv5-Powered Smart Parking System with IoT-Based Real-Time Slot Monitoring",
+      "publisher": "2025 RIVF International Conference on Computing and Communication Technologies (RIVF 2025)",
+      "releaseDate": "2025-12",
+      "url": "https://ieeexplore.ieee.org/document/11365041",
+      "booktitle_url": "https://rivf2025.org/"
     },
     {
-      "name": "Computer Vision",
-      "level": "Intermediate",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["Object classification", "Object detection", "Object recognition"]
+      "citationKey": "Phan2509:DAAL",
+      "name": "DAAL: Dual Ambiguity in Active Learning for Object Detection with YOLOE",
+      "publisher": "17th International Conference on Management of Digital Ecosystems",
+      "releaseDate": "2025-11",
+      "url": "https://conferences.sigappfr.org/medes2025/",
+      "booktitle_url": "https://conferences.sigappfr.org/medes2025/"
     },
     {
-      "name": "Image Generative AI",
-      "level": "Intermediate",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["Generative Adversarial Networks", "Variational Autoencoder", "Diffusion Models"]
+      "citationKey": "Nguyen2509:GloMER",
+      "name": "GloMER: Towards Robust Multimodal Emotion Recognition via Gated Fusion and Contrastive Learning",
+      "publisher": "17th International Conference on Management of Digital Ecosystems",
+      "releaseDate": "2025-11",
+      "url": "https://conferences.sigappfr.org/medes2025/",
+      "booktitle_url": "https://conferences.sigappfr.org/medes2025/"
+    },
+    {
+      "citationKey": "11181447",
+      "name": "ALMUS: Enhancing Active Learning for Object Detection with Metric-Based Uncertainty Sampling",
+      "publisher": "2025 25th Asia-Pacific Network Operations and Management Symposium (APNOMS'2025)",
+      "releaseDate": "2025-09",
+      "url": "https://ieeexplore.ieee.org/document/11181447",
+      "booktitle_url": "https://sites.google.com/view/apnoms2025/"
+    },
+    {
+      "citationKey": "11181320",
+      "name": "CemoBAM: Advancing Multimodal Emotion Recognition through Heterogeneous Graph Networks and Cross-Modal Attention Mechanisms",
+      "publisher": "2025 25th Asia-Pacific Network Operations and Management Symposium (APNOMS'2025)",
+      "releaseDate": "2025-09",
+      "url": "https://ieeexplore.ieee.org/document/11181320",
+      "booktitle_url": "https://sites.google.com/view/apnoms2025/"
+    },
+    {
+      "citationKey": "11009085",
+      "name": "Improving Face Attendance Checking System with Ensemble Learning",
+      "publisher": "2024 RIVF International Conference on Computing and Communication Technologies (RIVF 2024)",
+      "releaseDate": "2024-12",
+      "url": "https://ieeexplore.ieee.org/document/11009085",
+      "booktitle_url": "https://ieeexplore.ieee.org/xpl/conhome/11009006/proceeding"
+    },
+    {
+      "citationKey": "10827558",
+      "name": "Towards Real-Time Vietnamese Traffic Sign Recognition on Embedded Systems",
+      "publisher": "2024 15th International Conference on Information and Communication Technology Convergence (ICTC 2024)",
+      "releaseDate": "2024-10",
+      "url": "https://ieeexplore.ieee.org/document/10827558",
+      "booktitle_url": "https://2024.ictc.org/"
     }
   ],
   "languages": [
@@ -157,63 +138,6 @@
       "language": "Vietnamese",
       "fluency": "Native",
       "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Natural Language Processing",
-      "level": "Beginner",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["Word Embedding", "Text Classification", "Statistical NLP"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "FPT University",
-      "location": "Thu Duc city, HCMC",
-      "position": "Mam - Children Dream Foundation",
-      "url": "https://www.facebook.com/mamchildrendreamfoundation",
-      "startDate": "2024-05-22",
-      "endDate": "2024-07-17",
-      "summary": "Organized the 'Mầm - Children's Dream Foundation' project, which aimed to support underprivileged children's education through fundraising and selling mini plant pot kits.",
-      "highlights": [
-        "Raised over 3 million VND, exceeding the initial goal.",
-        "Donated educational supplies, including textbooks and learning tools, to children.",
-        "Awarded a 'Letter of Thanks' by the Hiep Binh Phuoc Ward Youth Union for the project's efforts."
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Dr. Dang Ngoc Minh Duc",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Flower Generator with Diffusion model from scratch",
-      "summary": "Implement a diffusion model with UNet base on 102flower dataset to create 64x64 images.",
-      "startDate": "2024-02-02",
-      "endDate": "2024-02-07",
-      "highlights": ["Diffusion model", "Positional Embedding", "Diffusion Schedules"],
-      "url": "https://github.com/TaiDuc1001/Flower-Diffusion-Model"
-    },
-    {
-      "name": "Manipulating Face Emotion with VAE",
-      "summary": "Implement a VAE model and apply mathematical operations to manipulate face emotion.",
-      "startDate": "2024-01-18",
-      "endDate": "2024-01-23",
-      "highlights": ["Variational AutoEncoder", "Latent Space"],
-      "url": "https://github.com/TaiDuc1001/Manipulating-Face-Attributes-with-VAE"
-    },
-    {
-      "name": "Horse2Zebra Transfer with CycleGAN",
-      "summary": "Implement CycleGAN model to transfer horse image to zebra image.",
-      "startDate": "2024-02-18",
-      "endDate": "2024-02-23",
-      "highlights": ["Generative Adversarial Networks", "CycleGAN", "WandB"],
-      "url": "https://github.com/TaiDuc1001/Horse-to-Zebra-Transfer"
     }
   ]
 }

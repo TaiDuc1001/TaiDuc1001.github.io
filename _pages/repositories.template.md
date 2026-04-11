@@ -5,7 +5,7 @@ title: Repositories
 description: A list of repositories I have created or contributed to.
 nav: true
 nav_order: 4
-
+published: false
 ---
 
 <!-- This file is used by bin/generate_repositories_page.rb to generate repositories.md. -->
@@ -13,9 +13,7 @@ nav_order: 4
 ## GitHub users
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_user.liquid username='aita-lab' %}
-  {% include repository/repo_user.liquid username='nhut-ngnn' %}
-  {% include repository/repo_user.liquid username='TaiDuc1001' %}
+{{AUTO_GITHUB_USERS}}
 </div>
 
 ---
@@ -23,7 +21,5 @@ nav_order: 4
 ## GitHub Repositories
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo.liquid repository='aita-lab/FDAL' %}
-  {% include repository/repo.liquid repository='nhut-ngnn/GloMER' %}
-  {% include repository/repo.liquid repository='TaiDuc1001/DAAL' %}
+{{AUTO_GITHUB_REPOS}}
 </div>

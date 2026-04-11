@@ -5,8 +5,12 @@
       <div class="row">
         <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
           {% if content.startDate and content.startDate != '' %}
-            {% assign startDate = content.startDate | split: '-' | slice: 0, 2 | join: '.' %}
-            {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
+            {% assign startDate = content.startDate | split: '-' | first | split: ' ' | first %}
+            {% if content.endDate and content.endDate != '' %}
+              {% assign endDate = content.endDate | split: '-' | first | split: ' ' | first %}
+            {% else %}
+              {% assign endDate = 'Present' %}
+            {% endif %}
             {% assign date = startDate | append: ' - ' %}
             {% assign date = date | append: endDate %}
           {% else %}
@@ -17,7 +21,7 @@
               <tr>
                 <td>
                   {% if date %}
-                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ date }} </span>
+                    <span class="badge font-weight-bold danger-color-dark align-middle" style="min-width: 75px"> {{ date }} </span>
                   {% endif %}
                 </td>
               </tr>

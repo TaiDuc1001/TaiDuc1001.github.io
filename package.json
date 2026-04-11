@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "gen:resume": "ruby bin/generate_resume_json.rb"
+  },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "1.4.0",
     "prettier": "3.8.1"

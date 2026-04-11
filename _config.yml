@@ -242,6 +242,7 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - _pages/repositories.template.md
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -650,11 +651,11 @@ jsonresume:
   - basics
   - work
   - education
+  - publications
   - projects
   # - volunteer
   - awards
   - certificates
-  # - publications
   - skills
   - languages
   - interests

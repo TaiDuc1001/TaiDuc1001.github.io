@@ -1,6 +1,7 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign publications = data[1] | sort: 'releaseDate' | reverse %}
   {% for content in publications %}
+    {% assign publisher_link = content.journal_url | default: content.booktitle_url | default: content.publisher_url | default: content.url %}
     <li class="list-group-item">
       <div class="row">
         <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
@@ -17,9 +18,17 @@
         </div>
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           <h6 class="title font-weight-bold ml-1 ml-md-4">
-            <a href="{{ content.url }}">{{ content.name }}</a>
+            <a href="{{ content.url }}" target="_blank" rel="noopener noreferrer">{{ content.name }}</a>
           </h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.publisher }}</h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+            {% if publisher_link and publisher_link != '' %}
+              <a href="{{ publisher_link }}" target="_blank" rel="noopener noreferrer" style="color: #fff; font-style: italic; text-decoration: underline; text-underline-offset: 3px">
+                {{ content.publisher }}
+              </a>
+            {% else %}
+              <span style="color: #fff; font-style: italic">{{ content.publisher }}</span>
+            {% endif %}
+          </h6>
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
         </div>
       </div>

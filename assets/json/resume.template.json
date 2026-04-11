@@ -1,0 +1,70 @@
+{
+  "basics": {
+    "name": "Duc Tai Phan",
+    "label": "Researcher Assistant",
+    "image": "",
+    "email": "ducptse194683@fpt.edu.vn",
+    "summary": "I am currently a final-year Software Engineering student at FPT University in Ho Chi Minh City, Vietnam, and a research assistant at AiTA Lab. My work focuses primarily on computer vision, with particular interests in data-efficient learning, especially the combination of few-shot learning and active learning for challenging tasks such as fine-grained image classification and object detection. I am interested in developing practical learning strategies that remain effective under limited supervision and subtle visual differences. In the future, I aim to grow into an AI Engineer while continuing to explore research-driven approaches to difficult machine learning problems.",
+    "location": {
+      "postalCode": "762000",
+      "city": "Ho Chi Minh City",
+      "countryCode": "VN",
+      "region": "Ho Chi Minh City"
+    }
+  },
+  "work": [
+    {
+      "name": "IMT Solutions",
+      "position": "AI Engineer",
+      "url": "https://imt-soft.com/",
+      "startDate": "2025-08",
+      "endDate": "2026-05",
+      "summary": "AI Engineer, Ho Chi Minh City, Vietnam."
+    },
+    {
+      "name": "ABCStudio",
+      "position": "AI Engineer",
+      "url": "https://abcstudio.co/",
+      "startDate": "2024-10",
+      "endDate": "2025-04",
+      "summary": "AI Engineer, Ho Chi Minh City, Vietnam."
+    }
+  ],
+  "education": [
+    {
+      "institution": "FPT University",
+      "url": "https://daihoc.fpt.edu.vn/en/",
+      "area": "Software Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2023-09-07",
+      "endDate": "2026-11-07 (Expected)"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Second Prize, Student Research Festival Fall 2025",
+      "date": "2025-12",
+      "awarder": "FPT University",
+      "summary": ""
+    },
+    {
+      "title": "Second Prize, Student Research Festival Summer 2025",
+      "date": "2025-08",
+      "awarder": "FPT University",
+      "summary": ""
+    }
+  ],
+  "publications": [],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
+    },
+    {
+      "language": "Vietnamese",
+      "fluency": "Native",
+      "icon": ""
+    }
+  ]
+}
