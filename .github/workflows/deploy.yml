@@ -22,7 +22,7 @@ jobs:
           BUNDLE_LOCKFILE_CHECKSUMS: "false"
         with:
           ruby-version: ruby
-          bundler-cache: true
+          bundler-cache: false
       - name: Build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -35,8 +35,13 @@ jobs:
 
           export JEKYLL_ENV=production
           export BUNDLE_LOCKFILE_CHECKSUMS=false
+          export BUNDLE_FROZEN=false
 
           ruby -e "cfg=File.read('_config.yml'); cfg.sub!(/(giscus:\s*\n(?:[ \t].*\n)*?[ \t]*repo:\s*).*/, '\\1' + ENV.fetch('GITHUB_REPOSITORY')); File.write('_config.yml', cfg)"
+
+          bundle config set path vendor/bundle
+          bundle config set frozen false
+          bundle install --jobs 4 --retry 3
 
           bundle exec ruby bin/build_bibliography.rb
           ruby bin/generate_repositories_page.rb
