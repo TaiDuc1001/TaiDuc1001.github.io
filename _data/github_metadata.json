@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-04-11T08:17:19Z",
+  "users": [
+    {
+      "login": "aita-lab",
+      "html_url": "https://github.com/aita-lab",
+      "avatar_url": "https://github.com/aita-lab.png?size=160",
+      "error": "403"
+    },
+    {
+      "login": "nhut-ngnn",
+      "html_url": "https://github.com/nhut-ngnn",
+      "avatar_url": "https://github.com/nhut-ngnn.png?size=160",
+      "error": "403"
+    },
+    {
+      "login": "TaiDuc1001",
+      "html_url": "https://github.com/TaiDuc1001",
+      "avatar_url": "https://github.com/TaiDuc1001.png?size=160",
+      "error": "403"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "aita-lab/FDAL",
+      "html_url": "https://github.com/aita-lab/FDAL",
+      "error": "403"
+    },
+    {
+      "full_name": "nhut-ngnn/GloMER",
+      "html_url": "https://github.com/nhut-ngnn/GloMER",
+      "error": "403"
+    },
+    {
+      "full_name": "TaiDuc1001/DAAL",
+      "html_url": "https://github.com/TaiDuc1001/DAAL",
+      "error": "403"
+    }
+  ]
+}

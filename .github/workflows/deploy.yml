@@ -16,7 +16,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        env:
+          BUNDLE_LOCKFILE_CHECKSUMS: "false"
+        with:
+          ruby-version: ruby
+          bundler-cache: true
       - name: Build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick biber
@@ -27,13 +36,11 @@ jobs:
           export JEKYLL_ENV=production
           export BUNDLE_LOCKFILE_CHECKSUMS=false
 
-          bundle config set path vendor/bundle
-          bundle install --jobs 4 --retry 3
-
           ruby -e "cfg=File.read('_config.yml'); cfg.sub!(/(giscus:\s*\n(?:[ \t].*\n)*?[ \t]*repo:\s*).*/, '\\1' + ENV.fetch('GITHUB_REPOSITORY')); File.write('_config.yml', cfg)"
 
           bundle exec ruby bin/build_bibliography.rb
           ruby bin/generate_repositories_page.rb
+          ruby bin/fetch_github_metadata.rb
           ruby bin/generate_gallery_page.rb
           ruby bin/generate_people_page.rb
           ruby bin/generate_cv_latex.rb

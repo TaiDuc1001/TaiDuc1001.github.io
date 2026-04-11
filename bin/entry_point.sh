@@ -8,6 +8,7 @@ GALLERY_SOURCE_DIR=_pages/gallery
 PEOPLE_SOURCE_DIR=_pages/people
 BIB_BUILD_SCRIPT=bin/build_bibliography.rb
 REPOSITORIES_PAGE_SCRIPT=bin/generate_repositories_page.rb
+GITHUB_METADATA_SCRIPT=bin/fetch_github_metadata.rb
 GALLERY_PAGE_SCRIPT=bin/generate_gallery_page.rb
 PEOPLE_PAGE_SCRIPT=bin/generate_people_page.rb
 RESUME_JSON_SCRIPT=bin/generate_resume_json.rb
@@ -29,6 +30,10 @@ generate_repositories_page() {
   ruby "$REPOSITORIES_PAGE_SCRIPT"
 }
 
+fetch_github_metadata() {
+  ruby "$GITHUB_METADATA_SCRIPT"
+}
+
 generate_gallery_page() {
   ruby "$GALLERY_PAGE_SCRIPT"
 }
@@ -48,6 +53,7 @@ start_jekyll() {
 
 build_bibliography
 generate_repositories_page
+fetch_github_metadata
 generate_gallery_page
 generate_people_page
 generate_resume_json
@@ -65,6 +71,7 @@ while true; do
 
       build_bibliography
       generate_repositories_page
+      fetch_github_metadata
       generate_gallery_page
       generate_people_page
       generate_resume_json
@@ -73,6 +80,7 @@ while true; do
     elif [ "$changed_path" = "$REPOSITORIES_TEMPLATE_FILE" ]; then
       echo "Change detected in $REPOSITORIES_TEMPLATE_FILE, regenerating repositories.md"
       generate_repositories_page
+      fetch_github_metadata
     elif [[ "$changed_path" == "$GALLERY_SOURCE_DIR/"* ]]; then
       echo "Change detected in $GALLERY_SOURCE_DIR, regenerating gallery.md"
       generate_gallery_page
@@ -86,6 +94,7 @@ while true; do
       echo "Change detected in bibliography sources, rebuilding _papers.bib, repositories.md, gallery.md, people.md, resume.json and cv latex"
       build_bibliography
       generate_repositories_page
+      fetch_github_metadata
       generate_gallery_page
       generate_people_page
       generate_resume_json

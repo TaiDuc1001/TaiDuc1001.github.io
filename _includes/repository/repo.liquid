@@ -1,30 +1,43 @@
-{% assign repo_url = include.repository | split: '/' %}
-{% if site.data.repositories.github_users contains repo_url.first %}
-  {% assign show_owner = false %}
-{% else %}
-  {% assign show_owner = true %}
+{% assign repo_parts = include.repository | split: '/' %}
+{% assign repo_owner = repo_parts | first %}
+{% assign github_metadata = site.data.github_metadata | default: empty %}
+{% assign github_repositories = github_metadata.repositories | default: empty %}
+{% assign repo = github_repositories | where: "full_name", include.repository | first %}
+{% assign repo_url = repo.html_url | default: '' %}
+{% if repo_url == '' %}
+  {% assign repo_url = 'https://github.com/' | append: include.repository %}
 {% endif %}
 
-{% if site.data.repositories.repo_description_lines_max %}
-  {% assign max_lines = site.data.repositories.repo_description_lines_max %}
-{% else %}
-  {% assign max_lines = 2 %}
-{% endif %}
-
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}">
-    <img
-      class="repo-img-light w-100"
-      alt="{{ include.repository }}"
-      src="https://gh-card.dev/repos/{{ include.repository }}.svg"
-      loading="lazy"
-    >
-    <img
-      class="repo-img-dark w-100"
-      alt="{{ include.repository }}"
-      src="https://gh-card.dev/repos/{{ include.repository }}.svg"
-      loading="lazy"
-    >
-    <p class="mt-2 mb-0"><code>{{ include.repository }}</code></p>
+<div class="repo repo--repo p-2">
+  <a
+    class="repo-card repo-card--repo{% if repo_owner == site.github_username %} repo-card--self{% endif %}"
+    href="{{ repo_url }}"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div class="repo-card__topline">
+      <span class="repo-card__label">Repository</span>
+      <span class="repo-card__arrow" aria-hidden="true">&rarr;</span>
+    </div>
+    <div class="repo-card__owner">
+      <img
+        class="repo-card__avatar repo-card__avatar--repo"
+        src="https://github.com/{{ repo_owner }}.png?size=96"
+        alt="{{ repo_owner }} avatar"
+        loading="lazy"
+      >
+      <div class="repo-card__owner-copy">
+        <span class="repo-card__owner-name">{{ repo_owner }}</span>
+        <div class="repo-card__header">
+          <span class="repo-card__name">{{ include.repository }}</span>
+        </div>
+      </div>
+    </div>
+    <p class="repo-card__desc">{{ repo.description | default: 'No description yet.' }}</p>
+    <div class="repo-card__meta">
+      <span class="repo-card__pill">Language: {{ repo.language | default: 'N/A' }}</span>
+      <span class="repo-card__pill">Stars: {{ repo.stargazers_count | default: 0 }}</span>
+      <span class="repo-card__pill">Forks: {{ repo.forks_count | default: 0 }}</span>
+    </div>
   </a>
 </div>

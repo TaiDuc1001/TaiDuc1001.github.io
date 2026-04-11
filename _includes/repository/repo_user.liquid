@@ -1,17 +1,38 @@
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.username }}">
-    <img
-      class="repo-img-light w-100"
-      alt="{{ include.username }}"
-      src="https://github.com/{{ include.username }}.png?size=420"
-      loading="lazy"
-    >
-    <img
-      class="repo-img-dark w-100"
-      alt="{{ include.username }}"
-      src="https://github.com/{{ include.username }}.png?size=420"
-      loading="lazy"
-    >
-    <p class="mt-2 mb-0"><code>{{ include.username }}</code></p>
+{% assign github_metadata = site.data.github_metadata | default: empty %}
+{% assign github_users = github_metadata.users | default: empty %}
+{% assign user = github_users | where: "login", include.username | first %}
+{% assign profile_url = user.html_url | default: '' %}
+{% if profile_url == '' %}
+  {% assign profile_url = 'https://github.com/' | append: include.username %}
+{% endif %}
+{% assign avatar_url = user.avatar_url | default: '' %}
+{% if avatar_url == '' %}
+  {% assign avatar_url = 'https://github.com/' | append: include.username | append: '.png?size=160' %}
+{% endif %}
+
+<div class="repo repo--user p-2">
+  <a
+    class="repo-card repo-card--user{% if include.username == site.github_username %} repo-card--self{% endif %}"
+    href="{{ profile_url }}"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div class="repo-card__topline">
+      <span class="repo-card__label">GitHub User</span>
+      <span class="repo-card__arrow" aria-hidden="true">&rarr;</span>
+    </div>
+    <div class="repo-card__user-head">
+      <img
+        class="repo-card__avatar"
+        src="{{ avatar_url }}"
+        alt="{{ include.username }} avatar"
+        loading="lazy"
+      >
+      <div>
+        <div class="repo-card__name">{{ user.name | default: include.username }}</div>
+        <div class="repo-card__handle">@{{ include.username }}</div>
+        <div class="repo-card__sub">{{ user.bio | default: 'No public bio' }}</div>
+      </div>
+    </div>
   </a>
 </div>
