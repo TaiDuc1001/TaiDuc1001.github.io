@@ -933,6 +933,12 @@ footer.sticky-bottom {
       }
 
       .author {
+        .author-name,
+        a,
+        em {
+          white-space: nowrap;
+        }
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -942,7 +948,8 @@ footer.sticky-bottom {
           }
         }
 
-        > em {
+        > em,
+        em {
           border-bottom: 1px solid;
           font-style: normal;
         }

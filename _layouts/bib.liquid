@@ -59,50 +59,49 @@
       {% endif %}
 
       {%- for author in entry.author_array limit: author_array_limit -%}
-        {% assign author_is_self = false %}
+        {%- assign author_is_self = false -%}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
         {%- assign author_full_name_normalized = author.first | append: ' ' | append: author_last_name | downcase | replace: '-', ' ' | replace: '.', ' ' | split: ' ' | join: ' ' | strip -%}
         {%- assign scholar_name_normalized = site.scholar.name | default: '' | downcase | replace: '-', ' ' | replace: '.', ' ' | split: ' ' | join: ' ' | strip -%}
-        {% if scholar_name_normalized != '' and author_full_name_normalized == scholar_name_normalized %}
-          {% assign author_is_self = true %}
+        {%- if scholar_name_normalized != '' and author_full_name_normalized == scholar_name_normalized -%}
+          {%- assign author_is_self = true -%}
         {%- endif -%}
-        {% assign coauthor_url = null %}
+        {%- assign coauthor_url = null -%}
         {%- assign clean_author_name = author.first | append: ' ' | append: author_last_name | downcase | remove_accents | replace: '-', ' ' | replace: '.', ' ' | split: ' ' | join: ' ' | strip -%}
         {%- assign clean_author_name_hyphen = author.first | append: ' ' | append: author_last_name | downcase | remove_accents | replace: '.', ' ' | split: ' ' | join: ' ' | strip -%}
-        {% assign coauthor_entry = site.data.coauthors[clean_author_name] %}
-        {% unless coauthor_entry %}
-          {% assign coauthor_entry = site.data.coauthors[clean_author_name_hyphen] %}
-        {% endunless %}
-        {% if coauthor_entry %}
-          {% if coauthor_entry.url %}
-            {% assign coauthor_url = coauthor_entry.url %}
-          {% else %}
-            {% assign coauthor_url = coauthor_entry %}
-          {% endif %}
+        {%- assign coauthor_entry = site.data.coauthors[clean_author_name] -%}
+        {%- unless coauthor_entry -%}
+          {%- assign coauthor_entry = site.data.coauthors[clean_author_name_hyphen] -%}
+        {%- endunless -%}
+        {%- if coauthor_entry -%}
+          {%- if coauthor_entry.url -%}
+            {%- assign coauthor_url = coauthor_entry.url -%}
+          {%- else -%}
+            {%- assign coauthor_url = coauthor_entry -%}
+          {%- endif -%}
         {%- endif -%}
-
         {%- if forloop.length > 1 -%}
-          {% if forloop.first == false %},&nbsp;{% endif %}
-          {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
-        {% endif %}
+          {%- if forloop.first == false -%}, {% endif -%}
+          {%- if forloop.last and author_array_limit == author_array_size -%}and {% endif -%}
+        {%- endif -%}
         {%- if author_is_self -%}
           <em><b style="color: #FFA500;">
             {{- author.first }}
             {{ author_last_html -}}
           </b></em>
-        {%- else -%}
-          {%- if coauthor_url -%}
-            <a href="{{coauthor_url}}">
-              {{- author.first }}
-              {{ author_last_html -}}
-            </a>
-          {%- else -%}
+        {%- elsif coauthor_url -%}
+          <a href="{{coauthor_url}}">
             {{- author.first }}
             {{ author_last_html -}}
-          {% endif %}
+          </a>
+        {%- else -%}
+          <span class="author-name">
+            {{- author.first }}
+            {{ author_last_html -}}
+          </span>
         {%- endif -%}
-      {% endfor %}
+      {%- endfor -%}
       {%- assign more_authors = author_array_size | minus: author_array_limit -%}
 
       {%- assign more_authors_hide = more_authors | append: ' more author' -%}
