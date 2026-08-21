@@ -64,6 +64,7 @@
       {% endif %}
       {% if include.zoomable %}
         data-zoomable
+        data-zoom-src="{% if include.zoom_path %}{{ include.zoom_path | relative_url }}{% elsif include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
       {% endif %}
       {% if include.loading %}
         loading="{{ include.loading }}"

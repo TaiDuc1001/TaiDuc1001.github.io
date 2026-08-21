@@ -47,7 +47,12 @@ generate_cv_latex() {
 }
 
 start_jekyll() {
-  /bin/bash -c "exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --force_polling"&
+  (
+    while true; do
+      jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --force_polling
+      sleep 1
+    done
+  ) &
   JEKYLL_PID=$!
 }
 

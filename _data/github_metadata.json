@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T15:29:19Z",
+  "generated_at": "2026-08-21T15:41:18Z",
   "users": [
     {
       "login": "aita-lab",
@@ -57,7 +57,7 @@
       "full_name": "Lamn17/DVAL",
       "name": "DVAL",
       "owner": "Lamn17",
-      "description": null,
+      "description": "[ATC'26] DVAL: Detector and Vision-language active learning for traffic sign detection",
       "language": "Python",
       "stargazers_count": 0,
       "forks_count": 0,
