@@ -1,40 +1,67 @@
 {
-  "generated_at": "2026-04-11T08:17:19Z",
+  "generated_at": "2026-08-21T13:54:35Z",
   "users": [
     {
       "login": "aita-lab",
+      "name": null,
+      "bio": null,
+      "company": null,
+      "followers": 8,
+      "public_repos": 10,
       "html_url": "https://github.com/aita-lab",
-      "avatar_url": "https://github.com/aita-lab.png?size=160",
-      "error": "403"
+      "avatar_url": "https://avatars.githubusercontent.com/u/176905190?v=4"
     },
     {
       "login": "nhut-ngnn",
+      "name": "Nhut Minh Nguyen",
+      "bio": null,
+      "company": "FPT University",
+      "followers": 15,
+      "public_repos": 30,
       "html_url": "https://github.com/nhut-ngnn",
-      "avatar_url": "https://github.com/nhut-ngnn.png?size=160",
-      "error": "403"
+      "avatar_url": "https://avatars.githubusercontent.com/u/138198155?v=4"
     },
     {
       "login": "TaiDuc1001",
+      "name": "Duc Tai Phan",
+      "bio": "Studying at FPT University. ",
+      "company": "FPT University",
+      "followers": 20,
+      "public_repos": 43,
       "html_url": "https://github.com/TaiDuc1001",
-      "avatar_url": "https://github.com/TaiDuc1001.png?size=160",
-      "error": "403"
+      "avatar_url": "https://avatars.githubusercontent.com/u/89329066?v=4"
     }
   ],
   "repositories": [
     {
       "full_name": "aita-lab/FDAL",
-      "html_url": "https://github.com/aita-lab/FDAL",
-      "error": "403"
+      "name": "FDAL",
+      "owner": "aita-lab",
+      "description": "Official implementation of Feature Difficulty in Active Learning (FDAL)",
+      "language": "Python",
+      "stargazers_count": 6,
+      "forks_count": 0,
+      "html_url": "https://github.com/aita-lab/FDAL"
     },
     {
       "full_name": "nhut-ngnn/GloMER",
-      "html_url": "https://github.com/nhut-ngnn/GloMER",
-      "error": "403"
+      "name": "GloMER",
+      "owner": "nhut-ngnn",
+      "description": "[MEDES'25] - \"GloMER: Towards Robust Multimodal Emotion Recognition via Gated Fusion and Contrastive Learning\" - Nhut Minh Nguyen, Duc Tai Phan, Duc Ngoc Minh Dang.",
+      "language": "Python",
+      "stargazers_count": 4,
+      "forks_count": 0,
+      "html_url": "https://github.com/nhut-ngnn/GloMER"
     },
     {
       "full_name": "TaiDuc1001/DAAL",
-      "html_url": "https://github.com/TaiDuc1001/DAAL",
-      "error": "403"
+      "name": "DAAL",
+      "owner": "TaiDuc1001",
+      "description": "The official implementation of paper DAAL: Dual Ambiguity in Active Learning for Object Detection with YOLOE",
+      "language": "Python",
+      "stargazers_count": 4,
+      "forks_count": 0,
+      "html_url": "https://github.com/TaiDuc1001/DAAL"
     }
   ]
 }

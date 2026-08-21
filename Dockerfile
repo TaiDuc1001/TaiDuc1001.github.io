@@ -29,7 +29,7 @@ ENV LANG=en_US.UTF-8 \
 
 RUN mkdir /srv/jekyll
 
-ADD Gemfile /srv/jekyll
+ADD Gemfile Gemfile.lock /srv/jekyll/
 
 WORKDIR /srv/jekyll
 

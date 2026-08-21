@@ -294,6 +294,8 @@ sass:
   style: compressed
   quiet_deps: true
   verbose: false
+  silence_deprecations:
+    - import
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
@@ -301,8 +303,6 @@ sass:
 
 jekyll-minifier:
   exclude: ["robots.txt", "assets/js/search/*.js"]
-  uglifier_args:
-    harmony: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives

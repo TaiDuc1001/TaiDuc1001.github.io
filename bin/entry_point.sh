@@ -47,7 +47,7 @@ generate_cv_latex() {
 }
 
 start_jekyll() {
-  /bin/bash -c "rm -f Gemfile.lock && exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --force_polling"&
+  /bin/bash -c "exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --force_polling"&
   JEKYLL_PID=$!
 }
 
