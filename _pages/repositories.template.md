@@ -10,7 +10,7 @@ published: false
 
 <!-- This file is used by bin/generate_repositories_page.rb to generate repositories.md. -->
 
-## GitHub users
+## GitHub Users
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
 {{AUTO_GITHUB_USERS}}

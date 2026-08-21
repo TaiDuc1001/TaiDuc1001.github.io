@@ -38,7 +38,7 @@ sorted_repos = repos.to_a.sort_by(&:downcase)
 sorted_users = sorted_repos.map { |repo| repo.split('/').first }.uniq.sort_by(&:downcase)
 
 users_markup = if sorted_users.empty?
-  "  <p>No GitHub users found from <code>code</code> fields in <code>_papers.bib</code>.</p>"
+  "  <p>No GitHub Users found from <code>code</code> fields in <code>_papers.bib</code>.</p>"
 else
   sorted_users.map { |user| "  {% include repository/repo_user.liquid username='#{user}' %}" }.join("\n")
 end
