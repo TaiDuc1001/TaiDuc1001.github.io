@@ -56,6 +56,46 @@
   ],
   "publications": [
     {
+      "citationKey": "Nguy2610:Audio",
+      "name": "Audio-Guided Repair Gate for ASR-Robust Speech Emotion Recognition",
+      "publisher": "2026 International Conference on Advanced Technologies for Communications (ATC) (ATC'26)",
+      "releaseDate": "2026-10",
+      "url": "https://atc-conf.org/",
+      "booktitle_url": "https://atc-conf.org/"
+    },
+    {
+      "citationKey": "Phuo2610:DVAL",
+      "name": "DVAL: Detector and Vision-Language Active Learning for Traffic Sign Detection",
+      "publisher": "2026 International Conference on Advanced Technologies for Communications (ATC) (ATC'26)",
+      "releaseDate": "2026-10",
+      "url": "https://atc-conf.org/",
+      "booktitle_url": "https://atc-conf.org/"
+    },
+    {
+      "citationKey": "Phan2610R3CEC",
+      "name": "Three-Rank Calibrated Entropy-Weighted Clustering for Active Learning with Vision-Language Models",
+      "publisher": "The 5th International Conference on Intelligence of Things 2026 (ICITconf'2026)",
+      "releaseDate": "2026-10",
+      "url": "https://icitconf.org/",
+      "booktitle_url": "https://icitconf.org/"
+    },
+    {
+      "citationKey": "Phan2607CorrTie",
+      "name": "CorrTie: Correction-aware Tie-breaking for Active Learning with Vision-Language Models",
+      "publisher": "The 10th APWeb-WAIM Joint International Conference on Web and Big Data (APWeb-WAIM 2026)",
+      "releaseDate": "2026-09",
+      "url": "https://conferences.sigappfr.org/apweb2026/",
+      "booktitle_url": "https://conferences.sigappfr.org/apweb2026/"
+    },
+    {
+      "citationKey": "Nguyen2609LexiChem",
+      "name": "LexiChem: Shared-Latent Alignment for Faithful Text-to-Molecule Generation in SELFIES Space",
+      "publisher": "The 10th APWeb-WAIM Joint International Conference on Web and Big Data (APWeb-WAIM 2026)",
+      "releaseDate": "2026-09",
+      "url": "https://conferences.sigappfr.org/apweb2026/",
+      "booktitle_url": "https://conferences.sigappfr.org/apweb2026/"
+    },
+    {
       "citationKey": "PHAN2026115946",
       "name": "From object difficulty to image scoring: A strategy for active learning in object detection",
       "publisher": "Knowledge-Based Systems",
@@ -68,7 +108,7 @@
       "name": "Swin Transformer V2 for Optical Chemical Structure Recognition: Comparison with Convolutional Neural Networks and Swin Transformer Variants",
       "publisher": "The 22nd International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology (ECTI-CON 2025)",
       "releaseDate": "2026-03",
-      "url": "https://ecti-con2025.eng.chula.ac.th/",
+      "url": "https://ieeexplore.ieee.org/document/11608590",
       "booktitle_url": "https://ecti-con2025.eng.chula.ac.th/"
     },
     {

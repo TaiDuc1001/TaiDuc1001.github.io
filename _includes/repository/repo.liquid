@@ -16,6 +16,7 @@
     href="{{ repo_url }}"
     target="_blank"
     rel="noopener noreferrer"
+    data-github-repo="{{ include.repository }}"
   >
     <div class="repo-card__topline">
       <span class="repo-card__label">Repository</span>
@@ -35,11 +36,11 @@
         </div>
       </div>
     </div>
-    <p class="repo-card__desc">{{ repo.description | default: 'No description yet.' }}</p>
+    <p class="repo-card__desc js-repo-desc">{{ repo.description | default: 'No description yet.' }}</p>
     <div class="repo-card__meta">
-      <span class="repo-card__pill">Language: {{ repo.language | default: 'N/A' }}</span>
-      <span class="repo-card__pill">Stars: {{ repo.stargazers_count | default: 0 }}</span>
-      <span class="repo-card__pill">Forks: {{ repo.forks_count | default: 0 }}</span>
+      <span class="repo-card__pill js-repo-lang">Language: {{ repo.language | default: 'N/A' }}</span>
+      <span class="repo-card__pill js-repo-stars">Stars: {{ repo.stargazers_count | default: 0 }}</span>
+      <span class="repo-card__pill js-repo-forks">Forks: {{ repo.forks_count | default: 0 }}</span>
     </div>
   </a>
 </div>

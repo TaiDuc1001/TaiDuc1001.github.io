@@ -1,0 +1,32 @@
+@INPROCEEDINGS{Phan2610R3CEC,
+AUTHOR="Duc Tai Phan and Lam Phuong Nguyen and Nam Van Hai Phan and Tri Nguyen Thai and Duc Ngoc Minh Dang",
+TITLE="{Three-Rank} Calibrated {Entropy-Weighted} Clustering for Active Learning with {Vision-Language} Models",
+BOOKTITLE="The 5th International Conference on Intelligence of Things 2026 (ICITconf'2026)",
+booktitle_url={https://icitconf.org/},
+ADDRESS="Seoul, South Korea",
+DAYS=15,
+MONTH=oct,
+YEAR=2026,
+code={https://github.com/TaiDuc1001/R3-CEC},
+preview={R3CEC.png},
+abbr={ICIT'26},
+bibtex_show={true},
+ABSTRACT="Vision-language models (VLMs) provide strong transferable representations
+for visual recognition, but adapting them to downstream tasks remains
+challenging when labeled data are scarce. Active learning (AL) addresses
+this issue by selecting informative unlabeled samples for annotation;
+however, recent VLM-oriented solutions, such as Calibrated Entropy-weighted
+Clustering (CEC), select the final query from each cluster using a
+nearest-center rule. This rule is representative, but it does not consider
+whether a candidate is predicted to belong to a class with few labeled
+examples. To address this limitation, we propose Three-Rank Calibrated
+Entropy-weighted Clustering (R3-CEC), a parameter-free extension of CEC
+that replaces the final within-cluster selection step with rank aggregation
+over residual class coverage, informativeness, and representativeness.
+Experiments on six image classification benchmarks across multiple
+prompt-learning baselines show that R3-CEC improves over CEC in the main
+setting across multiple budget settings, with gains of +3.2\%, +1.4\%, and
++0.2\%. These results indicate that R3-CEC is a simple and practical query
+strategy for annotation-efficient VLM adaptation, with potential
+applications in label-scarce visual recognition scenarios."
+}

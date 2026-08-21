@@ -1,0 +1,40 @@
+@INPROCEEDINGS{Phuo2610:DVAL,
+  AUTHOR="Lam Phuong Nguyen and Duc Tai Phan and Duc-Hieu Hoang and Tri Nguyen Thai and Cuong Tuan Nguyen and Duc Ngoc Minh Dang",
+  TITLE="{DVAL:} Detector and {Vision-Language} Active Learning for Traffic Sign Detection",
+  BOOKTITLE="2026 International Conference on Advanced Technologies for Communications (ATC) (ATC'26)",
+  booktitle_url={https://atc-conf.org/},
+  ADDRESS="Quy Nhon, Vietnam",
+  PAGES=6,
+  DAYS=15,
+  MONTH=oct,
+  YEAR=2026,
+  abbr={ATC'26},
+  code={https://github.com/Lamn17/DVAL},
+  bibtex_show={true},
+  preview={DVAL.png},
+  ABSTRACT="Traffic sign detection (TSD) is important for intelligent transportation
+systems and autonomous driving, but training reliable detectors requires
+costly manual annotation of bounding boxes and class labels. To reduce this
+effort, we propose Detector and Vision-Language Active Learning (DVAL), a
+two-stage active learning (AL) framework for TSD. AL reduces annotation
+cost by iteratively selecting the most informative unlabeled samples under
+a limited labeling budget. In the first stage, a You Only Look Once (YOLO)
+detector is trained on the current labeled set. Based on these predictions,
+we introduce Detection Difficulty Uncertainty Sampling (DDUS), which
+estimates detection uncertainty based on class-level classification and
+localization difficulty to select candidate images from the unlabeled pool.
+In the second stage, YOLO-predicted boxes are used to crop traffic sign
+regions, which are processed by Multi-modal Prompt Learning (MaPLe) as a
+vision-language prompt learning module. The entropy from MaPLe and the
+prediction mismatch between YOLO and MaPLe are combined into an image score
+to select the final query images for annotation. Experiments are conducted
+on two TSD datasets, namely the German Traffic Sign Detection Benchmark
+(GTSDB) and the Vietnamese Traffic Sign Detection Database 100 (VTSDB100),
+using YOLO11-Nano as the detector. With 50\% of the training images
+labeled, DVAL achieves 0.9762 mAP(at)50 and 0.8419 mAP(at)50:95 on GTSDB,
+compared with 0.9813 and 0.8535 from fully supervised training. On
+VTSDB100, DVAL achieves 0.9616 mAP(at)50 and 0.7593 mAP(at)50:95, compared
+with 0.9702 and 0.8158 from fully supervised training. DVAL also achieves
+the highest mAP(at)50 among the compared AL methods on both datasets,
+showing competitive detection performance with fewer labeled images."
+}

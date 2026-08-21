@@ -97,7 +97,7 @@
 % -----------------------------------------------------------------------------
 
 @INPROCEEDINGS{11365041,
-    AUTHOR={Phuong Lam Nguyen and Duc Tai Phan and Thanh Trung Nguyen and Nhut Minh Nguyen and Duc Ngoc Minh Dang},
+    AUTHOR={Lam Phuong Nguyen and Duc Tai Phan and Thanh Trung Nguyen and Nhut Minh Nguyen and Duc Ngoc Minh Dang},
     TITLE={YOLOv5-Powered Smart Parking System with IoT-Based Real-Time Slot Monitoring},
     BOOKTITLE={2025 RIVF International Conference on Computing and Communication Technologies (RIVF 2025)},
     booktitle_url={https://rivf2025.org/},
@@ -180,6 +180,110 @@
     KEYWORDS = {Optical Chemical Structure Recognition (OCSR); Swin Transformer; Deep Learning; Molecular Graph Extraction; Computer Vision.},
     abbr={ECTI-CON'25},
     bibtex_show={true},
+    html={https://ieeexplore.ieee.org/document/11608590},
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2026-Nguyen2609-LexiChem.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{Nguyen2609LexiChem,
+  AUTHOR={Khoa Minh Nguyen and Nam Van Hai Phan and Phu Trong Nguyen and Duc Tai Phan and Tri Minh Pham and Duc Ngoc Minh Dang},
+  TITLE={LexiChem: Shared-Latent Alignment for Faithful Text-to-Molecule Generation in SELFIES Space},
+  BOOKTITLE={The 10th APWeb-WAIM Joint International Conference on Web and Big Data (APWeb-WAIM 2026)},
+  booktitle_url={https://conferences.sigappfr.org/apweb2026/},
+  ADDRESS={Da Nang, Vietnam},
+  DAYS=7,
+  MONTH=sep,
+  YEAR={2026},
+  preview={LexiChem.png},
+  abbr={APWeb-WAIM'26},
+  bibtex_show={true},
+  ABSTRACT="Text-to-molecule generation, or conditional de novo molecule generation from natural language, offers a natural interface for early-stage molecular design, where researchers often describe functional goals before a precise scaffold is known. Existing encoder-decoder and SELFIES-based systems reduce syntactic failures, but sequence-only supervision can still lack cross-modal grounding, generating valid molecules that drift from the requested scaffold family, motif pattern, or medicinal-chemistry role. We propose LexiChem, a multimodal alignment-and-generation framework for faithful text-to-molecule generation in SELFIES space. LexiChem combines a pretrained text branch, a training-time SELFIES branch, lightweight projector heads, VICReg-based shared-latent alignment, asymmetric gradient isolation for the pretrained language branch, and conditional autoregressive SELFIES decoding. Experiments on the abstract and strongly one-to-many L+M-24 benchmark show that LexiChem achieves the highest BLEU score among the compared systems (73.47) while maintaining perfect chemical validity (100.0%). Compared with the BioT5+-base backbone, it raises BLEU from 66.36 to 73.47, improves MACCS, RDKit, and Morgan fingerprint similarities, and reduces FCD from 15.42 to 11.20. Ablation results further show that explicit alignment improves sequence and fingerprint fidelity, while gradient isolation strengthens the aligned setting without removing the edit-distance trade-off. These results suggest that latent alignment improves prompt-conditioned faithfulness and scaffold-family adherence."
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2026-Nguyen2610-Audio.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{Nguy2610:Audio,
+  AUTHOR="Nhut Minh Nguyen and Duc Tai Phan and Dang Nguyen Huu Duc and Nguyen Thu Ky and Duc Ngoc Minh Dang",
+  TITLE="{Audio-Guided} Repair Gate for {ASR-Robust} Speech Emotion Recognition",
+  BOOKTITLE="2026 International Conference on Advanced Technologies for Communications (ATC) (ATC'26)",
+  booktitle_url={https://atc-conf.org/},
+  ADDRESS="Quy Nhon, Vietnam",
+  PAGES=6,
+  DAYS=15,
+  MONTH=oct,
+  YEAR=2026,
+  abbr={ATC'26},
+  code={https://github.com/nhut-ngnn/AURORA},
+  bibtex_show={true},
+  preview={AURORA.png},
+  ABSTRACT="Speech Emotion Recognition (SER) is an important task in affective
+computing and human-computer interaction. While multimodal SER can leverage
+complementary audio and textual cues, real-world systems often rely on
+Automatic Speech Recognition (ASR)-generated transcripts instead of manual
+transcripts. However, ASR errors may degrade semantic representations and
+reduce emotion recognition performance. In this study, we propose AURORA,
+an audio-guided repair gate architecture for ASR-robust SER. AURORA adopts
+a teacher-student architecture, where the teacher branch learns from audio
+and clean text, while the student branch learns from audio and
+ASR-generated text to match real-world inference conditions. The student
+branch is further equipped with hallucination-based repair and a
+reliability gate to selectively correct ASR-based textual representations
+using audio guidance. The gated multimodal fusion and knowledge
+distillation are used to integrate multimodal information and transfer
+reliable knowledge from the teacher branch to the student branch.
+Experiments on two benchmark datasets show that AURORA achieves competitive
+performance, with 79.96\% WA and 79.77\% UA on IEMOCAP, and 63.27\% WA and
+62.47\% UA on MSP-IMPROV. Ablation studies validate the contribution of the
+proposed components to ASR-robust emotion recognition."
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2026-Nguyen2610-DVAL.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{Phuo2610:DVAL,
+  AUTHOR="Lam Phuong Nguyen and Duc Tai Phan and Duc-Hieu Hoang and Tri Nguyen Thai and Cuong Tuan Nguyen and Duc Ngoc Minh Dang",
+  TITLE="{DVAL:} Detector and {Vision-Language} Active Learning for Traffic Sign Detection",
+  BOOKTITLE="2026 International Conference on Advanced Technologies for Communications (ATC) (ATC'26)",
+  booktitle_url={https://atc-conf.org/},
+  ADDRESS="Quy Nhon, Vietnam",
+  PAGES=6,
+  DAYS=15,
+  MONTH=oct,
+  YEAR=2026,
+  abbr={ATC'26},
+  code={https://github.com/Lamn17/DVAL},
+  bibtex_show={true},
+  preview={DVAL.png},
+  ABSTRACT="Traffic sign detection (TSD) is important for intelligent transportation
+systems and autonomous driving, but training reliable detectors requires
+costly manual annotation of bounding boxes and class labels. To reduce this
+effort, we propose Detector and Vision-Language Active Learning (DVAL), a
+two-stage active learning (AL) framework for TSD. AL reduces annotation
+cost by iteratively selecting the most informative unlabeled samples under
+a limited labeling budget. In the first stage, a You Only Look Once (YOLO)
+detector is trained on the current labeled set. Based on these predictions,
+we introduce Detection Difficulty Uncertainty Sampling (DDUS), which
+estimates detection uncertainty based on class-level classification and
+localization difficulty to select candidate images from the unlabeled pool.
+In the second stage, YOLO-predicted boxes are used to crop traffic sign
+regions, which are processed by Multi-modal Prompt Learning (MaPLe) as a
+vision-language prompt learning module. The entropy from MaPLe and the
+prediction mismatch between YOLO and MaPLe are combined into an image score
+to select the final query images for annotation. Experiments are conducted
+on two TSD datasets, namely the German Traffic Sign Detection Benchmark
+(GTSDB) and the Vietnamese Traffic Sign Detection Database 100 (VTSDB100),
+using YOLO11-Nano as the detector. With 50\% of the training images
+labeled, DVAL achieves 0.9762 mAP(at)50 and 0.8419 mAP(at)50:95 on GTSDB,
+compared with 0.9813 and 0.8535 from fully supervised training. On
+VTSDB100, DVAL achieves 0.9616 mAP(at)50 and 0.7593 mAP(at)50:95, compared
+with 0.9702 and 0.8158 from fully supervised training. DVAL also achieves
+the highest mAP(at)50 among the compared AL methods on both datasets,
+showing competitive detection performance with fewer labeled images."
 }
 
 % -----------------------------------------------------------------------------
@@ -206,4 +310,61 @@
     issn = {0950-7051},
     doi = {https://doi.org/10.1016/j.knosys.2026.115946},
     url = {https://www.sciencedirect.com/science/article/pii/S0950705126006726},
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2026-Phan2607-CorrTie.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{Phan2607CorrTie,
+  AUTHOR={Duc Tai Phan and Tri Nguyen Thai and Khoa Minh Nguyen and Nhut Minh Nguyen and Duc Ngoc Minh Dang},
+  TITLE={CorrTie: Correction-aware Tie-breaking for Active Learning with Vision-Language Models},
+  BOOKTITLE={The 10th APWeb-WAIM Joint International Conference on Web and Big Data (APWeb-WAIM 2026)},
+  booktitle_url={https://conferences.sigappfr.org/apweb2026/},
+  ADDRESS={Da Nang, Vietnam},
+  DAYS=7,
+  MONTH=sep,
+  YEAR={2026},
+  code={https://github.com/TaiDuc1001/CorrTie},
+  preview={CorrTie.png},
+  abbr={APWeb-WAIM'26},
+  bibtex_show={true},
+  ABSTRACT="Vision-language models (VLMs) provide strong transferable representations for visual recognition, but adapting them to downstream image classification tasks remains challenging when labeled data are scarce. Active learning (AL) reduces annotation cost by selecting informative unlabeled samples for oracle labeling; however, most AL strategies use oracle feedback only to expand the labeled training set. The correction event between a model prediction and the oracle label is usually not reused to guide future acquisition. To address this limitation, we propose Correction-aware Tie-breaking (CorrTie), a lightweight post-acquisition reranker for AL with VLMs. CorrTie keeps the base AL strategy unchanged and uses past oracle corrections to estimate class-wise correction risk. This risk is then used to rerank near-tie candidates while preserving the original acquisition ranking as the primary signal. Experiments with CoOp prompt learning on four image classification benchmarks and five base AL strategies show that CorrTie improves the average accuracy by +7.14, +3.74, and +0.66 percentage points at the 1%, 2%, and 5% annotation budgets, respectively. These results indicate that oracle corrections can serve not only as supervision for prompt learning, but also as useful feedback for future active sample acquisition."
+}
+
+% -----------------------------------------------------------------------------
+% Source: /srv/jekyll/_bibliography/papers/2026-Phan2607-R3CEC.bib
+% -----------------------------------------------------------------------------
+
+@INPROCEEDINGS{Phan2610R3CEC,
+AUTHOR="Duc Tai Phan and Lam Phuong Nguyen and Nam Van Hai Phan and Tri Nguyen Thai and Duc Ngoc Minh Dang",
+TITLE="{Three-Rank} Calibrated {Entropy-Weighted} Clustering for Active Learning with {Vision-Language} Models",
+BOOKTITLE="The 5th International Conference on Intelligence of Things 2026 (ICITconf'2026)",
+booktitle_url={https://icitconf.org/},
+ADDRESS="Seoul, South Korea",
+DAYS=15,
+MONTH=oct,
+YEAR=2026,
+code={https://github.com/TaiDuc1001/R3-CEC},
+preview={R3CEC.png},
+abbr={ICIT'26},
+bibtex_show={true},
+ABSTRACT="Vision-language models (VLMs) provide strong transferable representations
+for visual recognition, but adapting them to downstream tasks remains
+challenging when labeled data are scarce. Active learning (AL) addresses
+this issue by selecting informative unlabeled samples for annotation;
+however, recent VLM-oriented solutions, such as Calibrated Entropy-weighted
+Clustering (CEC), select the final query from each cluster using a
+nearest-center rule. This rule is representative, but it does not consider
+whether a candidate is predicted to belong to a class with few labeled
+examples. To address this limitation, we propose Three-Rank Calibrated
+Entropy-weighted Clustering (R3-CEC), a parameter-free extension of CEC
+that replaces the final within-cluster selection step with rank aggregation
+over residual class coverage, informativeness, and representativeness.
+Experiments on six image classification benchmarks across multiple
+prompt-learning baselines show that R3-CEC improves over CEC in the main
+setting across multiple budget settings, with gains of +3.2\%, +1.4\%, and
++0.2\%. These results indicate that R3-CEC is a simple and practical query
+strategy for annotation-efficient VLM adaptation, with potential
+applications in label-scarce visual recognition scenarios."
 }

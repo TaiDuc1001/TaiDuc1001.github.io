@@ -1,0 +1,14 @@
+@INPROCEEDINGS{Nguyen2609LexiChem,
+  AUTHOR={Khoa Minh Nguyen and Nam Van Hai Phan and Phu Trong Nguyen and Duc Tai Phan and Tri Minh Pham and Duc Ngoc Minh Dang},
+  TITLE={LexiChem: Shared-Latent Alignment for Faithful Text-to-Molecule Generation in SELFIES Space},
+  BOOKTITLE={The 10th APWeb-WAIM Joint International Conference on Web and Big Data (APWeb-WAIM 2026)},
+  booktitle_url={https://conferences.sigappfr.org/apweb2026/},
+  ADDRESS={Da Nang, Vietnam},
+  DAYS=7,
+  MONTH=sep,
+  YEAR={2026},
+  preview={LexiChem.png},
+  abbr={APWeb-WAIM'26},
+  bibtex_show={true},
+  ABSTRACT="Text-to-molecule generation, or conditional de novo molecule generation from natural language, offers a natural interface for early-stage molecular design, where researchers often describe functional goals before a precise scaffold is known. Existing encoder-decoder and SELFIES-based systems reduce syntactic failures, but sequence-only supervision can still lack cross-modal grounding, generating valid molecules that drift from the requested scaffold family, motif pattern, or medicinal-chemistry role. We propose LexiChem, a multimodal alignment-and-generation framework for faithful text-to-molecule generation in SELFIES space. LexiChem combines a pretrained text branch, a training-time SELFIES branch, lightweight projector heads, VICReg-based shared-latent alignment, asymmetric gradient isolation for the pretrained language branch, and conditional autoregressive SELFIES decoding. Experiments on the abstract and strongly one-to-many L+M-24 benchmark show that LexiChem achieves the highest BLEU score among the compared systems (73.47) while maintaining perfect chemical validity (100.0%). Compared with the BioT5+-base backbone, it raises BLEU from 66.36 to 73.47, improves MACCS, RDKit, and Morgan fingerprint similarities, and reduces FCD from 15.42 to 11.20. Ablation results further show that explicit alignment improves sequence and fingerprint fidelity, while gradient isolation strengthens the aligned setting without removing the edit-distance trade-off. These results suggest that latent alignment improves prompt-conditioned faithfulness and scaffold-family adherence."
+}

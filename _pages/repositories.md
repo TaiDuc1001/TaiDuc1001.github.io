@@ -14,6 +14,7 @@ nav_order: 4
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% include repository/repo_user.liquid username='aita-lab' %}
+  {% include repository/repo_user.liquid username='Lamn17' %}
   {% include repository/repo_user.liquid username='nhut-ngnn' %}
   {% include repository/repo_user.liquid username='TaiDuc1001' %}
 </div>
@@ -24,6 +25,10 @@ nav_order: 4
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% include repository/repo.liquid repository='aita-lab/FDAL' %}
+  {% include repository/repo.liquid repository='Lamn17/DVAL' %}
+  {% include repository/repo.liquid repository='nhut-ngnn/AURORA' %}
   {% include repository/repo.liquid repository='nhut-ngnn/GloMER' %}
+  {% include repository/repo.liquid repository='TaiDuc1001/CorrTie' %}
   {% include repository/repo.liquid repository='TaiDuc1001/DAAL' %}
+  {% include repository/repo.liquid repository='TaiDuc1001/R3-CEC' %}
 </div>

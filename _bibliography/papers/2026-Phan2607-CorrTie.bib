@@ -1,0 +1,15 @@
+@INPROCEEDINGS{Phan2607CorrTie,
+  AUTHOR={Duc Tai Phan and Tri Nguyen Thai and Khoa Minh Nguyen and Nhut Minh Nguyen and Duc Ngoc Minh Dang},
+  TITLE={CorrTie: Correction-aware Tie-breaking for Active Learning with Vision-Language Models},
+  BOOKTITLE={The 10th APWeb-WAIM Joint International Conference on Web and Big Data (APWeb-WAIM 2026)},
+  booktitle_url={https://conferences.sigappfr.org/apweb2026/},
+  ADDRESS={Da Nang, Vietnam},
+  DAYS=7,
+  MONTH=sep,
+  YEAR={2026},
+  code={https://github.com/TaiDuc1001/CorrTie},
+  preview={CorrTie.png},
+  abbr={APWeb-WAIM'26},
+  bibtex_show={true},
+  ABSTRACT="Vision-language models (VLMs) provide strong transferable representations for visual recognition, but adapting them to downstream image classification tasks remains challenging when labeled data are scarce. Active learning (AL) reduces annotation cost by selecting informative unlabeled samples for oracle labeling; however, most AL strategies use oracle feedback only to expand the labeled training set. The correction event between a model prediction and the oracle label is usually not reused to guide future acquisition. To address this limitation, we propose Correction-aware Tie-breaking (CorrTie), a lightweight post-acquisition reranker for AL with VLMs. CorrTie keeps the base AL strategy unchanged and uses past oracle corrections to estimate class-wise correction risk. This risk is then used to rerank near-tie candidates while preserving the original acquisition ranking as the primary signal. Experiments with CoOp prompt learning on four image classification benchmarks and five base AL strategies show that CorrTie improves the average accuracy by +7.14, +3.74, and +0.66 percentage points at the 1%, 2%, and 5% annotation budgets, respectively. These results indicate that oracle corrections can serve not only as supervision for prompt learning, but also as useful feedback for future active sample acquisition."
+}

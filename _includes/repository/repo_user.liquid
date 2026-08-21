@@ -16,6 +16,7 @@
     href="{{ profile_url }}"
     target="_blank"
     rel="noopener noreferrer"
+    data-github-user="{{ include.username }}"
   >
     <div class="repo-card__topline">
       <span class="repo-card__label">GitHub User</span>
@@ -23,13 +24,13 @@
     </div>
     <div class="repo-card__user-head">
       <img
-        class="repo-card__avatar"
+        class="repo-card__avatar js-user-avatar"
         src="{{ avatar_url }}"
         alt="{{ include.username }} avatar"
         loading="lazy"
       >
       <div>
-        <div class="repo-card__name">{{ user.name | default: include.username }}</div>
+        <div class="repo-card__name js-user-name">{{ user.name | default: include.username }}</div>
         <div class="repo-card__handle">@{{ include.username }}</div>
       </div>
     </div>

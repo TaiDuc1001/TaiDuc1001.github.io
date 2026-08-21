@@ -1,3 +1,15 @@
+"APWeb-WAIM'26":
+  url: https://conferences.sigappfr.org/apweb2026/
+  color: "#215d42"
+
+"ATC'26":
+  url: https://atc-conf.org/
+  color: "#215d42"
+
+"ICIT'26":
+  url: https://icitconf.org/
+  color: "#215d42"
+
 "KBS":
   "url": https://www.sciencedirect.com/journal/knowledge-based-systems
   color: "#600"

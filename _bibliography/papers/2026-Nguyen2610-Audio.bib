@@ -1,0 +1,34 @@
+@INPROCEEDINGS{Nguy2610:Audio,
+  AUTHOR="Nhut Minh Nguyen and Duc Tai Phan and Dang Nguyen Huu Duc and Nguyen Thu Ky and Duc Ngoc Minh Dang",
+  TITLE="{Audio-Guided} Repair Gate for {ASR-Robust} Speech Emotion Recognition",
+  BOOKTITLE="2026 International Conference on Advanced Technologies for Communications (ATC) (ATC'26)",
+  booktitle_url={https://atc-conf.org/},
+  ADDRESS="Quy Nhon, Vietnam",
+  PAGES=6,
+  DAYS=15,
+  MONTH=oct,
+  YEAR=2026,
+  abbr={ATC'26},
+  code={https://github.com/nhut-ngnn/AURORA},
+  bibtex_show={true},
+  preview={AURORA.png},
+  ABSTRACT="Speech Emotion Recognition (SER) is an important task in affective
+computing and human-computer interaction. While multimodal SER can leverage
+complementary audio and textual cues, real-world systems often rely on
+Automatic Speech Recognition (ASR)-generated transcripts instead of manual
+transcripts. However, ASR errors may degrade semantic representations and
+reduce emotion recognition performance. In this study, we propose AURORA,
+an audio-guided repair gate architecture for ASR-robust SER. AURORA adopts
+a teacher-student architecture, where the teacher branch learns from audio
+and clean text, while the student branch learns from audio and
+ASR-generated text to match real-world inference conditions. The student
+branch is further equipped with hallucination-based repair and a
+reliability gate to selectively correct ASR-based textual representations
+using audio guidance. The gated multimodal fusion and knowledge
+distillation are used to integrate multimodal information and transfer
+reliable knowledge from the teacher branch to the student branch.
+Experiments on two benchmark datasets show that AURORA achieves competitive
+performance, with 79.96\% WA and 79.77\% UA on IEMOCAP, and 63.27\% WA and
+62.47\% UA on MSP-IMPROV. Ablation studies validate the contribution of the
+proposed components to ASR-robust emotion recognition."
+}

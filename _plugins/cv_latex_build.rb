@@ -41,17 +41,20 @@ module CVLatexBuild
     begin
       _stdout, stderr, status = Open3.capture3(*cmd)
     rescue Errno::ENOENT
-      raise("CV LaTeX build failed: '#{tectonic_bin}' not found. Install Tectonic or set TECTONIC_BIN.")
+      Jekyll.logger.warn("CV LaTeX:", "'#{tectonic_bin}' not found. Install Tectonic or set TECTONIC_BIN.")
+      return
     end
 
     unless status.success?
-      raise("CV LaTeX build failed for #{source_rel}: #{stderr.strip}")
+      Jekyll.logger.warn("CV LaTeX:", "build failed for #{source_rel}: #{stderr.strip}")
+      return
     end
 
     generated_pdf_name = "#{File.basename(source, File.extname(source))}.pdf"
     generated_pdf_path = File.join(output_dir, generated_pdf_name)
     unless File.file?(generated_pdf_path)
-      raise("CV LaTeX build failed: expected output not found at #{generated_pdf_path}")
+      Jekyll.logger.warn("CV LaTeX:", "expected output not found at #{generated_pdf_path}")
+      return
     end
 
     if generated_pdf_path != pdf_path

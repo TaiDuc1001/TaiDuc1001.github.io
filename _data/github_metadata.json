@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T13:54:35Z",
+  "generated_at": "2026-08-21T15:12:16Z",
   "users": [
     {
       "login": "aita-lab",
@@ -10,6 +10,16 @@
       "public_repos": 10,
       "html_url": "https://github.com/aita-lab",
       "avatar_url": "https://avatars.githubusercontent.com/u/176905190?v=4"
+    },
+    {
+      "login": "Lamn17",
+      "name": null,
+      "bio": null,
+      "company": null,
+      "followers": 0,
+      "public_repos": 5,
+      "html_url": "https://github.com/Lamn17",
+      "avatar_url": "https://avatars.githubusercontent.com/u/205649014?v=4"
     },
     {
       "login": "nhut-ngnn",
@@ -44,6 +54,26 @@
       "html_url": "https://github.com/aita-lab/FDAL"
     },
     {
+      "full_name": "Lamn17/DVAL",
+      "name": "DVAL",
+      "owner": "Lamn17",
+      "description": null,
+      "language": "Python",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "html_url": "https://github.com/Lamn17/DVAL"
+    },
+    {
+      "full_name": "nhut-ngnn/AURORA",
+      "name": "AURORA",
+      "owner": "nhut-ngnn",
+      "description": "[ATC'26] - \"Audio-Guided Repair Gate for ASR-Robust Speech Emotion Recognition\" - Nhut Minh Nguyen, Duc Tai Phan, Duc Nguyen Huu Dang, Thu Ky Nguyen, and Duc Ngoc Minh Dang",
+      "language": "Python",
+      "stargazers_count": 0,
+      "forks_count": 1,
+      "html_url": "https://github.com/nhut-ngnn/AURORA"
+    },
+    {
       "full_name": "nhut-ngnn/GloMER",
       "name": "GloMER",
       "owner": "nhut-ngnn",
@@ -54,6 +84,16 @@
       "html_url": "https://github.com/nhut-ngnn/GloMER"
     },
     {
+      "full_name": "TaiDuc1001/CorrTie",
+      "name": "CorrTie",
+      "owner": "TaiDuc1001",
+      "description": "Official implementation of CorrTie: Correction-aware Tie-breaking for Active Learning with Vision-Language Models",
+      "language": "Python",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "html_url": "https://github.com/TaiDuc1001/CorrTie"
+    },
+    {
       "full_name": "TaiDuc1001/DAAL",
       "name": "DAAL",
       "owner": "TaiDuc1001",
@@ -62,6 +102,16 @@
       "stargazers_count": 4,
       "forks_count": 0,
       "html_url": "https://github.com/TaiDuc1001/DAAL"
+    },
+    {
+      "full_name": "TaiDuc1001/R3-CEC",
+      "name": "R3-CEC",
+      "owner": "TaiDuc1001",
+      "description": "Official implementation of Three-Rank Calibrated Entropy-Weighted Clustering for Active Learning with Vision-Language Models",
+      "language": "Python",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "html_url": "https://github.com/TaiDuc1001/R3-CEC"
     }
   ]
 }
