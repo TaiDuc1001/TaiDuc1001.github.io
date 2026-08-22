@@ -27,6 +27,7 @@ nav_order: 4
   {% include repository/repo.liquid repository='aita-lab/FDAL' %}
   {% include repository/repo.liquid repository='Lamn17/DVAL' %}
   {% include repository/repo.liquid repository='nhut-ngnn/AURORA' %}
+  {% include repository/repo.liquid repository='nhut-ngnn/CemoBAM' %}
   {% include repository/repo.liquid repository='nhut-ngnn/GloMER' %}
   {% include repository/repo.liquid repository='TaiDuc1001/CorrTie' %}
   {% include repository/repo.liquid repository='TaiDuc1001/DAAL' %}

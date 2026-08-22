@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T15:41:18Z",
+  "generated_at": "2026-08-22T06:42:09Z",
   "users": [
     {
       "login": "aita-lab",
@@ -72,6 +72,16 @@
       "stargazers_count": 0,
       "forks_count": 1,
       "html_url": "https://github.com/nhut-ngnn/AURORA"
+    },
+    {
+      "full_name": "nhut-ngnn/CemoBAM",
+      "name": "CemoBAM",
+      "owner": "nhut-ngnn",
+      "description": "[APNOMS'25] - \"CemoBAM: Advancing Multimodal Emotion Recognition through Heterogeneous Graph Networks and Cross-Modal Attention Mechanisms\" by Nhut Minh Nguyen, Thu Thuy Le, Trung Thanh Nguyen, Tai Duc Phan, Anh Khoa Tran, and Duc Ngoc Minh Dang",
+      "language": "Python",
+      "stargazers_count": 9,
+      "forks_count": 1,
+      "html_url": "https://github.com/nhut-ngnn/CemoBAM"
     },
     {
       "full_name": "nhut-ngnn/GloMER",
