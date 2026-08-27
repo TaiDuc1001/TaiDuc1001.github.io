@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T06:42:09Z",
+  "generated_at": "2026-08-27T11:25:39Z",
   "users": [
     {
       "login": "aita-lab",
@@ -7,7 +7,7 @@
       "bio": null,
       "company": null,
       "followers": 8,
-      "public_repos": 10,
+      "public_repos": 11,
       "html_url": "https://github.com/aita-lab",
       "avatar_url": "https://avatars.githubusercontent.com/u/176905190?v=4"
     },
@@ -17,7 +17,7 @@
       "bio": null,
       "company": null,
       "followers": 0,
-      "public_repos": 5,
+      "public_repos": 4,
       "html_url": "https://github.com/Lamn17",
       "avatar_url": "https://avatars.githubusercontent.com/u/205649014?v=4"
     },
@@ -37,7 +37,7 @@
       "bio": "Studying at FPT University. ",
       "company": "FPT University",
       "followers": 20,
-      "public_repos": 43,
+      "public_repos": 44,
       "html_url": "https://github.com/TaiDuc1001",
       "avatar_url": "https://avatars.githubusercontent.com/u/89329066?v=4"
     }
@@ -57,7 +57,7 @@
       "full_name": "Lamn17/DVAL",
       "name": "DVAL",
       "owner": "Lamn17",
-      "description": "[ATC'26] DVAL: Detector and Vision-language active learning for traffic sign detection",
+      "description": "[ATC'26] DVAL: Detector and Vision-language active learning for traffic sign detection - Lam Phuong Nguyen, Duc Tai Phan, Duc-Hieu Hoang, Tri Nguyen Thai, Cuong Tuan Nguyen, and Duc Ngoc Minh Dang",
       "language": "Python",
       "stargazers_count": 0,
       "forks_count": 0,
