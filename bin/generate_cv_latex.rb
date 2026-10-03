@@ -5,8 +5,8 @@ require "fileutils"
 require "yaml"
 
 bib_file = ARGV[0] || "_bibliography/_papers.bib"
-template_file = ARGV[1] || "assets/latex/template.tex"
-output_file = ARGV[2] || "assets/latex/cv.tex"
+template_arg = ARGV[1]
+output_arg = ARGV[2]
 config_file = ARGV[3] || "_config.yml"
 
 MONTH_MAP = {
@@ -411,10 +411,14 @@ def force_bibliography_order(template_content)
   template_content.sub(/sorting\s*=\s*[^,\]]+/, "sorting=none")
 end
 
-unless File.file?(template_file)
-  warn "Template file #{template_file} was not found."
-  exit 1
-end
+targets = if template_arg && output_arg
+            [[template_arg, output_arg]]
+          else
+            [
+              ["assets/latex/template_2page.tex", "assets/latex/cv_2page.tex"],
+              ["assets/latex/template_3page.tex", "assets/latex/cv_3page.tex"]
+            ]
+          end
 
 config_data = {}
 if (config_content = read_file_if_exists(config_file))
@@ -442,11 +446,6 @@ else
   publications = parse_publications(bib_content, user_profile)
 end
 
-template_content = File.read(template_file)
-inline_bib = build_inline_ref_bib(publications)
-content = inject_ref_bib(template_content, inline_bib)
-content = force_bibliography_order(content)
-
 replacements = {
   "FULL_NAME" => latex_escape(full_name),
   "FIRST_NAME" => latex_escape(first_name),
@@ -457,17 +456,28 @@ replacements = {
   "SITE_URL" => latex_escape(config_data["url"].to_s.strip)
 }
 
-content = render_template(content, replacements)
-
-FileUtils.mkdir_p(File.dirname(output_file))
-
-if File.exist?(output_file) && File.read(output_file) == content
-  puts "No changes detected for #{output_file}; rendered CV LaTeX is up to date."
-  exit 0
-end
-
 journal_count = publications.count { |publication| publication[:type] == "article" }
 conference_count = publications.count { |publication| publication[:type] == "inproceedings" }
+inline_bib = build_inline_ref_bib(publications)
 
-File.write(output_file, content)
-puts "Rendered #{output_file} from template #{template_file} with #{journal_count} journal and #{conference_count} conference publication(s)."
+targets.each do |template_file, output_file|
+  unless File.file?(template_file)
+    warn "Template file #{template_file} was not found; skipping."
+    next
+  end
+
+  template_content = File.read(template_file)
+  content = inject_ref_bib(template_content, inline_bib)
+  content = force_bibliography_order(content)
+  content = render_template(content, replacements)
+
+  FileUtils.mkdir_p(File.dirname(output_file))
+
+  if File.exist?(output_file) && File.read(output_file) == content
+    puts "No changes detected for #{output_file}; rendered CV LaTeX is up to date."
+    next
+  end
+
+  File.write(output_file, content)
+  puts "Rendered #{output_file} from template #{template_file} with #{journal_count} journal and #{conference_count} conference publication(s)."
+end

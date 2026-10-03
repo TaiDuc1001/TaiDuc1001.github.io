@@ -1,0 +1,81 @@
+{% if page.cv_pdf_2page or page.cv_pdf_3page or page.cv_pdf %}
+  <div class="dropdown cv-pdf-dropdown float-right">
+    <a
+      class="btn-cv-pdf dropdown-toggle"
+      href="javascript:void(0)"
+      role="button"
+      id="cvPdfDropdownMenu"
+      data-toggle="dropdown"
+      data-bs-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      title="Download CV"
+    >
+      <i class="fa-solid fa-file-pdf"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right cv-pdf-menu shadow-sm" aria-labelledby="cvPdfDropdownMenu">
+      {% if page.cv_pdf_2page %}
+        <a
+          class="dropdown-item"
+          href="{{ page.cv_pdf_2page | prepend: 'assets/pdf/' | relative_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-file-lines mr-1"></i> 2 pages
+        </a>
+      {% endif %}
+      {% if page.cv_pdf_3page or page.cv_pdf %}
+        {% if page.cv_pdf_2page %}<div class="dropdown-divider"></div>{% endif %}
+        <a
+          class="dropdown-item"
+          href="{{ page.cv_pdf_3page | default: page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-file-pdf mr-1"></i> 3 pages
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      function initCvDropdown() {
+        var dropdowns = document.querySelectorAll('.cv-pdf-dropdown');
+        dropdowns.forEach(function(dd) {
+          var btn = dd.querySelector('.btn-cv-pdf');
+          var menu = dd.querySelector('.dropdown-menu');
+          if (!btn || !menu || btn.dataset.initialized) return;
+          btn.dataset.initialized = 'true';
+
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var isOpen = dd.classList.contains('show') || menu.classList.contains('show');
+            document.querySelectorAll('.cv-pdf-dropdown.show, .cv-pdf-menu.show').forEach(function(el) {
+              el.classList.remove('show');
+            });
+            if (!isOpen) {
+              dd.classList.add('show');
+              menu.classList.add('show');
+            }
+          });
+        });
+
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.cv-pdf-dropdown')) {
+            document.querySelectorAll('.cv-pdf-dropdown.show, .cv-pdf-menu.show').forEach(function(el) {
+              el.classList.remove('show');
+            });
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCvDropdown);
+      } else {
+        initCvDropdown();
+      }
+    })();
+  </script>
+{% endif %}

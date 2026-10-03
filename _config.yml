@@ -252,7 +252,8 @@ keep_files:
   - .nojekyll
 
 watch_excludes:
-  - assets/pdf/cv.pdf
+  - assets/pdf/cv_2page.pdf
+  - assets/pdf/cv_3page.pdf
 
 # -----------------------------------------------------------------------------
 # CV LaTeX build settings
@@ -260,9 +261,12 @@ watch_excludes:
 
 cv_latex:
   enabled: true
-  source: assets/latex/cv.tex
   output_dir: assets/pdf
-  output_name: cv.pdf
+  files:
+    - source: assets/latex/cv_2page.tex
+      output_name: cv_2page.pdf
+    - source: assets/latex/cv_3page.tex
+      output_name: cv_3page.pdf
 
 # Plug-ins
 plugins:

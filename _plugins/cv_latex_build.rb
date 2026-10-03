@@ -12,20 +12,38 @@ module CVLatexBuild
     config = site.config.fetch(CONFIG_KEY, {})
     return unless config.fetch("enabled", true)
 
-    source_rel = config.fetch("source", "assets/latex/cv.tex")
     output_dir_rel = config.fetch("output_dir", "assets/pdf")
+    output_dir = File.expand_path(output_dir_rel, site.source)
+    FileUtils.mkdir_p(output_dir)
+
+    files = if config["files"].is_a?(Array) && !config["files"].empty?
+              config["files"]
+            else
+              [
+                {
+                  "source" => config.fetch("source", "assets/latex/cv.tex"),
+                  "output_name" => config["output_name"]
+                }
+              ]
+            end
+
+    files.each do |file_config|
+      compile_entry(site, file_config, output_dir, output_dir_rel)
+    end
+  end
+
+  def compile_entry(site, file_config, output_dir, output_dir_rel)
+    source_rel = file_config.fetch("source", "").to_s.strip
+    return if source_rel.empty?
 
     source = File.expand_path(source_rel, site.source)
-    output_dir = File.expand_path(output_dir_rel, site.source)
 
     unless File.file?(source)
       Jekyll.logger.warn("CV LaTeX:", "source not found at #{source_rel}; skipping")
       return
     end
 
-    FileUtils.mkdir_p(output_dir)
-
-    configured_output_name = config["output_name"].to_s.strip
+    configured_output_name = file_config["output_name"].to_s.strip
     default_output_name = "#{File.basename(source, File.extname(source))}.pdf"
     pdf_name = configured_output_name.empty? ? default_output_name : configured_output_name
     pdf_path = File.join(output_dir, pdf_name)
