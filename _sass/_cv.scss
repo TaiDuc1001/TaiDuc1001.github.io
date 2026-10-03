@@ -245,22 +245,16 @@ ul.timeline li::before {
     left: auto !important;
 
     .dropdown-item {
-      padding: 0.4rem 0.65rem;
+      padding: 0.35rem 0.75rem;
       border-radius: 0.25rem;
       font-size: 0.9rem;
       color: var(--global-text-color);
-      display: flex;
-      align-items: center;
+      text-align: center;
       transition: background-color 0.15s ease, color 0.15s ease;
 
       &:hover {
         background-color: var(--global-hover-fill-color, rgba(0, 0, 0, 0.05));
         color: var(--global-theme-color);
-      }
-
-      i {
-        width: 1.25rem;
-        text-align: center;
       }
     }
 
